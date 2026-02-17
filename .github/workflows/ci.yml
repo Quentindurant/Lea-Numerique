@@ -19,4 +19,7 @@ jobs:
             cd ${{ secrets.PROJECT_PATH }}
             sudo git fetch --all
             sudo git reset --hard origin/main
-            sudo chown -R www-data:www-data ${{ secrets.PROJECT_PATH }}
+            sudo chown -R debian:debian ${{ secrets.PROJECT_PATH }}
+            npm install
+            npm run build
+            pm2 restart lea-numerique || pm2 start npm --name "lea-numerique" -- start

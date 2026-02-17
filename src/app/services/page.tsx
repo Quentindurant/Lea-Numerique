@@ -15,7 +15,7 @@ const services = [
   {
     id: "01",
     Icon: Wrench,
-    title: "Installation & Déploiement",
+    title: "Installationa & Déploiement",
     tagline: "On s'occupe de tout, du câble au cloud.",
     image: "/images/informatique.png",
     description:

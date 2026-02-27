@@ -25,7 +25,7 @@ export default function RootLayout({
     <html lang="fr" className={poppins.variable}>
       <body className="font-sans antialiased">
         <Header />
-        <main>{children}</main>
+        <main className="overflow-x-hidden">{children}</main>
         <Footer />
       </body>
     </html>

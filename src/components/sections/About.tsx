@@ -34,7 +34,7 @@ export default function About() {
             </Link>
           </div>
 
-          <div className="relative">
+          <div className="relative overflow-hidden lg:overflow-visible">
             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
               <Image
                 src="/images/informatique.png"
@@ -45,7 +45,7 @@ export default function About() {
               />
             </div>
             {/* Floating stats cards */}
-            <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-xl p-5 flex items-center gap-4">
+            <div className="absolute -bottom-6 left-0 lg:-left-6 bg-white rounded-2xl shadow-xl p-5 flex items-center gap-4">
               <div className="w-12 h-12 rounded-xl bg-[#7C6EFA]/10 flex items-center justify-center">
                 <Users className="text-[#7C6EFA] w-5 h-5" />
               </div>
@@ -54,7 +54,7 @@ export default function About() {
                 <p className="text-gray-500 text-sm">Clients nous font confiance</p>
               </div>
             </div>
-            <div className="absolute -top-6 -right-6 bg-white rounded-2xl shadow-xl p-5 flex items-center gap-4">
+            <div className="absolute -top-6 right-0 lg:-right-6 bg-white rounded-2xl shadow-xl p-5 flex items-center gap-4">
               <div className="w-12 h-12 rounded-xl bg-[#7C6EFA]/10 flex items-center justify-center">
                 <Star className="text-[#7C6EFA] w-5 h-5" />
               </div>

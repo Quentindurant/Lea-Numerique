@@ -20,7 +20,7 @@ const partners = [
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen bg-[#0D0D1A] flex flex-col justify-center overflow-hidden">
+    <section className="relative min-h-screen bg-[#0D0D1A] flex flex-col justify-center overflow-clip">
       {/* Background decoration */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 -left-32 w-96 h-96 bg-[#7C6EFA]/10 rounded-full blur-3xl" />
@@ -47,10 +47,10 @@ export default function Hero() {
         </svg>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 sm:pt-32 pb-16 sm:pb-20">
+      <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 sm:pt-32 pb-16 sm:pb-20">
         <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
           {/* Text content */}
-          <div className="flex-1 text-center lg:text-left">
+          <div className="flex-1 w-full min-w-0 text-center lg:text-left">
             <div className="inline-flex items-center gap-2 bg-[#7C6EFA]/15 border border-[#7C6EFA]/30 rounded-full px-4 py-2 mb-6">
               <span className="w-2 h-2 rounded-full bg-[#7C6EFA] animate-pulse" />
               <span className="text-[#7C6EFA] text-sm font-medium">
@@ -106,7 +106,7 @@ export default function Hero() {
           <p className="text-white/40 text-sm text-center mb-6 uppercase tracking-widest">
             Nos partenaires technologiques
           </p>
-          <div className="relative overflow-hidden">
+          <div className="relative overflow-clip">
             <div className="flex gap-12 partners-track">
               {[...partners, ...partners].map((p, i) => (
                 <div
@@ -118,7 +118,7 @@ export default function Hero() {
                     alt={p.alt}
                     width={100}
                     height={40}
-                    className={`h-8 w-auto opacity-50 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 ${p.className || ''}`}
+                    className="h-8 w-auto opacity-50 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
                   />
                 </div>
               ))}

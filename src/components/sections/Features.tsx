@@ -1,5 +1,8 @@
+"use client";
+
 import { Headset, ShieldCheck, Network, TrendingUp, Handshake, Settings } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const features: { icon: LucideIcon; title: string; description: string }[] = [
   {
@@ -35,8 +38,10 @@ const features: { icon: LucideIcon; title: string; description: string }[] = [
 ];
 
 export default function Features() {
+  const ref = useScrollReveal();
+
   return (
-    <section className="bg-[#F5F4FF] py-24">
+    <section ref={ref} className="bg-[#F5F4FF] py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <span className="text-[#7C6EFA] font-semibold text-sm uppercase tracking-widest">

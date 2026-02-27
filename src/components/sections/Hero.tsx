@@ -3,14 +3,14 @@ import Image from "next/image";
 
 const partners = [
   { src: "/images/partenaire/3CX_blanc.png", alt: "3CX" },
-  { src: "/images/partenaire/FORTINET_BLANCan.png", alt: "Fortinet" },
+  { src: "/images/partenaire/Forti.png", alt: "Fortinet", className: "scale-300" },
   { src: "/images/partenaire/Yealink-Logo-blanc.png", alt: "Yealink" },
   { src: "/images/partenaire/ubiquiti_blanc_1an.png", alt: "Ubiquiti" },
   { src: "/images/partenaire/sfr_logo_blanc.png", alt: "SFR" },
   { src: "/images/partenaire/tp_link_blanc.png", alt: "TP-Link" },
   { src: "/images/partenaire/hp_blancan.png", alt: "HP" },
   { src: "/images/partenaire/lenovo_blancan.png", alt: "Lenovo" },
-  { src: "/images/partenaire/logo-bouygues-telecom-blanc.png", alt: "Bouygues Telecom" },
+  { src: "/images/partenaire/bouygue.png", alt: "Bouygues Telecom" },
   { src: "/images/partenaire/wazo_blanc.png", alt: "Wazo" },
   { src: "/images/partenaire/yeastar_blanc.png", alt: "Yeastar" },
   { src: "/images/partenaire/zyxel_blc.png", alt: "Zyxel" },
@@ -67,7 +67,7 @@ export default function Hero() {
               </span>
             </h1>
 
-            <p className="text-white/60 text-lg leading-relaxed mb-8 max-w-xl lg:max-w-none">
+            <p className="text-white/70 text-lg leading-relaxed mb-8 max-w-xl lg:max-w-none">
               Léa Numérique, votre partenaire IT de confiance, allie expertise et innovation pour répondre à vos besoins numériques. Accédez à l'excellence technologique avec notre approche unique, complète et entièrement personnalisée.
             </p>
 
@@ -111,14 +111,14 @@ export default function Hero() {
               {[...partners, ...partners].map((p, i) => (
                 <div
                   key={i}
-                  className="flex-shrink-0 flex items-center justify-center h-10"
+                  className="flex-shrink-0 flex items-center justify-center w-[100px] h-10"
                 >
                   <Image
                     src={p.src}
                     alt={p.alt}
                     width={100}
                     height={40}
-                    className="h-8 w-auto opacity-50 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
+                    className={`h-8 w-auto opacity-50 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 ${p.className || ''}`}
                   />
                 </div>
               ))}

@@ -16,7 +16,7 @@ export default function Footer() {
               height={42}
               className="h-10 w-auto mb-4 brightness-0 invert"
             />
-            <p className="text-white/60 text-sm leading-relaxed">
+            <p className="text-white/70 text-sm leading-relaxed">
               Votre partenaire incontournable des solutions IT pour entreprises
               et collectivités.
             </p>
@@ -36,7 +36,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-white/60 hover:text-[#7C6EFA] text-sm transition-colors"
+                    className="text-white/70 hover:text-[#7C6EFA] text-sm transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -53,7 +53,7 @@ export default function Footer() {
                 <li key={item}>
                   <Link
                     href="/solutions"
-                    className="text-white/60 hover:text-[#7C6EFA] text-sm transition-colors"
+                    className="text-white/70 hover:text-[#7C6EFA] text-sm transition-colors"
                   >
                     {item}
                   </Link>
@@ -65,15 +65,15 @@ export default function Footer() {
           {/* Contact */}
           <div>
             <h3 className="text-white font-semibold mb-4">Contact</h3>
-            <ul className="space-y-3 text-sm text-white/60">
+            <ul className="space-y-3 text-sm text-white/70">
               <li className="flex items-start gap-2">
                 <MapPin className="text-[#7C6EFA] w-4 h-4 mt-0.5 flex-shrink-0" />
                 <span>Angers, France</span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="text-[#7C6EFA] w-4 h-4 flex-shrink-0" />
-                <a href="tel:+33XXXXXXXXX" className="hover:text-white transition-colors">
-                  Nous appeler
+                <a href="tel:02 19 23 06 91" className="hover:text-white transition-colors">
+                  02 19 23 06 91
                 </a>
               </li>
               <li className="flex items-center gap-2">

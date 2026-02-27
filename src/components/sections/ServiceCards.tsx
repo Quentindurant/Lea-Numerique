@@ -1,7 +1,10 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { PhoneCall, Network, Laptop, ShieldCheck, ArrowRight } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const solutions: { title: string; description: string; image: string; icon: LucideIcon; features: string[] }[] = [
   {
@@ -39,8 +42,10 @@ const solutions: { title: string; description: string; image: string; icon: Luci
 ];
 
 export default function ServiceCards() {
+  const ref = useScrollReveal();
+
   return (
-    <section className="bg-[#0D0D1A] py-24">
+    <section ref={ref} className="bg-[#0D0D1A] py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <span className="text-[#7C6EFA] font-semibold text-sm uppercase tracking-widest">
@@ -49,7 +54,7 @@ export default function ServiceCards() {
           <h2 className="text-3xl sm:text-4xl font-bold text-white mt-3 mb-4">
             Des solutions IT complètes
           </h2>
-          <p className="text-white/60 max-w-2xl mx-auto">
+          <p className="text-white/70 max-w-2xl mx-auto">
             De la téléphonie à la cybersécurité, nous couvrons tous vos besoins
             en infrastructure numérique.
           </p>
@@ -78,7 +83,7 @@ export default function ServiceCards() {
                 <h3 className="text-xl font-bold text-white mb-3">
                   {solution.title}
                 </h3>
-                <p className="text-white/60 text-sm leading-relaxed mb-4">
+                <p className="text-white/70 text-sm leading-relaxed mb-4">
                   {solution.description}
                 </p>
                 <ul className="space-y-1.5 mb-6">
@@ -90,7 +95,7 @@ export default function ServiceCards() {
                   ))}
                 </ul>
                 <Link
-                  href="/solutions"
+                  href={`/solutions#${solution.title}`}
                   className="inline-flex items-center gap-2 text-[#7C6EFA] text-sm font-semibold hover:gap-3 transition-all"
                 >
                   En savoir plus <ArrowRight className="w-3 h-3" />

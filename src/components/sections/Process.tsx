@@ -1,3 +1,7 @@
+"use client";
+
+import { useScrollReveal } from "@/hooks/useScrollReveal";
+
 const steps = [
   {
     number: "01",
@@ -26,8 +30,10 @@ const steps = [
 ];
 
 export default function Process() {
+  const ref = useScrollReveal();
+
   return (
-    <section className="bg-[#0D0D1A] py-24">
+    <section ref={ref} className="bg-[#0D0D1A] py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <span className="text-[#7C6EFA] font-semibold text-sm uppercase tracking-widest">
@@ -36,7 +42,7 @@ export default function Process() {
           <h2 className="text-3xl sm:text-4xl font-bold text-white mt-3 mb-4">
             Notre processus en 4 étapes
           </h2>
-          <p className="text-white/60 max-w-2xl mx-auto">
+          <p className="text-white/70 max-w-2xl mx-auto">
             Un accompagnement structuré de l&apos;analyse initiale jusqu&apos;au suivi
             post-installation.
           </p>
@@ -64,7 +70,7 @@ export default function Process() {
                 <h3 className="text-white font-semibold text-lg mb-3">
                   {step.title}
                 </h3>
-                <p className="text-white/55 text-sm leading-relaxed">
+                <p className="text-white/70 text-sm leading-relaxed">
                   {step.description}
                 </p>
               </div>

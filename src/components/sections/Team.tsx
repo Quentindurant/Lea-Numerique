@@ -1,3 +1,7 @@
+"use client";
+
+import { useScrollReveal } from "@/hooks/useScrollReveal";
+
 const team = [
   {
     name: "Direction",
@@ -26,8 +30,10 @@ const team = [
 ];
 
 export default function Team() {
+  const ref = useScrollReveal();
+
   return (
-    <section className="bg-[#0D0D1A] py-24">
+    <section ref={ref} className="bg-[#0D0D1A] py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <span className="text-[#7C6EFA] font-semibold text-sm uppercase tracking-widest">
@@ -36,7 +42,7 @@ export default function Team() {
           <h2 className="text-3xl sm:text-4xl font-bold text-white mt-3 mb-4">
             Des experts à votre service
           </h2>
-          <p className="text-white/60 max-w-2xl mx-auto">
+          <p className="text-white/70 max-w-2xl mx-auto">
             Une équipe passionnée et certifiée, dédiée à votre satisfaction et à
             la réussite de vos projets IT.
           </p>

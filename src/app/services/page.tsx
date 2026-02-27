@@ -12,12 +12,31 @@ export const metadata: Metadata = {
 };
 
 const services = [
+  
+
   {
     id: "01",
+    Icon: MessageSquare,
+    title: "Conseil & Accompagnement",
+    tagline: "Des choix éclairés pour votre organisation.",
+    image: "/images/conseil.png",
+    description:
+      "Nos experts vous accompagnent dans la stratégie IT de votre organisation : audit, préconisations, plan de transformation numérique.",
+    items: [
+      "Audit de l'infrastructure existante",
+      "Préconisations personnalisées",
+      "Plan de transformation IT",
+      "Accompagnement au changement",
+      "Veille technologique",
+      "Relation partenaires & constructeurs",
+    ],
+  },
+  {
+    id: "02",
     Icon: Wrench,
-    title: "Installationa & Déploiement",
+    title: "Installation & Déploiement",
     tagline: "On s'occupe de tout, du câble au cloud.",
-    image: "/images/informatique.png",
+    image: "/images/deploiement.png",
     description:
       "Nous prenons en charge l'intégralité de l'installation de vos équipements IT. Câblage, configuration, tests — vous n'avez qu'à utiliser.",
     items: [
@@ -29,12 +48,12 @@ const services = [
       "Formation des utilisateurs",
     ],
   },
-  {
-    id: "02",
+    {
+    id: "03",
     Icon: Cpu,
     title: "Maintenance & Support",
     tagline: "Réactif quand vous en avez besoin.",
-    image: "/images/réseau.jpg",
+    image: "/images/support.png",
     description:
       "Un contrat de maintenance adapté à votre structure, avec un helpdesk disponible et des interventions rapides sur site ou en télémaintenance.",
     items: [
@@ -47,11 +66,11 @@ const services = [
     ],
   },
   {
-    id: "03",
+    id: "04",
     Icon: ShieldCheck,
     title: "Sécurité & Protection",
     tagline: "Votre sécurité n'est pas négociable.",
-    image: "/images/cyber.jpg",
+    image: "/images/securiter.png",
     description:
       "Nous déployons des solutions de cybersécurité éprouvées pour protéger vos données et votre infrastructure contre les menaces modernes.",
     items: [
@@ -61,23 +80,6 @@ const services = [
       "Audit de sécurité complet",
       "Filtrage web et DNS",
       "Plan de reprise d'activité (PRA)",
-    ],
-  },
-  {
-    id: "04",
-    Icon: MessageSquare,
-    title: "Conseil & Accompagnement",
-    tagline: "Des choix éclairés pour votre organisation.",
-    image: "/images/téléphonie.jpg",
-    description:
-      "Nos experts vous accompagnent dans la stratégie IT de votre organisation : audit, préconisations, plan de transformation numérique.",
-    items: [
-      "Audit de l'infrastructure existante",
-      "Préconisations personnalisées",
-      "Plan de transformation IT",
-      "Accompagnement au changement",
-      "Veille technologique",
-      "Relation partenaires & constructeurs",
     ],
   },
 ];

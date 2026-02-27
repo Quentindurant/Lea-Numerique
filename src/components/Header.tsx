@@ -15,10 +15,10 @@ export default function Header() {
   }, []);
 
   const navLinks = [
+    { href: "/", label: "Accueil" },
     { href: "/solutions", label: "Solutions" },
     { href: "/services", label: "Services" },
     { href: "/a-propos", label: "À propos" },
-    { href: "/contact", label: "Contact" },
   ];
 
   return (
@@ -59,6 +59,13 @@ export default function Header() {
             >
               Prendre contact
             </Link>
+            <Link
+              href="tel:0219230691"
+              className="text-white/80 hover:text-white font-medium transition-colors duration-200 hover:text-[#7C6EFA]"
+            >
+              02 19 23 06 91
+            </Link>
+            
           </nav>
 
           {/* Mobile menu button */}
@@ -101,6 +108,14 @@ export default function Header() {
             >
               Prendre contact
             </Link>
+            <Link
+              href="tel:0219230691"
+              className="bg-[#7C6EFA] text-white px-5 py-3 rounded-full font-semibold text-center mt-2"
+              onClick={() => setMenuOpen(false)}
+            >
+              02 19 23 06 91
+            </Link>
+            
           </nav>
         </div>
       )}

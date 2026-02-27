@@ -1,5 +1,8 @@
+"use client";
+
 import { Landmark, School, Stethoscope, Briefcase, Factory, Scale } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const clients: { icon: LucideIcon; label: string }[] = [
   { icon: Landmark, label: "Mairies & Collectivités" },
@@ -11,8 +14,10 @@ const clients: { icon: LucideIcon; label: string }[] = [
 ];
 
 export default function Clients() {
+  const ref = useScrollReveal();
+
   return (
-    <section className="bg-[#F5F4FF] py-24">
+    <section ref={ref} className="bg-[#F5F4FF] py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <span className="text-[#7C6EFA] font-semibold text-sm uppercase tracking-widest">

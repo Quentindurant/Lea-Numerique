@@ -17,12 +17,6 @@ const values: { icon: LucideIcon; title: string; desc: string }[] = [
   { icon: Star, title: "Excellence", desc: "Chaque intervention est réalisée avec le plus grand soin." },
 ];
 
-const team = [
-  { initials: "LN", name: "Direction", role: "Gérant & Fondateur", color: "from-[#7C6EFA] to-[#5A4ED8]" },
-  { initials: "ET", name: "Expert Téléphonie", role: "Ingénieur VoIP", color: "from-[#5A4ED8] to-[#3B2FC0]" },
-  { initials: "ER", name: "Expert Réseau", role: "Architecte Réseau & Sécurité", color: "from-[#9B8FFF] to-[#7C6EFA]" },
-];
-
 const stats = [
   { value: "800+", label: "Clients nous font confiance" },
   { value: "10+", label: "Ans d'expérience" },
@@ -48,7 +42,7 @@ export default function APropos() {
             Une agence IT<br />
             <span className="text-[#7C6EFA]">de proximité</span>
           </h1>
-          <p className="text-white/50 text-xl max-w-2xl mx-auto leading-relaxed">
+          <p className="text-white/70 text-xl max-w-2xl mx-auto leading-relaxed">
            Léa Numérique accompagne entreprises et collectivités
             dans leur transformation numérique depuis plus de 10 ans.
           </p>
@@ -62,7 +56,7 @@ export default function APropos() {
             {stats.map((s) => (
               <div key={s.label} className="text-center py-6 px-4">
                 <p className="text-4xl font-bold text-[#7C6EFA] mb-1">{s.value}</p>
-                <p className="text-white/50 text-sm">{s.label}</p>
+                <p className="text-white/70 text-sm">{s.label}</p>
               </div>
             ))}
           </div>
@@ -77,12 +71,12 @@ export default function APropos() {
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6 leading-tight">
                 Pourquoi Léa Numérique existe
               </h2>
-              <p className="text-white/55 leading-relaxed mb-5">
+              <p className="text-white/70 leading-relaxed mb-5">
                 Léa Numérique est née d&apos;un constat simple : les PME, les collectivités
                 et les établissements de santé méritent d&apos;avoir accès aux meilleures
                 technologies IT, avec un interlocuteur humain, disponible et expert.
               </p>
-              <p className="text-white/55 leading-relaxed">
+              <p className="text-white/70 leading-relaxed">
                 D'autre part, nous vous offrons un accès à des innovations de pointe. Cette approche unique garantit que notre partenariat vous place toujours à l'avant-garde de l'évolution numérique, tout en répondant efficacement à vos exigences en constante évolution.
               </p>
             </div>
@@ -119,7 +113,7 @@ export default function APropos() {
                     <CardTitle className="text-white text-lg">{v.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-white/50 text-sm leading-relaxed">{v.desc}</p>
+                    <p className="text-white/70 text-sm leading-relaxed">{v.desc}</p>
                   </CardContent>
                 </Card>
               ))}
@@ -128,40 +122,11 @@ export default function APropos() {
         </div>
       </section>
 
-      {/* Équipe */}
-      <section className="py-24 border-t border-white/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <p className="text-[#7C6EFA] text-sm font-medium uppercase tracking-widest mb-3">L&apos;équipe</p>
-            <h2 className="text-3xl font-bold text-white">Des experts à votre écoute</h2>
-          </div>
-
-          <div className="flex flex-wrap justify-center gap-6">
-            {team.map((member) => (
-              <div
-                key={member.name}
-                className="group relative bg-white/[0.03] border border-white/[0.08] hover:border-[#7C6EFA]/40 rounded-3xl p-8 text-center w-64 transition-all duration-300 overflow-hidden"
-              >
-                {/* Halo derrière l'avatar */}
-                <div className="absolute inset-0 bg-[#7C6EFA]/0 group-hover:bg-[#7C6EFA]/5 transition-all duration-300 rounded-3xl" />
-                <div
-                  className={`relative z-10 w-20 h-20 rounded-full bg-gradient-to-br ${member.color} flex items-center justify-center text-white text-xl font-bold mx-auto mb-5 shadow-lg shadow-[#7C6EFA]/20 group-hover:scale-105 transition-transform duration-300`}
-                >
-                  {member.initials}
-                </div>
-                <h3 className="relative z-10 text-white font-semibold text-lg mb-1">{member.name}</h3>
-                <p className="relative z-10 text-[#7C6EFA] text-sm">{member.role}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
       <section className="border-t border-white/5 py-24">
         <div className="max-w-3xl mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-white mb-4">Travaillons ensemble</h2>
-          <p className="text-white/50 mb-8 text-lg">
+          <p className="text-white/70 mb-8 text-lg">
             Vous avez un projet IT ? Prenons 30 minutes pour en parler.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

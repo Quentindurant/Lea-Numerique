@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const partners = [
   { src: "/images/partenaire/3CX_blanc.png", alt: "3CX" },
-  { src: "/images/partenaire/Forti.png", alt: "Fortinet", className: "scale-300" },
+  { src: "/images/partenaire/Forti.png", alt: "Fortinet" },
   { src: "/images/partenaire/Yealink-Logo-blanc.png", alt: "Yealink" },
   { src: "/images/partenaire/ubiquiti_blanc_1an.png", alt: "Ubiquiti" },
   { src: "/images/partenaire/sfr_logo_blanc.png", alt: "SFR" },
@@ -47,8 +47,8 @@ export default function Hero() {
         </svg>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
-        <div className="flex flex-col lg:flex-row items-center gap-16">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 sm:pt-32 pb-16 sm:pb-20">
+        <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
           {/* Text content */}
           <div className="flex-1 text-center lg:text-left">
             <div className="inline-flex items-center gap-2 bg-[#7C6EFA]/15 border border-[#7C6EFA]/30 rounded-full px-4 py-2 mb-6">
@@ -58,29 +58,29 @@ export default function Hero() {
               </span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
               <span className="block text-[#7C6EFA]">
                 Votre partenaire incontournable
               </span>
-              <span className="block text-white/80 text-3xl sm:text-4xl lg:text-5xl font-medium mt-2">
+              <span className="block text-white/80 text-2xl sm:text-4xl lg:text-5xl font-medium mt-2">
                 en solutions IT.
               </span>
             </h1>
 
-            <p className="text-white/70 text-lg leading-relaxed mb-8 max-w-xl lg:max-w-none">
+            <p className="text-white/70 text-base sm:text-lg leading-relaxed mb-8">
               Léa Numérique, votre partenaire IT de confiance, allie expertise et innovation pour répondre à vos besoins numériques. Accédez à l'excellence technologique avec notre approche unique, complète et entièrement personnalisée.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Link
                 href="/contact"
-                className="bg-[#7C6EFA] hover:bg-[#5A4ED8] text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-200 shadow-lg shadow-[#7C6EFA]/25 hover:shadow-[#7C6EFA]/40"
+                className="bg-[#7C6EFA] hover:bg-[#5A4ED8] text-white px-6 sm:px-8 py-3.5 sm:py-4 rounded-full font-semibold text-base sm:text-lg transition-all duration-200 shadow-lg shadow-[#7C6EFA]/25 hover:shadow-[#7C6EFA]/40"
               >
                 Demander un devis gratuit
               </Link>
               <Link
                 href="/solutions"
-                className="border border-white/20 hover:border-[#7C6EFA] text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-200 hover:text-[#7C6EFA]"
+                className="border border-white/20 hover:border-[#7C6EFA] text-white px-6 sm:px-8 py-3.5 sm:py-4 rounded-full font-semibold text-base sm:text-lg transition-all duration-200 hover:text-[#7C6EFA]"
               >
                 Découvrir nos solutions
               </Link>
@@ -88,14 +88,14 @@ export default function Hero() {
           </div>
 
           {/* Mascotte */}
-          <div className="flex-shrink-0 lg:w-80">
+          <div className="hidden sm:block flex-shrink-0 lg:w-80">
             <div className="float-animation">
               <Image
                 src="/images/mascotte.png"
                 alt="Léa Numérique mascotte"
                 width={320}
                 height={320}
-                className="w-full max-w-xs mx-auto drop-shadow-2xl"
+                className="w-full max-w-[200px] lg:max-w-xs mx-auto drop-shadow-2xl"
               />
             </div>
           </div>

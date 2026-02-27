@@ -22,4 +22,4 @@ jobs:
             sudo chown -R debian:debian ${{ secrets.PROJECT_PATH }}
             npm install
             npm run build
-            pm2 restart lea-numerique || pm2 start npm --name "lea-numerique" -- start
+            pm2 reload ecosystem.config.js --update-env || pm2 start ecosystem.config.js

@@ -100,7 +100,7 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Partners strip */}
+       
         <div className="mt-20">
           <p className="text-white/40 text-sm text-center mb-6 uppercase tracking-widest">
             Nos partenaires technologiques

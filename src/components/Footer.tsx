@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#0D0D1A] border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10">
           {/* Brand */}
           <div className="md:col-span-1">
             <Image
@@ -49,13 +49,39 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-semibold mb-4">Nos solutions</h3>
             <ul className="space-y-2">
-              {["Téléphonie IP", "Réseaux & Infrastructure", "Informatique", "Cybersécurité"].map((item) => (
-                <li key={item}>
+              {[
+                { href: "/solutions#telephonie", label: "Téléphonie IP" },
+                { href: "/solutions#reseaux", label: "Réseaux & Infrastructure" },
+                { href: "/solutions#informatique", label: "Informatique" },
+                { href: "/solutions#cybersecurite", label: "Cybersécurité" },
+              ].map((link) => (
+                <li key={link.href}>
                   <Link
-                    href="/solutions"
+                    href={link.href}
                     className="text-white/70 hover:text-[#7C6EFA] text-sm transition-colors"
                   >
-                    {item}
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+          {/* Services */}
+          <div>
+            <h3 className="text-white font-semibold mb-4">Nos services</h3>
+            <ul className="space-y-2">
+              {[
+                { href: "/services#conseil", label: "Conseil" },
+                { href: "/services#installation", label: "Installation" },
+                { href: "/services#maintenance", label: "Maintenance" },
+                { href: "/services#securite", label: "Sécurité" },
+              ].map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-white/70 hover:text-[#7C6EFA] text-sm transition-colors"
+                  >
+                    {link.label}
                   </Link>
                 </li>
               ))}

@@ -9,9 +9,10 @@ export const metadata: Metadata = {
   description: "Nos solutions IT : téléphonie IP, réseaux & infrastructure, informatique et cybersécurité.",
 };
 
-const solutions: { id: string; title: string; subtitle: string; icon: LucideIcon; image: string; description: string; features: string[]; partners: string[] }[] = [
+const solutions: { id: string; slug: string; title: string; subtitle: string; icon: LucideIcon; image: string; description: string; features: string[]; partners: string[] }[] = [
   {
     id: "01",
+    slug: "telephonie",
     title: "Téléphonie IP",
     subtitle: "Communiquez sans limites",
     icon: PhoneCall,
@@ -30,6 +31,7 @@ const solutions: { id: string; title: string; subtitle: string; icon: LucideIcon
   },
   {
     id: "02",
+    slug: "reseaux",
     title: "Réseaux & Infrastructure",
     subtitle: "Connectez, sécurisez, performez",
     icon: Network,
@@ -48,6 +50,7 @@ const solutions: { id: string; title: string; subtitle: string; icon: LucideIcon
   },
   {
     id: "03",
+    slug: "informatique",
     title: "Informatique",
     subtitle: "Des outils fiables pour vos équipes",
     icon: Laptop,
@@ -66,6 +69,7 @@ const solutions: { id: string; title: string; subtitle: string; icon: LucideIcon
   },
   {
     id: "04",
+    slug: "cybersecurite",
     title: "Cybersécurité",
     subtitle: "Protégez ce qui compte vraiment",
     icon: ShieldCheck,
@@ -112,7 +116,7 @@ export default function Solutions() {
 
       {/* Solutions — sections aérées */}
       {solutions.map((solution, index) => (
-        <div key={solution.id} className="border-t border-white/[0.06]">
+        <div key={solution.id} id={solution.slug} className="border-t border-white/[0.06] scroll-mt-24">
           <div className="max-w-6xl mx-auto px-6 lg:px-8 py-24 lg:py-32">
             <div className={`grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center ${index % 2 !== 0 ? "lg:[&>*:first-child]:order-2" : ""}`}>
 

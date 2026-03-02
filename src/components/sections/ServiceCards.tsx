@@ -6,9 +6,10 @@ import { PhoneCall, Network, Laptop, ShieldCheck, ArrowRight } from "lucide-reac
 import type { LucideIcon } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
-const solutions: { title: string; description: string; image: string; icon: LucideIcon; features: string[] }[] = [
+const solutions: { title: string; slug: string; description: string; image: string; icon: LucideIcon; features: string[] }[] = [
   {
     title: "Téléphonie",
+    slug: "telephonie",
     description:
       "Terminaux fixes, sans fil et répondants aux exigences de mobilité ou télétravail.",
     image: "/images/téléphonie.jpg",
@@ -17,6 +18,7 @@ const solutions: { title: string; description: string; image: string; icon: Luci
   },
   {
     title: "Réseau",
+    slug: "reseaux",
     description:
       "Tous les équipements pour une connectivité optimale.",
     image: "/images/réseau.jpg",
@@ -25,6 +27,7 @@ const solutions: { title: string; description: string; image: string; icon: Luci
   },
   {
     title: "Informatique",
+    slug: "informatique",
     description:
       "Ordinateurs, périphériques, accessoires adaptés à vos besoins.",
     image: "/images/informatique.png",
@@ -33,6 +36,7 @@ const solutions: { title: string; description: string; image: string; icon: Luci
   },
   {
     title: "Cybersécurité",
+    slug: "cybersecurite",
     description:
       "Solutions avancées pour protéger votre entreprise.",
     image: "/images/cyber.jpg",
@@ -95,7 +99,7 @@ export default function ServiceCards() {
                   ))}
                 </ul>
                 <Link
-                  href={`/solutions#${solution.title}`}
+                  href={`/solutions#${solution.slug}`}
                   className="inline-flex items-center gap-2 text-[#7C6EFA] text-sm font-semibold hover:gap-3 transition-all"
                 >
                   En savoir plus <ArrowRight className="w-3 h-3" />

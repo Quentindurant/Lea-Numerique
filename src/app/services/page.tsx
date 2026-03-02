@@ -16,6 +16,7 @@ const services = [
 
   {
     id: "01",
+    slug: "conseil",
     Icon: MessageSquare,
     title: "Conseil & Accompagnement",
     tagline: "Des choix éclairés pour votre organisation.",
@@ -33,6 +34,7 @@ const services = [
   },
   {
     id: "02",
+    slug: "installation",
     Icon: Wrench,
     title: "Installation & Déploiement",
     tagline: "On s'occupe de tout, du câble au cloud.",
@@ -50,6 +52,7 @@ const services = [
   },
     {
     id: "03",
+    slug: "maintenance",
     Icon: Cpu,
     title: "Maintenance & Support",
     tagline: "Réactif quand vous en avez besoin.",
@@ -67,6 +70,7 @@ const services = [
   },
   {
     id: "04",
+    slug: "securite",
     Icon: ShieldCheck,
     title: "Sécurité & Protection",
     tagline: "Votre sécurité n'est pas négociable.",
@@ -115,7 +119,7 @@ export default function Services() {
         const { Icon } = service;
         const isEven = index % 2 === 0;
         return (
-          <div key={service.id} className="border-t border-white/[0.06]">
+          <div key={service.id} id={service.slug} className="border-t border-white/[0.06] scroll-mt-24">
             <div className="max-w-6xl mx-auto px-6 lg:px-8 py-20 lg:py-28">
               <div
                 className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-center ${

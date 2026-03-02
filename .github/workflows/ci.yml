@@ -16,10 +16,16 @@ jobs:
           password: ${{ secrets.SERVER_PASSWORD }}
           port: ${{ secrets.SERVER_PORT }}
           script: |
-            cd ${{ secrets.PROJECT_PATH }}
+            export NVM_DIR="$HOME/.nvm"
+            [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
+            cd ${{ secrets.PROJECT_PATH }} || exit 1
+
             sudo git fetch --all
             sudo git reset --hard origin/main
             sudo chown -R debian:debian ${{ secrets.PROJECT_PATH }}
+
             npm install
             npm run build
+
             pm2 reload ecosystem.config.js --update-env || pm2 start ecosystem.config.js

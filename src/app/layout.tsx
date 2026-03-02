@@ -12,6 +12,9 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "Léa Numérique - Votre partenaire IT de confiance",
+  icons: {
+    icon: "/images/mascotte.png",
+  },
   description:
     "Léa Numérique, votre partenaire incontournable des solutions IT. Téléphonie, réseaux, informatique et cybersécurité pour entreprises, collectivités et établissements de santé.",
 };

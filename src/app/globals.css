@@ -48,12 +48,13 @@
 
 @layer utilities {
   .partners-track {
-    animation: scroll-partners 40s linear infinite;
+    animation: scroll-partners 30s linear infinite;
+    will-change: transform;
   }
 
   @keyframes scroll-partners {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+    from { transform: translateX(0); }
+    to { transform: translateX(-1680px); }
   }
 
   .float-animation {

@@ -3,7 +3,6 @@ import Image from "next/image";
 
 const partners = [
   { src: "/images/partenaire/3CX_blanc.png", alt: "3CX" },
-  { src: "/images/partenaire/Forti.png", alt: "Fortinet" },
   { src: "/images/partenaire/Yealink-Logo-blanc.png", alt: "Yealink" },
   { src: "/images/partenaire/ubiquiti_blanc_1an.png", alt: "Ubiquiti" },
   { src: "/images/partenaire/sfr_logo_blanc.png", alt: "SFR" },
@@ -106,19 +105,21 @@ export default function Hero() {
           <p className="text-white/40 text-sm text-center mb-6 uppercase tracking-widest">
             Nos partenaires technologiques
           </p>
-          <div className="relative overflow-clip">
-            <div className="flex gap-12 partners-track">
+          <div className="relative overflow-clip"
+            style={{ maskImage: "linear-gradient(to right, transparent, black 10%, black 90%, transparent)", WebkitMaskImage: "linear-gradient(to right, transparent, black 10%, black 90%, transparent)" }}
+          >
+            <div className="flex items-center w-fit partners-track">
               {[...partners, ...partners].map((p, i) => (
                 <div
                   key={i}
-                  className="flex-shrink-0 flex items-center justify-center w-[100px] h-10"
+                  className="flex-shrink-0 w-[120px] h-10 flex items-center justify-center px-4"
                 >
                   <Image
                     src={p.src}
                     alt={p.alt}
-                    width={100}
+                    width={120}
                     height={40}
-                    className="h-8 w-auto opacity-50 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
+                    className="max-h-7 max-w-[88px] w-auto object-contain opacity-50 grayscale"
                   />
                 </div>
               ))}

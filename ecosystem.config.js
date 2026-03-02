@@ -4,7 +4,7 @@ module.exports = {
       name: "lea-numerique",
       script: "node_modules/.bin/next",
       args: "start",
-      cwd: "/var/www/html/Lea-numerique",
+      cwd: "/var/www/html/Lea-Numerique",
       env: {
         NODE_ENV: "production",
         PORT: 3000,

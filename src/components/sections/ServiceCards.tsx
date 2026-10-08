@@ -6,40 +6,48 @@ import { PhoneCall, Network, Laptop, ShieldCheck, ArrowRight } from "lucide-reac
 import type { LucideIcon } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
-const solutions: { title: string; slug: string; description: string; image: string; icon: LucideIcon; features: string[] }[] = [
+const solutions: { title: string; slug: string; description: string; image: string; alt: string; cta: string; icon: LucideIcon; features: string[] }[] = [
   {
-    title: "Téléphonie",
+    title: "Téléphonie IP d'entreprise",
     slug: "telephonie",
     description:
       "Terminaux fixes, sans fil et répondants aux exigences de mobilité ou télétravail.",
-    image: "/images/téléphonie.jpg",
+    image: "/images/telephonie-ip-entreprise.webp",
+    alt: "Illustration d'un standard téléphonique : opératrice avec casque, téléphone et messagerie",
+    cta: "Découvrir la téléphonie IP",
     icon: PhoneCall,
     features: ["Centralisation des appels", "Visioconférence", "Mobilité"],
   },
   {
-    title: "Réseau",
+    title: "Réseaux et Wi-Fi professionnels",
     slug: "reseaux",
     description:
       "Tous les équipements pour une connectivité optimale.",
-    image: "/images/réseau.jpg",
+    image: "/images/reseau-wifi-professionnel.webp",
+    alt: "Illustration d'un réseau Wi-Fi professionnel reliant smartphones, tablettes et ordinateurs",
+    cta: "Découvrir nos solutions réseau",
     icon: Network,
     features: ["Wi-Fi professionnel", "VPN sécurisé", "Monitoring 24/7"],
   },
   {
-    title: "Informatique",
+    title: "Matériel informatique professionnel",
     slug: "informatique",
     description:
       "Ordinateurs, périphériques, accessoires adaptés à vos besoins.",
-    image: "/images/informatique.png",
+    image: "/images/materiel-informatique-professionnel.webp",
+    alt: "Illustration : techniciens informatiques travaillant devant des baies de serveurs",
+    cta: "Découvrir notre offre informatique",
     icon: Laptop,
     features: ["Matériel certifié", "Maintenance préventive", "Support technique"],
   },
   {
-    title: "Cybersécurité",
+    title: "Cybersécurité et protection des données",
     slug: "cybersecurite",
     description:
       "Solutions avancées pour protéger votre entreprise.",
-    image: "/images/cyber.jpg",
+    image: "/images/cybersecurite-entreprise.webp",
+    alt: "Illustration de cybersécurité : bouclier à cadenas protégeant un ordinateur et le cloud",
+    cta: "Découvrir nos solutions de cybersécurité",
     icon: ShieldCheck,
     features: ["Pare-feu Fortinet", "Audit de sécurité", "Sauvegarde sécurisée"],
   },
@@ -56,7 +64,7 @@ export default function ServiceCards() {
             Nos domaines d&apos;expertise
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold text-white mt-3 mb-4">
-            Des solutions IT complètes
+            Téléphonie, réseau, informatique et cybersécurité pour les professionnels
           </h2>
           <p className="text-white/70 max-w-2xl mx-auto">
             De la téléphonie à la cybersécurité, nous couvrons tous vos besoins
@@ -73,8 +81,9 @@ export default function ServiceCards() {
               <div className="relative h-48 overflow-hidden">
                 <Image
                   src={solution.image}
-                  alt={solution.title}
+                  alt={solution.alt}
                   fill
+                  sizes="(min-width: 768px) 50vw, 100vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A2E] to-transparent" />
@@ -102,7 +111,7 @@ export default function ServiceCards() {
                   href={`/solutions#${solution.slug}`}
                   className="inline-flex items-center gap-2 text-[#7C6EFA] text-sm font-semibold hover:gap-3 transition-all"
                 >
-                  En savoir plus <ArrowRight className="w-3 h-3" />
+                  {solution.cta} <ArrowRight className="w-3 h-3" aria-hidden="true" />
                 </Link>
               </div>
             </div>

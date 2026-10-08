@@ -35,9 +35,10 @@ export default function Header() {
           <Link href="/" className="flex items-center gap-3">
             <Image
               src="/images/logo.png"
-              alt="Léa Numérique"
+              alt="Léa Numérique – retour à l'accueil"
               width={150}
               height={45}
+              preload
               className="h-10 w-auto brightness-0 invert"
             />
           </Link>
@@ -60,7 +61,7 @@ export default function Header() {
               Prendre contact
             </Link>
             <Link
-              href="tel:0219230691"
+              href="tel:+33219230691"
               className="text-white/80 hover:text-white font-medium transition-colors duration-200 hover:text-[#7C6EFA]"
             >
               02 19 23 06 91
@@ -72,7 +73,8 @@ export default function Header() {
           <button
             className="md:hidden flex flex-col gap-1.5 p-2"
             onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Menu"
+            aria-label={menuOpen ? "Fermer le menu" : "Ouvrir le menu"}
+            aria-expanded={menuOpen}
           >
             <span
               className={`block h-0.5 w-6 bg-white transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-2" : ""}`}
@@ -109,7 +111,7 @@ export default function Header() {
               Prendre contact
             </Link>
             <Link
-              href="tel:0219230691"
+              href="tel:+33219230691"
               className="bg-[#7C6EFA] text-white px-5 py-3 rounded-full font-semibold text-center mt-2"
               onClick={() => setMenuOpen(false)}
             >

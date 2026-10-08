@@ -1,14 +1,16 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import { Handshake, Lightbulb, Users, Star } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import HistoryTimeline from "@/components/ui/HistoryTimeline";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "À propos — Léa Numérique",
-  description: "Léa Numérique, votre partenaire IT de proximité.",
-};
+export const metadata = pageMetadata({
+  title: "Agence IT de proximité à Angers",
+  description:
+    "Léa Numérique, intégrateur IT de proximité basé à Angers : téléphonie, réseau, informatique et cybersécurité pour entreprises, collectivités et santé.",
+  path: "/a-propos",
+});
 
 const values: { icon: LucideIcon; title: string; desc: string }[] = [
   { icon: Handshake, title: "Confiance", desc: "Des relations durables fondées sur la transparence et l'honnêteté." },
@@ -40,11 +42,11 @@ export default function APropos() {
           </div>
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
             Une agence IT<br />
-            <span className="text-[#7C6EFA]">de proximité</span>
+            <span className="text-[#7C6EFA]">de proximité à Angers</span>
           </h1>
           <p className="text-white/70 text-xl max-w-2xl mx-auto leading-relaxed">
-           Léa Numérique accompagne entreprises et collectivités
-            dans leur transformation numérique depuis plus de 10 ans.
+            Depuis Angers, Léa Numérique accompagne entreprises, collectivités et
+            établissements de santé dans leur transformation numérique depuis plus de 10 ans.
           </p>
         </div>
       </section>
@@ -77,7 +79,15 @@ export default function APropos() {
                 technologies IT, avec un interlocuteur humain, disponible et expert.
               </p>
               <p className="text-white/70 leading-relaxed">
-                D'autre part, nous vous offrons un accès à des innovations de pointe. Cette approche unique garantit que notre partenariat vous place toujours à l'avant-garde de l'évolution numérique, tout en répondant efficacement à vos exigences en constante évolution.
+                Installés à Angers, nous avons fait le choix de la proximité : un interlocuteur
+                qui connaît votre installation, se déplace sur site quand c&apos;est nécessaire
+                et vous répond directement. Nous prenons en charge votre{" "}
+                <Link href="/solutions#telephonie" className="text-[#7C6EFA] hover:underline">téléphonie IP</Link>, votre{" "}
+                <Link href="/solutions#reseaux" className="text-[#7C6EFA] hover:underline">réseau</Link>, votre{" "}
+                <Link href="/solutions#informatique" className="text-[#7C6EFA] hover:underline">parc informatique</Link> et votre{" "}
+                <Link href="/solutions#cybersecurite" className="text-[#7C6EFA] hover:underline">cybersécurité</Link>,
+                de l&apos;audit à la{" "}
+                <Link href="/services#maintenance" className="text-[#7C6EFA] hover:underline">maintenance</Link>.
               </p>
             </div>
 
@@ -127,7 +137,7 @@ export default function APropos() {
         <div className="max-w-3xl mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-white mb-4">Travaillons ensemble</h2>
           <p className="text-white/70 mb-8 text-lg">
-            Vous avez un projet IT ? Prenons 30 minutes pour en parler.
+            Vous avez un projet IT à Angers ou en Maine-et-Loire ? Prenons 30 minutes pour en parler.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

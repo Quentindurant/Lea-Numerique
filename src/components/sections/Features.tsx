@@ -12,7 +12,7 @@ const features: { icon: LucideIcon; title: string; description: string }[] = [
   },
   {
     icon: ShieldCheck,
-    title: "Sécurité garantie",
+    title: "Sécurité de vos données",
     description: "Protection de vos infrastructures avec les meilleures solutions du marché.",
   },
   {
@@ -48,7 +48,7 @@ export default function Features() {
             Pourquoi nous choisir ?
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold text-[#0D0D1A] mt-3 mb-4">
-            Une expertise reconnue
+            Pourquoi choisir un prestataire IT de proximité ?
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Nous mettons notre savoir-faire au service de votre transformation

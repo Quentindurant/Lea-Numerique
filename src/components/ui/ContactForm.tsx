@@ -5,7 +5,7 @@ import emailjs from "@emailjs/browser";
 import { Loader2, Send, CheckCircle2, AlertCircle } from "lucide-react";
 
 const inputClass =
-  "w-full px-4 py-3 rounded-xl bg-white/[0.06] border border-white/10 focus:border-[#7C6EFA] focus:bg-[#7C6EFA]/5 focus:ring-2 focus:ring-[#7C6EFA]/15 outline-none transition-all text-white placeholder:text-white/30";
+  "w-full px-4 py-3 rounded-xl bg-white/[0.06] border border-white/10 focus:border-[#7C6EFA] focus:bg-[#7C6EFA]/5 focus:ring-2 focus:ring-[#7C6EFA]/15 outline-none transition-all text-white placeholder:text-white/50";
 
 export default function ContactForm() {
   const formRef = useRef<HTMLFormElement>(null);
@@ -48,32 +48,32 @@ export default function ContactForm() {
     <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
-          <label className="block text-xs font-medium text-white/50 mb-1.5 uppercase tracking-wide">
+          <label htmlFor="cf-user_name" className="block text-xs font-medium text-white/70 mb-1.5 uppercase tracking-wide">
             Nom complet *
           </label>
-          <input type="text" name="user_name" required placeholder="Jean Dupont" className={inputClass} />
+          <input type="text" id="cf-user_name" name="user_name" required placeholder="Jean Dupont" className={inputClass} />
         </div>
         <div>
-          <label className="block text-xs font-medium text-white/50 mb-1.5 uppercase tracking-wide">
+          <label htmlFor="cf-user_email" className="block text-xs font-medium text-white/70 mb-1.5 uppercase tracking-wide">
             Email *
           </label>
-          <input type="email" name="user_email" required placeholder="jean@exemple.fr" className={inputClass} />
+          <input type="email" id="cf-user_email" name="user_email" required placeholder="jean@exemple.fr" className={inputClass} />
         </div>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
-          <label className="block text-xs font-medium text-white/50 mb-1.5 uppercase tracking-wide">
+          <label htmlFor="cf-user_phone" className="block text-xs font-medium text-white/70 mb-1.5 uppercase tracking-wide">
             Téléphone
           </label>
-          <input type="tel" name="user_phone" placeholder="06 XX XX XX XX" className={inputClass} />
+          <input type="tel" id="cf-user_phone" name="user_phone" placeholder="06 XX XX XX XX" className={inputClass} />
         </div>
         <div>
-          <label className="block text-xs font-medium text-white/50 mb-1.5 uppercase tracking-wide">
+          <label htmlFor="cf-subject" className="block text-xs font-medium text-white/70 mb-1.5 uppercase tracking-wide">
             Sujet *
           </label>
           <select
-            name="subject"
+            id="cf-subject" name="subject"
             required
             className={`${inputClass} [&>option]:bg-[#1A1A2E] [&>option]:text-white`}
           >
@@ -87,11 +87,11 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label className="block text-xs font-medium text-white/50 mb-1.5 uppercase tracking-wide">
+        <label htmlFor="cf-message" className="block text-xs font-medium text-white/70 mb-1.5 uppercase tracking-wide">
           Message *
         </label>
         <textarea
-          name="message"
+          id="cf-message" name="message"
           required
           rows={5}
           placeholder="Décrivez votre besoin..."
@@ -118,14 +118,14 @@ export default function ContactForm() {
       </button>
 
       {status === "success" && (
-        <div className="flex items-center gap-3 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 rounded-xl p-4">
+        <div role="status" className="flex items-center gap-3 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 rounded-xl p-4">
           <CheckCircle2 className="w-4 h-4 flex-shrink-0" />
           <p className="text-sm">Message envoyé ! Nous vous répondrons sous 24h.</p>
         </div>
       )}
 
       {status === "error" && (
-        <div className="flex items-center gap-3 bg-red-500/10 border border-red-500/30 text-red-400 rounded-xl p-4">
+        <div role="alert" className="flex items-center gap-3 bg-red-500/10 border border-red-500/30 text-red-400 rounded-xl p-4">
           <AlertCircle className="w-4 h-4 flex-shrink-0" />
           <p className="text-sm">Erreur d&apos;envoi. Contactez-nous à hello@lea-numerique.fr</p>
         </div>

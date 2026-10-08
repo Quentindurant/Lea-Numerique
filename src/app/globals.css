@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import "react-vertical-timeline-component/style.min.css";
 
 /* Override timeline styles for dark theme */
 .vertical-timeline::before {

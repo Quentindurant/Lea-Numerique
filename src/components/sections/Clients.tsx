@@ -24,7 +24,7 @@ export default function Clients() {
             Ils nous font confiance
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold text-[#0D0D1A] mt-3 mb-4">
-            Nous accompagnons tous types d&apos;organisations
+            Collectivités, santé, PME : des solutions IT pour chaque secteur
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Collectivités, établissements de santé, entreprises, professions

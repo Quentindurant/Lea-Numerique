@@ -1,8 +1,12 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
+import { site } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "Mentions légales — Léa Numérique",
-};
+export const metadata = pageMetadata({
+  title: "Mentions légales",
+  description:
+    "Mentions légales de Léa Numérique, SAS basée 19 place du Président Kennedy à Angers : éditeur du site, hébergement, propriété intellectuelle.",
+  path: "/mentions-legales",
+});
 
 export default function MentionsLegales() {
   return (
@@ -17,7 +21,8 @@ export default function MentionsLegales() {
               <strong>Raison sociale :</strong> Léa Numérique<br />
               <strong>Forme juridique :</strong> SAS<br />
               <strong>Siège social :</strong> 19 place du Président Kennedy, 49100 ANGERS<br />
-              <strong>Email :</strong> hello@leanumerique.com
+              <strong>Téléphone :</strong> {site.phoneDisplay}<br />
+              <strong>Email :</strong> {site.email}
             </p>
           </div>
 

@@ -1,8 +1,11 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Politique de confidentialité — Léa Numérique",
-};
+export const metadata = pageMetadata({
+  title: "Politique de confidentialité",
+  description:
+    "Comment Léa Numérique collecte, utilise et conserve les données transmises via son formulaire de contact, et comment exercer vos droits RGPD.",
+  path: "/politique-confidentialite",
+});
 
 export default function PolitiqueConfidentialite() {
   return (

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { MapPin, Phone, Mail } from "lucide-react";
+import { site } from "@/lib/site";
 
 export default function Footer() {
   return (
@@ -11,20 +12,20 @@ export default function Footer() {
           <div className="md:col-span-1">
             <Image
               src="/images/logo.png"
-              alt="Léa Numérique"
+              alt="Léa Numérique, intégrateur IT à Angers"
               width={140}
               height={42}
               className="h-10 w-auto mb-4 brightness-0 invert"
             />
             <p className="text-white/70 text-sm leading-relaxed">
-              Votre partenaire incontournable des solutions IT pour entreprises
-              et collectivités.
+              Intégrateur IT : téléphonie IP, réseaux, informatique et
+              cybersécurité pour les entreprises et collectivités du Maine-et-Loire.
             </p>
           </div>
 
           {/* Navigation */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Navigation</h3>
+            <p className="text-white font-semibold mb-4">Navigation</p>
             <ul className="space-y-2">
               {[
                 { href: "/", label: "Accueil" },
@@ -47,7 +48,7 @@ export default function Footer() {
 
           {/* Solutions */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Nos solutions</h3>
+            <p className="text-white font-semibold mb-4">Nos solutions</p>
             <ul className="space-y-2">
               {[
                 { href: "/solutions#telephonie", label: "Téléphonie IP" },
@@ -68,7 +69,7 @@ export default function Footer() {
           </div>
           {/* Services */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Nos services</h3>
+            <p className="text-white font-semibold mb-4">Nos services</p>
             <ul className="space-y-2">
               {[
                 { href: "/services#conseil", label: "Conseil" },
@@ -90,25 +91,33 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Contact</h3>
-            <ul className="space-y-3 text-sm text-white/70">
-              <li className="flex items-start gap-2">
-                <MapPin className="text-[#7C6EFA] w-4 h-4 mt-0.5 flex-shrink-0" />
-                <span>Angers, France</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <Phone className="text-[#7C6EFA] w-4 h-4 flex-shrink-0" />
-                <a href="tel:02 19 23 06 91" className="hover:text-white transition-colors">
-                  02 19 23 06 91
-                </a>
-              </li>
-              <li className="flex items-center gap-2">
-                <Mail className="text-[#7C6EFA] w-4 h-4 flex-shrink-0" />
-                <a href="mailto:hello@lea-numerique.fr" className="hover:text-white transition-colors">
-                  hello@lea-numerique.fr
-                </a>
-              </li>
-            </ul>
+            <p className="text-white font-semibold mb-4">Contact</p>
+            <address className="not-italic">
+              <ul className="space-y-3 text-sm text-white/70">
+                <li className="flex items-start gap-2">
+                  <MapPin className="text-[#7C6EFA] w-4 h-4 mt-0.5 flex-shrink-0" aria-hidden="true" />
+                  <span>
+                    {site.name}
+                    <br />
+                    {site.address.street}
+                    <br />
+                    {site.address.postalCode} {site.address.city}
+                  </span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <Phone className="text-[#7C6EFA] w-4 h-4 flex-shrink-0" aria-hidden="true" />
+                  <a href={`tel:${site.phone}`} className="hover:text-white transition-colors">
+                    {site.phoneDisplay}
+                  </a>
+                </li>
+                <li className="flex items-center gap-2">
+                  <Mail className="text-[#7C6EFA] w-4 h-4 flex-shrink-0" aria-hidden="true" />
+                  <a href={`mailto:${site.email}`} className="hover:text-white transition-colors">
+                    {site.email}
+                  </a>
+                </li>
+              </ul>
+            </address>
           </div>
         </div>
 

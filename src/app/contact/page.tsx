@@ -1,20 +1,37 @@
-import type { Metadata } from "next";
 import ContactForm from "@/components/ui/ContactForm";
-import { Mail, Clock, MapPin, ShieldCheck } from "lucide-react";
+import { Mail, Clock, MapPin, ShieldCheck, Phone, Building2 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
+import { pageMetadata } from "@/lib/seo";
+import { site } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "Contact — Léa Numérique",
-  description: "Contactez Léa Numérique pour vos projets IT. Devis gratuit sous 24h.",
-};
+export const metadata = pageMetadata({
+  title: "Contact & devis IT gratuit à Angers",
+  description:
+    "Un projet de téléphonie, réseau ou informatique à Angers ? Appelez le 02 19 23 06 91 ou écrivez-nous : réponse sous 24h ouvrées, devis gratuit.",
+  path: "/contact",
+});
 
 const contactCards: { icon: LucideIcon; label: string; value: string; href: string | null; desc: string }[] = [
   {
+    icon: Phone,
+    label: "Téléphone",
+    value: site.phoneDisplay,
+    href: `tel:${site.phone}`,
+    desc: site.hours.display,
+  },
+  {
     icon: Mail,
     label: "Email",
-    value: "hello@lea-numerique.fr",
-    href: "mailto:hello@lea-numerique.fr",
+    value: site.email,
+    href: `mailto:${site.email}`,
     desc: "Réponse sous 24h ouvrées",
+  },
+  {
+    icon: Building2,
+    label: "Adresse",
+    value: `${site.address.street}, ${site.address.postalCode} ${site.address.city}`,
+    href: null,
+    desc: "Siège de Léa Numérique",
   },
   {
     icon: Clock,
@@ -26,7 +43,7 @@ const contactCards: { icon: LucideIcon; label: string; value: string; href: stri
   {
     icon: MapPin,
     label: "Zone d'intervention",
-    value: "France entière",
+    value: site.serviceArea,
     href: null,
     desc: "Interventions sur site ou à distance",
   },
@@ -50,11 +67,11 @@ export default function Contact() {
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-end">
               <h1 className="text-5xl sm:text-6xl font-bold text-white leading-tight">
-                Parlons de<br />
-                <span className="text-[#7C6EFA]">votre projet</span>
+                Parlons de votre<br />
+                <span className="text-[#7C6EFA]">projet IT à Angers</span>
               </h1>
-              <p className="text-white/50 text-lg leading-relaxed">
-                Remplissez le formulaire ou écrivez-nous directement.
+              <p className="text-white/70 text-lg leading-relaxed">
+                Remplissez le formulaire, appelez-nous au {site.phoneDisplay} ou écrivez-nous directement.
                 Nous vous répondons sous 24h avec une première analyse,
                 sans engagement.
               </p>
@@ -62,7 +79,7 @@ export default function Contact() {
           </div>
 
           {/* Cards rapides */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {contactCards.map((card) => (
               <div
                 key={card.label}
@@ -72,7 +89,7 @@ export default function Contact() {
                   <card.icon className="text-[#7C6EFA] w-4 h-4" />
                 </div>
                 <div>
-                  <p className="text-white/40 text-xs uppercase tracking-wide mb-0.5">{card.label}</p>
+                  <p className="text-white/60 text-xs uppercase tracking-wide mb-0.5">{card.label}</p>
                   {card.href ? (
                     <a href={card.href} className="text-white font-medium text-sm hover:text-[#7C6EFA] transition-colors">
                       {card.value}
@@ -80,7 +97,7 @@ export default function Contact() {
                   ) : (
                     <p className="text-white font-medium text-sm">{card.value}</p>
                   )}
-                  <p className="text-white/30 text-xs mt-0.5">{card.desc}</p>
+                  <p className="text-white/60 text-xs mt-0.5">{card.desc}</p>
                 </div>
               </div>
             ))}
@@ -131,7 +148,7 @@ export default function Contact() {
 
             {/* Formulaire */}
             <div className="bg-white/[0.03] border border-white/[0.07] rounded-3xl p-8 lg:p-10">
-              <h3 className="text-white font-bold text-xl mb-7">Envoyer un message</h3>
+              <h2 className="text-white font-bold text-xl mb-7">Envoyer un message</h2>
               <ContactForm />
             </div>
           </div>

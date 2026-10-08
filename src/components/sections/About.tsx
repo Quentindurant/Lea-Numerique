@@ -17,13 +17,13 @@ export default function About() {
               Qui sommes-nous ?
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold text-[#0D0D1A] mt-3 mb-6 leading-tight">
-              Notre expertise.
+              Un intégrateur IT angevin, de l&apos;audit à la maintenance
             </h2>
             <p className="text-gray-600 leading-relaxed mb-5">
-              Léa Numérique se positionne en tant que distributeur spécialisé dans les solutions technologiques, avec une mission à double volet. D'une part, notre engagement est de répondre de manière proactive à vos besoins croissants en matière de réseau, informatique, cybersécurité et téléphonie.
+              Léa Numérique est un intégrateur de solutions technologiques. Nous répondons aux besoins des organisations en téléphonie IP, réseau, informatique et cybersécurité : audit de l&apos;existant, choix du matériel, installation, formation des utilisateurs, puis maintenance.
             </p>
             <p className="text-gray-600 leading-relaxed mb-8">
-              D'autre part, nous vous offrons un accès à des innovations de pointe. Cette approche unique garantit que notre partenariat vous place toujours à l'avant-garde de l'évolution numérique, tout en répondant efficacement à vos exigences en constante évolution.
+              Avec nos marques partenaires de référence, dont 3CX, Yeastar, Ubiquiti, HP et Lenovo, nous sélectionnons pour chaque projet les équipements adaptés à votre structure et à votre budget, avec un interlocuteur local qui connaît votre installation.
             </p>
             <Link
               href="/a-propos"
@@ -37,10 +37,11 @@ export default function About() {
           <div className="relative overflow-hidden lg:overflow-visible">
             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
               <Image
-                src="/images/informatique.png"
-                alt="Solutions informatiques"
+                src="/images/materiel-informatique-professionnel.webp"
+                alt="Illustration : techniciens informatiques travaillant devant des baies de serveurs"
                 width={600}
-                height={500}
+                height={400}
+                sizes="(min-width: 1024px) 600px, 100vw"
                 className="w-full h-80 object-cover"
               />
             </div>

@@ -1,6 +1,8 @@
 "use client";
 
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 const steps = [
   {
@@ -40,7 +42,7 @@ export default function Process() {
             Comment ça marche ?
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold text-white mt-3 mb-4">
-            Notre processus en 4 étapes
+            Votre projet IT en 4 étapes
           </h2>
           <p className="text-white/70 max-w-2xl mx-auto">
             Un accompagnement structuré de l&apos;analyse initiale jusqu&apos;au suivi
@@ -76,6 +78,16 @@ export default function Process() {
               </div>
             ))}
           </div>
+        </div>
+
+        <div className="text-center mt-14">
+          <Link
+            href="/services"
+            className="inline-flex items-center gap-2 text-[#7C6EFA] font-semibold hover:gap-3 transition-all duration-200"
+          >
+            Voir le détail de nos services
+            <ArrowRight className="w-4 h-4" aria-hidden="true" />
+          </Link>
         </div>
       </div>
     </section>

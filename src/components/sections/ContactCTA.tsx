@@ -22,7 +22,7 @@ export default function ContactCTA() {
                 Parlons de votre projet
               </span>
               <h2 className="text-3xl sm:text-4xl font-bold text-white mt-3 mb-5 leading-tight">
-                Parlons de votre besoin dès aujourd&apos;hui.
+                Un projet IT en Anjou ? Parlons-en.
               </h2>
               <p className="text-white/70 leading-relaxed mb-8">
                 Que vous souhaitiez moderniser votre téléphonie, sécuriser votre
@@ -37,7 +37,7 @@ export default function ContactCTA() {
                   Prendre contact
                 </Link>
                 <a
-                  href="tel:02 19 23 06 91"
+                  href="tel:+33219230691"
                   className="inline-flex items-center border border-white/10 hover:border-[#7C6EFA] text-white px-8 py-4 rounded-full font-semibold transition-all duration-200 text-center hover:text-[#7C6EFA]"
                 >
                   <Phone className="w-5 h-5 mr-4" />Nous appeler
@@ -64,7 +64,7 @@ export default function ContactCTA() {
                   {
                     icon: MapPin,
                     label: "Zone d'intervention",
-                    value: "France entière",
+                    value: "Angers, Maine-et-Loire et France entière",
                     href: null,
                   },
                 ] as { icon: LucideIcon; label: string; value: string; href: string | null }[]

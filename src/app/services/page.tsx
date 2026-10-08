@@ -1,15 +1,17 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import ProcessTimeline from "@/components/ui/ProcessTimeline";
 import { Wrench, Cpu, ShieldCheck, MessageSquare, ArrowRight, CheckCircle2 } from "lucide-react";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Services — Léa Numérique",
-  description: "Installation, maintenance, sécurité et conseil IT pour votre entreprise.",
-};
+export const metadata = pageMetadata({
+  title: "Maintenance informatique entreprise Angers",
+  description:
+    "Audit, installation, maintenance et sécurité de votre parc IT à Angers et en Maine-et-Loire : helpdesk dédié, télémaintenance, intervention sur site.",
+  path: "/services",
+});
 
 const services = [
   
@@ -19,8 +21,11 @@ const services = [
     slug: "conseil",
     Icon: MessageSquare,
     title: "Conseil & Accompagnement",
+    heading: "Conseil et audit informatique",
     tagline: "Des choix éclairés pour votre organisation.",
-    image: "/images/conseil.png",
+    image: "/images/conseil-audit-informatique.webp",
+    alt: "La mascotte Léa Numérique conseille deux utilisateurs face à un problème informatique",
+    related: [{ href: "/solutions", label: "Toutes nos solutions IT" }],
     description:
       "Nos experts vous accompagnent dans la stratégie IT de votre organisation : audit, préconisations, plan de transformation numérique.",
     items: [
@@ -37,8 +42,15 @@ const services = [
     slug: "installation",
     Icon: Wrench,
     title: "Installation & Déploiement",
+    heading: "Installation réseau, téléphonie et postes de travail",
     tagline: "On s'occupe de tout, du câble au cloud.",
-    image: "/images/deploiement.png",
+    image: "/images/installation-deploiement-it.webp",
+    alt: "La mascotte Léa Numérique, casque de chantier, intervient sur une armoire de câblage",
+    related: [
+      { href: "/solutions#telephonie", label: "Téléphonie IP" },
+      { href: "/solutions#reseaux", label: "Réseaux et Wi-Fi" },
+      { href: "/solutions#informatique", label: "Postes de travail" },
+    ],
     description:
       "Nous prenons en charge l'intégralité de l'installation de vos équipements IT. Câblage, configuration, tests — vous n'avez qu'à utiliser.",
     items: [
@@ -55,10 +67,16 @@ const services = [
     slug: "maintenance",
     Icon: Cpu,
     title: "Maintenance & Support",
+    heading: "Maintenance informatique et support",
     tagline: "Réactif quand vous en avez besoin.",
-    image: "/images/support.png",
+    image: "/images/maintenance-support-informatique.webp",
+    alt: "La mascotte Léa Numérique répond au téléphone devant un ordinateur portable",
+    related: [
+      { href: "/solutions#informatique", label: "Matériel informatique professionnel" },
+      { href: "/contact", label: "Demander un contrat de maintenance" },
+    ],
     description:
-      "Un contrat de maintenance adapté à votre structure, avec un helpdesk disponible et des interventions rapides sur site ou en télémaintenance.",
+      "Un contrat de maintenance adapté à votre structure, avec un helpdesk disponible et des interventions rapides sur site à Angers et en Maine-et-Loire, ou en télémaintenance sécurisée partout en France.",
     items: [
       "Contrat de maintenance personnalisé",
       "Helpdesk téléphonique dédié",
@@ -73,8 +91,11 @@ const services = [
     slug: "securite",
     Icon: ShieldCheck,
     title: "Sécurité & Protection",
+    heading: "Sécurité informatique et sauvegarde",
     tagline: "Votre sécurité n'est pas négociable.",
-    image: "/images/securiter.png",
+    image: "/images/securite-informatique.webp",
+    alt: "La mascotte Léa Numérique sécurise un poste de travail : bouclier d'alerte, clé et cadenas",
+    related: [{ href: "/solutions#cybersecurite", label: "Nos solutions de cybersécurité" }],
     description:
       "Nous déployons des solutions de cybersécurité éprouvées pour protéger vos données et votre infrastructure contre les menaces modernes.",
     items: [
@@ -98,17 +119,19 @@ export default function Services() {
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-end">
             <div>
-              <Badge className="mb-8 bg-[#7C6EFA]/15 text-[#7C6EFA] border-[#7C6EFA]/30 hover:bg-[#7C6EFA]/15">
-                Ce que nous faisons
-              </Badge>
+              <div className="inline-flex items-center gap-2 border border-[#7C6EFA]/40 rounded-full px-4 py-1.5 mb-10">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#7C6EFA] animate-pulse" />
+                <span className="text-[#7C6EFA] text-sm">Ce que nous faisons</span>
+              </div>
               <h1 className="text-6xl sm:text-7xl font-bold text-white leading-none">
-                Nos<br />
-                <span className="text-[#7C6EFA]">services</span>
+                Nos services IT<br />
+                <span className="block mt-3 text-[#7C6EFA] text-4xl sm:text-5xl leading-tight">à Angers et en Anjou</span>
               </h1>
             </div>
-            <p className="text-white/45 text-xl leading-relaxed">
-              De l&apos;installation initiale à la maintenance quotidienne — nous couvrons
-              l&apos;ensemble de vos besoins IT avec réactivité et expertise.
+            <p className="text-white/70 text-xl leading-relaxed">
+              De l&apos;audit initial à la maintenance quotidienne, Léa Numérique accompagne
+              les organisations d&apos;Angers et du Maine-et-Loire, sur site ou à distance,
+              avec réactivité et expertise.
             </p>
           </div>
         </div>
@@ -131,8 +154,9 @@ export default function Services() {
                   <div className="relative rounded-2xl overflow-hidden aspect-[4/3]">
                     <Image
                       src={service.image}
-                      alt={service.title}
+                      alt={service.alt}
                       fill
+                      sizes="(min-width: 1024px) 50vw, 100vw"
                       className="object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0D0D1A]/70 to-transparent" />
@@ -153,9 +177,9 @@ export default function Services() {
                     </div>
                     <span className="text-white/15 font-mono text-2xl font-bold">{service.id}</span>
                   </div>
-                  <h2 className="text-3xl font-bold text-white mb-2">{service.title}</h2>
+                  <h2 className="text-3xl font-bold text-white mb-2">{service.heading}</h2>
                   <p className="text-[#7C6EFA]/80 text-sm italic mb-5">&ldquo;{service.tagline}&rdquo;</p>
-                  <p className="text-white/45 text-sm leading-relaxed mb-8">{service.description}</p>
+                  <p className="text-white/70 text-sm leading-relaxed mb-8">{service.description}</p>
 
                   <Card className="bg-white/[0.03] border-white/[0.07] p-5">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -167,6 +191,19 @@ export default function Services() {
                       ))}
                     </div>
                   </Card>
+
+                  <div className="flex flex-wrap gap-x-6 gap-y-2 mt-6">
+                    {service.related.map((link) => (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        className="inline-flex items-center gap-2 text-[#7C6EFA] hover:text-white font-semibold text-sm transition-colors"
+                      >
+                        {link.label}
+                        <ArrowRight className="w-3 h-3" aria-hidden="true" />
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
@@ -183,7 +220,7 @@ export default function Services() {
                 Processus
               </Badge>
               <h2 className="text-3xl font-bold text-white leading-tight">
-                Comment ça<br />se passe ?
+                Comment se déroule<br />votre projet IT ?
               </h2>
             </div>
             <ProcessTimeline />

@@ -53,21 +53,21 @@ export default function Hero() {
             <div className="inline-flex items-center gap-2 bg-[#7C6EFA]/15 border border-[#7C6EFA]/30 rounded-full px-4 py-2 mb-6">
               <span className="w-2 h-2 rounded-full bg-[#7C6EFA] animate-pulse" />
               <span className="text-[#7C6EFA] text-sm font-medium">
-                Solutions IT professionnelles
+                Intégrateur IT en Maine-et-Loire (49)
               </span>
             </div>
 
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
               <span className="block text-[#7C6EFA]">
-                Votre partenaire incontournable
+                Votre partenaire IT à Angers
               </span>
               <span className="block text-white/80 text-2xl sm:text-4xl lg:text-5xl font-medium mt-2">
-                en solutions IT.
+                Téléphonie IP, réseau, informatique et cybersécurité
               </span>
             </h1>
 
             <p className="text-white/70 text-base sm:text-lg leading-relaxed mb-8">
-              Léa Numérique, votre partenaire IT de confiance, allie expertise et innovation pour répondre à vos besoins numériques. Accédez à l'excellence technologique avec notre approche unique, complète et entièrement personnalisée.
+              Basée à Angers, Léa Numérique conçoit, installe et maintient la téléphonie IP, les réseaux, le parc informatique et la cybersécurité des entreprises, collectivités et établissements de santé du Maine-et-Loire. Un interlocuteur unique, de l&apos;audit à la maintenance.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -91,9 +91,10 @@ export default function Hero() {
             <div className="float-animation">
               <Image
                 src="/images/mascotte.png"
-                alt="Léa Numérique mascotte"
+                alt=""
                 width={320}
-                height={320}
+                height={374}
+                preload
                 className="w-full max-w-[200px] lg:max-w-xs mx-auto drop-shadow-2xl"
               />
             </div>
@@ -113,10 +114,11 @@ export default function Hero() {
                 <div
                   key={i}
                   className="flex-shrink-0 w-[120px] h-10 flex items-center justify-center px-4"
+                  aria-hidden={i >= partners.length ? true : undefined}
                 >
                   <Image
                     src={p.src}
-                    alt={p.alt}
+                    alt={i >= partners.length ? "" : `Logo ${p.alt}`}
                     width={120}
                     height={40}
                     className="max-h-7 max-w-[88px] w-auto object-contain opacity-50 grayscale"

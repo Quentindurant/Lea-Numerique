@@ -19,11 +19,16 @@ jobs:
             export NVM_DIR="$HOME/.nvm"
             [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
-            cd ${{ secrets.PROJECT_PATH }} || exit 1
+            # Toute erreur fait échouer le déploiement (avant, un git en échec passait inaperçu)
+            set -e
 
-            sudo git fetch --all
-            sudo git reset --hard origin/main
+            cd ${{ secrets.PROJECT_PATH }}
+
+            # safe.directory : root refuse sinon un dépôt appartenant à debian ("dubious ownership")
+            sudo git -c safe.directory="$PWD" fetch --all
+            sudo git -c safe.directory="$PWD" reset --hard origin/main
             sudo chown -R debian:debian ${{ secrets.PROJECT_PATH }}
+            echo "Version déployée : $(git -c safe.directory="$PWD" log -1 --oneline)"
 
             npm install
             npm run build

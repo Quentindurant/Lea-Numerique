@@ -5,6 +5,7 @@ export const metadata = pageMetadata({
   description:
     "Comment Léa Numérique collecte, utilise et conserve les données transmises via son formulaire de contact, et comment exercer vos droits RGPD.",
   path: "/politique-confidentialite",
+  noindex: true,
 });
 
 export default function PolitiqueConfidentialite() {

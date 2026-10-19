@@ -10,7 +10,7 @@ import { pageMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
 
 export const metadata = pageMetadata({
-  title: "Prestataire informatique & télécom à Angers | Léa Numérique",
+  title: "Opérateur télécom et informatique à Angers | Léa Numérique",
   description: site.description,
   path: "/",
   absoluteTitle: true,

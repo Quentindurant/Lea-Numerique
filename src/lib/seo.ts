@@ -8,18 +8,24 @@ export function pageMetadata({
   description,
   path,
   absoluteTitle = false,
+  noindex = false,
 }: {
   title: string;
   description: string;
   path: string;
   // true : le titre est utilisé tel quel, sans le suffixe « | Léa Numérique » du template
   absoluteTitle?: boolean;
+  // true : « noindex, follow » (page sans intérêt dans les résultats de recherche, liens toujours suivis).
+  // Une page noindex doit aussi être retirée du sitemap (src/app/sitemap.ts).
+  noindex?: boolean;
 }): Metadata {
   const fullTitle = absoluteTitle ? title : `${title} | ${site.name}`;
   return {
     title: absoluteTitle ? { absolute: title } : title,
     description,
     alternates: { canonical: path },
+    // Remplace entièrement le robots du layout (index, follow)
+    ...(noindex ? { robots: { index: false, follow: true } } : {}),
     openGraph: {
       type: "website",
       locale: "fr_FR",

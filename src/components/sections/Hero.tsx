@@ -5,21 +5,19 @@ const partners = [
   { src: "/images/partenaire/3CX_blanc.png", alt: "3CX" },
   { src: "/images/partenaire/Yealink-Logo-blanc.png", alt: "Yealink" },
   { src: "/images/partenaire/ubiquiti_blanc_1an.png", alt: "Ubiquiti" },
-  { src: "/images/partenaire/sfr_logo_blanc.png", alt: "SFR" },
   { src: "/images/partenaire/tp_link_blanc.png", alt: "TP-Link" },
   { src: "/images/partenaire/hp_blancan.png", alt: "HP" },
   { src: "/images/partenaire/lenovo_blancan.png", alt: "Lenovo" },
-  { src: "/images/partenaire/bouygue.png", alt: "Bouygues Telecom" },
   { src: "/images/partenaire/wazo_blanc.png", alt: "Wazo" },
   { src: "/images/partenaire/yeastar_blanc.png", alt: "Yeastar" },
   { src: "/images/partenaire/zyxel_blc.png", alt: "Zyxel" },
   { src: "/images/partenaire/hikvision_blancan.png", alt: "Hikvision" },
-  { src: "/images/partenaire/UNYC_BLANCan.png", alt: "UNYC" },
 ];
 
 export default function Hero() {
+  // Hauteur plafonnée (56rem) : sur une fenêtre très haute, le hero ne repousse pas le reste de la page hors de la vue
   return (
-    <section className="relative min-h-screen bg-[#0D0D1A] flex flex-col justify-center overflow-clip">
+    <section className="relative min-h-[min(100svh,56rem)] bg-[#0D0D1A] flex flex-col justify-center overflow-clip">
       {/* Background decoration */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 -left-32 w-96 h-96 bg-[#7C6EFA]/10 rounded-full blur-3xl" />
@@ -53,21 +51,21 @@ export default function Hero() {
             <div className="inline-flex items-center gap-2 bg-[#7C6EFA]/15 border border-[#7C6EFA]/30 rounded-full px-4 py-2 mb-6">
               <span className="w-2 h-2 rounded-full bg-[#7C6EFA] animate-pulse" />
               <span className="text-[#7C6EFA] text-sm font-medium">
-                Intégrateur IT en Maine-et-Loire (49)
+                Opérateur télécom et intégrateur IT en Maine-et-Loire (49)
               </span>
             </div>
 
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
               <span className="block text-[#7C6EFA]">
-                Votre partenaire IT à Angers
-              </span>
+                Léa Numérique, votre opérateur télécom à&nbsp;Angers
+              </span>{" "}
               <span className="block text-white/80 text-2xl sm:text-4xl lg:text-5xl font-medium mt-2">
                 Téléphonie IP, réseau, informatique et cybersécurité
               </span>
             </h1>
 
             <p className="text-white/70 text-base sm:text-lg leading-relaxed mb-8">
-              Basée à Angers, Léa Numérique conçoit, installe et maintient la téléphonie IP, les réseaux, le parc informatique et la cybersécurité des entreprises, collectivités et établissements de santé du Maine-et-Loire. Un interlocuteur unique, de l&apos;audit à la maintenance.
+              Basée à Angers, Léa Numérique fournit les lignes téléphoniques, les forfaits mobiles et l&apos;accès internet fibre des entreprises, collectivités et établissements de santé du <span className="whitespace-nowrap">Maine-et-Loire</span>. Elle installe et maintient aussi leur téléphonie IP, leurs réseaux, leur parc informatique et leur cybersécurité. Un interlocuteur unique, de l&apos;audit à la maintenance.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">

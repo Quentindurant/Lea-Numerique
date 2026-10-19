@@ -3,12 +3,15 @@ import { Handshake, Lightbulb, Users, Star } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import HistoryTimeline from "@/components/ui/HistoryTimeline";
+import { RICH_TEXT_LINK_CLASS } from "@/components/ui/RichText";
 import { pageMetadata } from "@/lib/seo";
+import { site } from "@/lib/site";
+import { solutionPath } from "@/lib/solutions";
 
 export const metadata = pageMetadata({
-  title: "Agence IT de proximité à Angers",
+  title: "Intégrateur IT de proximité à Angers",
   description:
-    "Léa Numérique, intégrateur IT de proximité basé à Angers : téléphonie, réseau, informatique et cybersécurité pour entreprises, collectivités et santé.",
+    "Léa Numérique, opérateur télécom et intégrateur IT basé à Angers : lignes, téléphonie, réseau, informatique et cybersécurité pour les professionnels.",
   path: "/a-propos",
 });
 
@@ -23,14 +26,14 @@ const stats = [
   { value: "800+", label: "Clients nous font confiance" },
   { value: "10+", label: "Ans d'expérience" },
   { value: "16", label: "Marques partenaires" },
-  { value: "<4h", label: "Délai d'intervention" },
+  { value: "<4h", label: "Intervention sur site sous contrat" },
 ];
 
 export default function APropos() {
   return (
     <div className="bg-[#0D0D1A]">
 
-      {/* Hero — grand et immersif */}
+      {/* Hero : grand et immersif */}
       <section className="relative pt-40 pb-20 overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[#7C6EFA]/8 rounded-full blur-3xl" />
@@ -41,7 +44,7 @@ export default function APropos() {
             <span className="text-[#7C6EFA] text-sm">Notre histoire</span>
           </div>
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
-            Une agence IT<br />
+            Une agence IT{" "}<br />
             <span className="text-[#7C6EFA]">de proximité à Angers</span>
           </h1>
           <p className="text-white/70 text-xl max-w-2xl mx-auto leading-relaxed">
@@ -65,7 +68,7 @@ export default function APropos() {
         </div>
       </section>
 
-      {/* Histoire — deux colonnes */}
+      {/* Histoire : deux colonnes */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
@@ -81,13 +84,15 @@ export default function APropos() {
               <p className="text-white/70 leading-relaxed">
                 Installés à Angers, nous avons fait le choix de la proximité : un interlocuteur
                 qui connaît votre installation, se déplace sur site quand c&apos;est nécessaire
-                et vous répond directement. Nous prenons en charge votre{" "}
-                <Link href="/solutions#telephonie" className="text-[#7C6EFA] hover:underline">téléphonie IP</Link>, votre{" "}
-                <Link href="/solutions#reseaux" className="text-[#7C6EFA] hover:underline">réseau</Link>, votre{" "}
-                <Link href="/solutions#informatique" className="text-[#7C6EFA] hover:underline">parc informatique</Link> et votre{" "}
-                <Link href="/solutions#cybersecurite" className="text-[#7C6EFA] hover:underline">cybersécurité</Link>,
+                et vous répond directement. Nous fournissons vos{" "}
+                <Link href={solutionPath("operateur-telecom")} className={RICH_TEXT_LINK_CLASS}>lignes, forfaits mobiles et accès fibre</Link>,{" "}
+                et prenons en charge votre{" "}
+                <Link href={solutionPath("telephonie-ip")} className={RICH_TEXT_LINK_CLASS}>téléphonie IP</Link>, votre{" "}
+                <Link href={solutionPath("reseaux-wifi")} className={RICH_TEXT_LINK_CLASS}>réseau</Link>, votre{" "}
+                <Link href={solutionPath("materiel-informatique")} className={RICH_TEXT_LINK_CLASS}>parc informatique</Link> et votre{" "}
+                <Link href={solutionPath("cybersecurite")} className={RICH_TEXT_LINK_CLASS}>cybersécurité</Link>,
                 de l&apos;audit à la{" "}
-                <Link href="/services#maintenance" className="text-[#7C6EFA] hover:underline">maintenance</Link>.
+                <Link href="/services#maintenance" className={RICH_TEXT_LINK_CLASS}>maintenance</Link>.
               </p>
             </div>
 
@@ -104,7 +109,7 @@ export default function APropos() {
             <div className="lg:sticky lg:top-28">
               <p className="text-[#7C6EFA] text-sm font-medium uppercase tracking-widest mb-3">Ce qui nous guide</p>
               <h2 className="text-3xl font-bold text-white leading-tight">
-                Quatre valeurs,<br />une seule mission
+                Quatre valeurs,{" "}<br />une seule mission
               </h2>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -147,10 +152,10 @@ export default function APropos() {
               Prendre contact
             </Link>
             <a
-              href="mailto:hello@lea-numerique.fr"
+              href={`mailto:${site.email}`}
               className="border border-white/20 hover:border-[#7C6EFA]/50 text-white/70 hover:text-white px-8 py-4 rounded-full font-semibold transition-all duration-200"
             >
-              hello@lea-numerique.fr
+              {site.email}
             </a>
           </div>
         </div>

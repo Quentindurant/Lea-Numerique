@@ -28,7 +28,7 @@ export default function Clients() {
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Collectivités, établissements de santé, entreprises, professions
-            libérales — nos solutions s&apos;adaptent à chaque secteur.
+            libérales : nos solutions s&apos;adaptent à chaque secteur.
           </p>
         </div>
 

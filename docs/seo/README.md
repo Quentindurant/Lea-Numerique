@@ -1,7 +1,7 @@
 # Refonte du référencement de lea-numerique.fr
 
-Branche : `seo/refonte-referencement-v2`, partie de `main` au commit `c43b8b1` (version en production le 19/10/2026).
-Rien n'est déployé tant que la branche n'est pas fusionnée dans `main` (le CI ne déploie que `main`).
+Travail fusionné dans `main` le 20/10/2026, à partir de la version en production du 19/10/2026 (commit `c43b8b1`).
+La mise en ligne se fait au `git push origin main` (le CI déploie `main`).
 
 ## Ce qui a été fait
 
@@ -14,26 +14,23 @@ Rien n'est déployé tant que la branche n'est pas fusionnée dans `main` (le CI
 | 4. Mentions légales | Page pilotée par l'objet `legal` de `src/lib/site.ts` : un champ vide ne s'affiche pas, le build liste les champs manquants |
 | 5 et 6. Signaux externes et suivi | Fiche Google Business Profile prête à remplir, liens partenaires et annuaires, procédure Search Console, script d'inspection d'URL |
 | Offre opérateur | Page `/solutions/operateur-telecom` (lignes fixes et trunks SIP, portabilité, forfaits mobiles, fibre pro) pour les recherches « opérateur téléphone 49 » ; positionnement « opérateur télécom » sur l'accueil (H1 avec le nom de l'entreprise, title, chapeau, carte dédiée, question de FAQ), le footer, le hub à 5 domaines, le JSON-LD et la fiche Google ; aucun nom d'autre opérateur, ni sur le site ni dans les documents |
+| Alarme et vidéosurveillance | Page `/solutions/alarme-videosurveillance` (alarme anti-intrusion et incendie, télésurveillance, contrôle d'accès et interphonie, vidéosurveillance Hikvision et TP-Link, cadre CNIL et préfectoral) ; la cybersécurité est recentrée ; accueil, footer, hub à 6 domaines, métas et fiche Google mis à jour ; l'informatique reste une page, en retrait sur l'accueil (simple lien) |
 | Corrections | Accueil : 6 sections restaient invisibles dans un rendu sans défilement (proche de celui de Googlebot), corrigé ; ESLint réparé (plantait déjà sur `main`) ; tirets longs retirés ; plus de données du formulaire dans la console du navigateur ; corrections de la relecture indépendante |
 
-Vérifié sur le site construit (`node scripts/seo/audit-local.mjs http://localhost:3000`) : 10 URLs du sitemap en 200, indexables et canoniques ; anciennes URLs en un seul 301 ; slug inconnu en 404 ; un seul H1 par page ; title de 51 à 60 caractères et description de 143 à 155 sur toutes les pages indexables ; JSON-LD valide et identique au texte visible ; chaque page solution liée dans le texte de 8 pages différentes ; aucun nom d'opérateur partenaire dans le HTML rendu ; aucun débordement en 390 et 1280 px.
+Vérifié sur le site construit (`node scripts/seo/audit-local.mjs http://localhost:3000`) : 11 URLs du sitemap en 200, indexables et canoniques ; anciennes URLs en un seul 301 ; slug inconnu en 404 ; un seul H1 par page ; title de 51 à 60 caractères et description de 143 à 155 sur toutes les pages indexables ; JSON-LD valide et identique au texte visible ; chaque page solution liée dans le texte de 8 pages différentes ; aucun nom d'opérateur partenaire dans le HTML rendu ; aucun débordement en 390 et 1280 px.
 
-## Récupérer et tester la branche
+## Récupérer `main` et mettre en ligne
 
 ```bash
 cd ~/workspace/Lea-Numerique
 git checkout main
-git branch -D seo/refonte-referencement 2>/dev/null   # ancienne version, à ne jamais pousser
-git fetch ./seo-refonte.bundle seo/refonte-referencement-v2:seo/refonte-referencement-v2
-git checkout seo/refonte-referencement-v2
+git pull --ff-only ./seo-refonte.bundle main   # avance main sur la version refondue
 rm seo-refonte.bundle
-npm install
-npm run dev        # puis ouvrir http://localhost:3000
+npm install && npm run dev                      # relecture locale sur http://localhost:3000
+git push origin main                            # déclenche le déploiement (CI)
 ```
 
-Si tu avais importé le premier bundle, sa branche `seo/refonte-referencement` ne doit pas être poussée : son historique contient d'anciennes versions des textes. La branche `-v2` repart de `main` avec un historique propre.
-
-Pour pousser la nouvelle branche sur GitHub sans déployer : `git push -u origin seo/refonte-referencement-v2` (le job de déploiement ne tourne que sur `main`).
+L'historique publié ne contient que des commits relus, sans nom d'opérateur partenaire. Aucune branche de travail n'est à pousser.
 
 ## À fournir avant la mise en production
 
@@ -51,8 +48,9 @@ Pour pousser la nouvelle branche sur GitHub sans déployer : `git push -u origin
 - Matériel informatique : marques des serveurs et des NAS ; impression libérée par code ; renouvellement du parc par vagues ; zone couverte par l'intervention sous 4h.
 - Cybersécurité : éditeurs de l'antivirus, de l'EDR et du filtrage DNS ; lieu d'hébergement des sauvegardes et détenteur de la clé ; prestataire de sauvegarde certifié HDS pour les données de santé (EHPAD) ; Zyxel présenté comme pare-feu pour petites structures (repris de l'ancienne page) ; contenu de l'audit (aucun test d'intrusion annoncé).
 - Services : audits gratuits ou facturés (la page contact titre « Audit & devis gratuit ») ; contenu des rapports mensuels ; numéro et horaires du helpdesk ; reprise d'installations faites par un autre prestataire ; longueur de la page (environ 1 850 mots, raccourcissable).
-- **Statut d'opérateur** : l'accueil, les titles et le JSON-LD présentent Léa Numérique comme « opérateur télécom ». Fournir au public des services de communications électroniques en son nom suppose une déclaration préalable à l'Arcep (article L33-1 du code des postes et des communications électroniques). Si Léa Numérique ne signe pas les contrats en son nom ou n'est pas déclarée, remplacer « opérateur télécom » par « fournisseur de lignes et d'abonnements télécoms » avant la mise en ligne.
+- **Statut d'opérateur** : confirmé, Léa Numérique signe les contrats télécoms en son nom. Seule vérification restante : la déclaration préalable à l'Arcep (article L33-1 du code des postes et des communications électroniques), normalement déjà faite.
 - Opérateur télécom : types de fibre vendus (FTTH pro, FTTE, FTTO) et engagements éventuels (débit garanti, GTR) ; secours de l'accès internet (4G/5G ou second lien, non écrit) ; prix, durées d'engagement, délais de portabilité et de mise en service (non écrits) ; Léa Numérique collecte-t-elle les RIO et dépose-t-elle les demandes de portabilité (la page le dit) ; le helpdesk couvre-t-il aussi les lignes, les mobiles et la fibre (la page le dit) ; migration des lignes d'alarme, d'ascenseur ou de TPE proposée ou non ; fourniture de smartphones, numéros SDA supplémentaires.
+- Alarme et vidéosurveillance : les contrats de maintenance couvrent-ils aussi alarmes, caméras et contrôle d'accès (la page le dit) ; qui exploite le centre de télésurveillance et la levée de doute vidéo ou audio est-elle proposée ; périmètre exact en alarme incendie (aucune capacité SSI de catégorie A ou B n'est écrite) ; alarmes filaires et sans fil ; visite sur place systématique avant devis ; gammes Hikvision AcuSense et ColorVu, TP-Link VIGI et Omada citées comme produits des fabricants ; certifications éventuelles (APSAD, NF&A2P) ; aide au dossier préfectoral et à la signalétique CNIL.
 - Hub `/solutions` et exemples types : rédigés à partir des faits du site uniquement, à confirmer comme réalistes.
 
 **Changements visibles hors contenu** :
@@ -71,7 +69,7 @@ Pour pousser la nouvelle branche sur GitHub sans déployer : `git push -u origin
 ## Après le déploiement (dans l'ordre)
 
 1. Contrôles en production, dont la redirection www à vérifier : `curl -sI https://www.lea-numerique.fr/` et `curl -sI http://www.lea-numerique.fr/` doivent renvoyer un seul 301 vers `https://lea-numerique.fr/`.
-2. Search Console : soumettre à nouveau le sitemap, puis UNE demande d'indexation pour l'accueil, `/services`, `/solutions` et les 5 pages solutions (dont `/solutions/operateur-telecom`). Procédure complète : `suivi-indexation.md`.
+2. Search Console : soumettre à nouveau le sitemap, puis UNE demande d'indexation pour l'accueil, `/services`, `/solutions` et les 6 pages solutions (dont `/solutions/operateur-telecom` et `/solutions/alarme-videosurveillance`). Procédure complète : `suivi-indexation.md`.
 3. Fiche Google Business Profile : `google-business-profile.md`. C'est le levier le plus rapide pour les recherches comme « informatique Angers ».
 4. Liens partenaires et annuaires : `liens-externes.md`.
 5. Suivi à J+7, J+14, J+30 : tableau dans `suivi-indexation.md`, script `scripts/seo/gsc-inspection.mjs` si un compte de service est créé.

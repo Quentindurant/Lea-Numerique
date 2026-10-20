@@ -4,6 +4,8 @@ import Link from "next/link";
 import { Phone, Mail, Clock, MapPin } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { frenchSpacing } from "@/components/ui/RichText";
+import { site } from "@/lib/site";
 
 export default function ContactCTA() {
   const ref = useScrollReveal();
@@ -25,9 +27,9 @@ export default function ContactCTA() {
                 Un projet IT en Anjou ? Parlons-en.
               </h2>
               <p className="text-white/70 leading-relaxed mb-8">
-                Que vous souhaitiez moderniser votre téléphonie, sécuriser votre
-                réseau ou obtenir du matériel informatique, nous avons la solution
-                adaptée à votre structure.
+                {frenchSpacing(
+                  "Lignes et mobiles, téléphonie, réseau, sécurité, alarme ou vidéosurveillance : décrivez-nous votre besoin. Nous vous répondons sous 24h ouvrées et le devis est gratuit, sans engagement.",
+                )}
               </p>
               <div className="flex flex-col sm:flex-row gap-6">
                 <Link
@@ -37,7 +39,7 @@ export default function ContactCTA() {
                   Prendre contact
                 </Link>
                 <a
-                  href="tel:+33219230691"
+                  href={`tel:${site.phone}`}
                   className="inline-flex items-center border border-white/10 hover:border-[#7C6EFA] text-white px-8 py-4 rounded-full font-semibold transition-all duration-200 text-center hover:text-[#7C6EFA]"
                 >
                   <Phone className="w-5 h-5 mr-4" />Nous appeler
@@ -51,20 +53,20 @@ export default function ContactCTA() {
                 [
                   {
                     icon: Mail,
-                    label: "Email",
-                    value: "hello@lea-numerique.fr",
-                    href: "mailto:hello@lea-numerique.fr",
+                    label: "E-mail",
+                    value: site.email,
+                    href: `mailto:${site.email}`,
                   },
                   {
                     icon: Clock,
                     label: "Disponibilité",
-                    value: "Lun–Ven, 9h–17h30",
+                    value: site.hours.display,
                     href: null,
                   },
                   {
                     icon: MapPin,
                     label: "Zone d'intervention",
-                    value: "Angers, Maine-et-Loire et France entière",
+                    value: site.serviceArea,
                     href: null,
                   },
                 ] as { icon: LucideIcon; label: string; value: string; href: string | null }[]
@@ -85,7 +87,15 @@ export default function ContactCTA() {
                         href={item.href}
                         className="text-white font-medium hover:text-[#7C6EFA] transition-colors"
                       >
-                        {item.value}
+                        {item.href.startsWith("mailto:") && item.value.includes("@") ? (
+                          // Coupure autorisée seulement après « @ », jamais sur le trait d'union du domaine
+                          <>
+                            {item.value.split("@")[0]}@<wbr />
+                            <span className="whitespace-nowrap">{item.value.split("@")[1]}</span>
+                          </>
+                        ) : (
+                          item.value
+                        )}
                       </a>
                     ) : (
                       <p className="text-white font-medium">{item.value}</p>

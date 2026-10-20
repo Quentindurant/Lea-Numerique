@@ -23,3 +23,10 @@ Thumbs.db
 # Logs
 *.log
 npm-debug.log*
+
+# TypeScript
+*.tsbuildinfo
+
+# Clés de compte de service Google (ne jamais commiter)
+*service-account*.json
+gsc-inspection*.json

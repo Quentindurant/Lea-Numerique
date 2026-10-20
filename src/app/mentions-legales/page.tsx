@@ -1,14 +1,40 @@
 import { pageMetadata } from "@/lib/seo";
-import { site } from "@/lib/site";
+import { missingLegalFields, site } from "@/lib/site";
 
 export const metadata = pageMetadata({
   title: "Mentions légales",
   description:
     "Mentions légales de Léa Numérique, SAS basée 19 place du Président Kennedy à Angers : éditeur du site, hébergement, propriété intellectuelle.",
   path: "/mentions-legales",
+  noindex: true,
 });
 
+// Ligne « libellé : valeur » ; une valeur absente (null) n'est jamais affichée
+function Fields({ fields }: { fields: { label: string; value: string | null }[] }) {
+  return (
+    <dl className="space-y-1">
+      {fields
+        .filter((f): f is { label: string; value: string } => Boolean(f.value))
+        .map((f) => (
+          <div key={f.label}>
+            <dt className="inline font-bold">{f.label}{"\u00A0"}:</dt> <dd className="inline">{f.value}</dd>
+          </div>
+        ))}
+    </dl>
+  );
+}
+
 export default function MentionsLegales() {
+  const { legal, address } = site;
+
+  // Rendu statique : l'avertissement s'affiche dans la sortie de `next build`
+  const missing = missingLegalFields();
+  if (missing.length > 0) {
+    console.warn(
+      `[mentions-legales] Informations légales à fournir par le propriétaire (src/lib/site.ts, objet legal) : ${missing.join(", ")}.`,
+    );
+  }
+
   return (
     <section className="bg-[#F5F4FF] pt-40 pb-24">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -17,21 +43,39 @@ export default function MentionsLegales() {
         <div className="space-y-8 text-gray-600 leading-relaxed">
           <div>
             <h2 className="text-xl font-bold text-[#0D0D1A] mb-3">Éditeur du site</h2>
-            <p>
-              <strong>Raison sociale :</strong> Léa Numérique<br />
-              <strong>Forme juridique :</strong> SAS<br />
-              <strong>Siège social :</strong> 19 place du Président Kennedy, 49100 ANGERS<br />
-              <strong>Téléphone :</strong> {site.phoneDisplay}<br />
-              <strong>Email :</strong> {site.email}
-            </p>
+            <Fields
+              fields={[
+                { label: "Raison sociale", value: legal.companyName },
+                { label: "Forme juridique", value: legal.legalForm },
+                { label: "Capital social", value: legal.shareCapital },
+                { label: "Siège social", value: `${address.street}, ${address.postalCode} ${address.city}` },
+                { label: "SIREN", value: legal.siren },
+                { label: "RCS", value: legal.rcs ? `${legal.rcs.city} ${legal.rcs.number}` : null },
+                { label: "TVA intracommunautaire", value: legal.vatNumber },
+                { label: "Téléphone", value: site.phoneDisplay },
+                { label: "Email", value: site.email },
+                { label: "Directeur de la publication", value: legal.publicationDirector },
+              ]}
+            />
           </div>
 
           <div>
             <h2 className="text-xl font-bold text-[#0D0D1A] mb-3">Hébergement</h2>
-            <p>
-              Ce site est hébergé par un prestataire dont les coordonnées sont disponibles
-              sur demande.
-            </p>
+            {legal.host ? (
+              <Fields
+                fields={[
+                  { label: "Hébergeur", value: legal.host.name },
+                  { label: "Adresse", value: legal.host.address },
+                  { label: "Téléphone", value: legal.host.phone },
+                  { label: "Site", value: legal.host.website },
+                ]}
+              />
+            ) : (
+              <p>
+                Ce site est hébergé par un prestataire dont les coordonnées sont disponibles
+                sur demande.
+              </p>
+            )}
           </div>
 
           <div>

@@ -15,7 +15,7 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "Prestataire informatique & télécom à Angers | Léa Numérique",
+    default: "Opérateur télécom et sécurité à Angers | Léa Numérique",
     template: `%s | ${site.name}`,
   },
   description: site.description,
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     siteName: site.name,
     url: "./",
-    title: "Prestataire informatique & télécom à Angers | Léa Numérique",
+    title: "Opérateur télécom et sécurité à Angers | Léa Numérique",
     description: site.description,
   },
   twitter: { card: "summary_large_image" },

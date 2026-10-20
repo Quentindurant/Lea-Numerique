@@ -27,8 +27,6 @@ export default function ContactForm() {
       message: formData.get('message') as string,
     };
     
-    console.log('Sending email with params:', templateParams);
-    
     try {
       await emailjs.send(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
@@ -120,7 +118,7 @@ export default function ContactForm() {
       {status === "success" && (
         <div role="status" className="flex items-center gap-3 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 rounded-xl p-4">
           <CheckCircle2 className="w-4 h-4 flex-shrink-0" />
-          <p className="text-sm">Message envoyé ! Nous vous répondrons sous 24h.</p>
+          <p className="text-sm">Message envoyé ! Nous vous répondrons sous 24h ouvrées.</p>
         </div>
       )}
 

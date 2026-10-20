@@ -7,7 +7,7 @@ import { site } from "@/lib/site";
 export const metadata = pageMetadata({
   title: "Contact & devis IT gratuit à Angers",
   description:
-    "Un projet de téléphonie, réseau ou informatique à Angers ? Appelez le 02 19 23 06 91 ou écrivez-nous : réponse sous 24h ouvrées, devis gratuit.",
+    "Lignes, téléphonie, réseau, alarme ou vidéosurveillance à Angers ? Appelez le 02 19 23 06 91 ou écrivez-nous : réponse sous 24h ouvrées, devis gratuit.",
   path: "/contact",
 });
 
@@ -36,7 +36,7 @@ const contactCards: { icon: LucideIcon; label: string; value: string; href: stri
   {
     icon: Clock,
     label: "Disponibilité",
-    value: "Lun – Ven, 9h – 17h30",
+    value: site.hours.display,
     href: null,
     desc: "Fermeture les week-ends",
   },
@@ -67,12 +67,12 @@ export default function Contact() {
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-end">
               <h1 className="text-5xl sm:text-6xl font-bold text-white leading-tight">
-                Parlons de votre<br />
+                Parlons de votre{" "}<br />
                 <span className="text-[#7C6EFA]">projet IT à Angers</span>
               </h1>
               <p className="text-white/70 text-lg leading-relaxed">
                 Remplissez le formulaire, appelez-nous au {site.phoneDisplay} ou écrivez-nous directement.
-                Nous vous répondons sous 24h avec une première analyse,
+                Nous vous répondons sous 24h ouvrées avec une première analyse,
                 sans engagement.
               </p>
             </div>
@@ -113,13 +113,13 @@ export default function Contact() {
             {/* Ce qui se passe après */}
             <div>
               <h2 className="text-2xl font-bold text-white mb-6">
-                Ce qui se passe<br />après votre message
+                Ce qui se passe{" "}<br />après votre message
               </h2>
               <div className="space-y-6">
                 {[
                   { num: "01", title: "On reçoit votre message", desc: "Vous recevez un accusé de réception automatique." },
                   { num: "02", title: "Analyse de votre besoin", desc: "Un expert étudie votre demande et prépare une réponse adaptée." },
-                  { num: "03", title: "Prise de contact sous 24h", desc: "Nous vous rappelons ou répondons par email avec une première proposition." },
+                  { num: "03", title: "Prise de contact sous 24h ouvrées", desc: "Nous vous rappelons ou répondons par e-mail avec une première proposition." },
                   { num: "04", title: "Audit & devis gratuit", desc: "Si nécessaire, nous organisons une visite ou un appel de diagnostic." },
                 ].map((step) => (
                   <div key={step.num} className="flex items-start gap-4">

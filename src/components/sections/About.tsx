@@ -17,10 +17,10 @@ export default function About() {
               Qui sommes-nous ?
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold text-[#0D0D1A] mt-3 mb-6 leading-tight">
-              Un intégrateur IT angevin, de l&apos;audit à la maintenance
+              Un opérateur télécom et intégrateur IT angevin
             </h2>
             <p className="text-gray-600 leading-relaxed mb-5">
-              Léa Numérique est un intégrateur de solutions technologiques. Nous répondons aux besoins des organisations en téléphonie IP, réseau, informatique et cybersécurité : audit de l&apos;existant, choix du matériel, installation, formation des utilisateurs, puis maintenance.
+              Léa Numérique est un intégrateur de solutions technologiques qui fournit aussi les abonnements télécoms de ses clients : lignes fixes, forfaits mobiles et accès internet fibre. Nous répondons aux besoins des organisations en téléphonie IP, réseau, cybersécurité, alarme et vidéosurveillance, ainsi qu&apos;en matériel informatique : audit de l&apos;existant, choix du matériel, installation, formation des utilisateurs, puis maintenance.
             </p>
             <p className="text-gray-600 leading-relaxed mb-8">
               Avec nos marques partenaires de référence, dont 3CX, Yeastar, Ubiquiti, HP et Lenovo, nous sélectionnons pour chaque projet les équipements adaptés à votre structure et à votre budget, avec un interlocuteur local qui connaît votre installation.
@@ -46,7 +46,7 @@ export default function About() {
               />
             </div>
             {/* Floating stats cards */}
-            <div className="absolute -bottom-6 left-0 lg:-left-6 bg-white rounded-2xl shadow-xl p-5 flex items-center gap-4">
+            <div className="absolute bottom-3 left-3 lg:-bottom-6 lg:left-0 xl:-left-6 bg-white rounded-2xl shadow-xl p-5 flex items-center gap-4">
               <div className="w-12 h-12 rounded-xl bg-[#7C6EFA]/10 flex items-center justify-center">
                 <Users className="text-[#7C6EFA] w-5 h-5" />
               </div>
@@ -55,7 +55,7 @@ export default function About() {
                 <p className="text-gray-500 text-sm">Clients nous font confiance</p>
               </div>
             </div>
-            <div className="absolute -top-6 right-0 lg:-right-6 bg-white rounded-2xl shadow-xl p-5 flex items-center gap-4">
+            <div className="absolute top-3 right-3 lg:-top-6 lg:right-0 xl:-right-6 bg-white rounded-2xl shadow-xl p-5 flex items-center gap-4">
               <div className="w-12 h-12 rounded-xl bg-[#7C6EFA]/10 flex items-center justify-center">
                 <Star className="text-[#7C6EFA] w-5 h-5" />
               </div>

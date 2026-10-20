@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 
-export const alt = "Léa Numérique – Intégrateur IT à Angers : téléphonie IP, réseaux, informatique, cybersécurité";
+export const alt = "Léa Numérique, opérateur télécom à Angers : lignes, mobiles, fibre, réseau, cybersécurité, alarme et vidéosurveillance";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -25,14 +25,13 @@ export default async function OpengraphImage() {
         }}
       >
         <div style={{ display: "flex", flexDirection: "column", maxWidth: 720 }}>
-          <div style={{ fontSize: 30, color: "#7C6EFA", marginBottom: 24 }}>Intégrateur IT à Angers (49)</div>
+          <div style={{ fontSize: 30, color: "#7C6EFA", marginBottom: 24 }}>Opérateur télécom et intégrateur IT à Angers (49)</div>
           <div style={{ fontSize: 76, fontWeight: 700, lineHeight: 1.1, marginBottom: 32 }}>Léa Numérique</div>
           <div style={{ fontSize: 36, color: "rgba(255,255,255,0.8)", lineHeight: 1.35 }}>
-            Téléphonie IP, réseaux, informatique et cybersécurité pour les professionnels
+            Lignes, mobiles, fibre, réseau, cybersécurité, alarme et vidéosurveillance
           </div>
           <div style={{ fontSize: 28, color: "rgba(255,255,255,0.6)", marginTop: 36 }}>lea-numerique.fr · 02 19 23 06 91</div>
         </div>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={mascotteSrc} width={300} height={351} alt="" />
       </div>
     ),

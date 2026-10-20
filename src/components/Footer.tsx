@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { MapPin, Phone, Mail } from "lucide-react";
 import { site } from "@/lib/site";
+import { SOLUTIONS } from "@/lib/solutions";
 
 export default function Footer() {
   return (
@@ -12,14 +13,15 @@ export default function Footer() {
           <div className="md:col-span-1">
             <Image
               src="/images/logo.png"
-              alt="Léa Numérique, intégrateur IT à Angers"
+              alt="Léa Numérique, opérateur télécom et intégrateur IT à Angers"
               width={140}
               height={42}
               className="h-10 w-auto mb-4 brightness-0 invert"
             />
             <p className="text-white/70 text-sm leading-relaxed">
-              Intégrateur IT : téléphonie IP, réseaux, informatique et
-              cybersécurité pour les entreprises et collectivités du Maine-et-Loire.
+              Opérateur télécom et intégrateur : lignes, mobiles et fibre pro,
+              téléphonie IP, réseau et cybersécurité, alarme et vidéosurveillance,
+              informatique, pour les entreprises et collectivités du Maine-et-Loire.
             </p>
           </div>
 
@@ -50,12 +52,7 @@ export default function Footer() {
           <div>
             <p className="text-white font-semibold mb-4">Nos solutions</p>
             <ul className="space-y-2">
-              {[
-                { href: "/solutions#telephonie", label: "Téléphonie IP" },
-                { href: "/solutions#reseaux", label: "Réseaux & Infrastructure" },
-                { href: "/solutions#informatique", label: "Informatique" },
-                { href: "/solutions#cybersecurite", label: "Cybersécurité" },
-              ].map((link) => (
+              {SOLUTIONS.map((s) => ({ href: s.path, label: s.label })).map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
@@ -97,18 +94,18 @@ export default function Footer() {
                 <li className="flex items-start gap-2">
                   <MapPin className="text-[#7C6EFA] w-4 h-4 mt-0.5 flex-shrink-0" aria-hidden="true" />
                   <span>
-                    {site.name}
+                    {site.name}{" "}
                     <br />
-                    {site.address.street}
+                    {site.address.street}{" "}
                     <br />
-                    {site.address.postalCode} {site.address.city}
+                    {site.address.postalCode} {site.address.city}{" "}
                   </span>
                 </li>
                 <li className="flex items-center gap-2">
                   <Phone className="text-[#7C6EFA] w-4 h-4 flex-shrink-0" aria-hidden="true" />
                   <a href={`tel:${site.phone}`} className="hover:text-white transition-colors">
                     {site.phoneDisplay}
-                  </a>
+                  </a>{" "}
                 </li>
                 <li className="flex items-center gap-2">
                   <Mail className="text-[#7C6EFA] w-4 h-4 flex-shrink-0" aria-hidden="true" />
@@ -123,14 +120,14 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-12 pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-white/40 text-sm">
+          <p className="text-white/60 text-sm">
             © {new Date().getFullYear()} Léa Numérique. Tous droits réservés.
           </p>
           <div className="flex gap-6 text-sm">
-            <Link href="/mentions-legales" className="text-white/40 hover:text-white/70 transition-colors">
+            <Link href="/mentions-legales" className="text-white/60 hover:text-white transition-colors">
               Mentions légales
             </Link>
-            <Link href="/politique-confidentialite" className="text-white/40 hover:text-white/70 transition-colors">
+            <Link href="/politique-confidentialite" className="text-white/60 hover:text-white transition-colors">
               Politique de confidentialité
             </Link>
           </div>

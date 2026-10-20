@@ -2,16 +2,17 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { PhoneCall, Network, Laptop, ShieldCheck, ArrowRight } from "lucide-react";
+import { PhoneCall, Network, ShieldCheck, RadioTower, Cctv, ArrowRight } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { solutionPath, type SolutionSlug } from "@/lib/solutions";
 
-const solutions: { title: string; slug: string; description: string; image: string; alt: string; cta: string; icon: LucideIcon; features: string[] }[] = [
+const solutions: { title: string; slug: SolutionSlug; description: string; image: string; alt: string; cta: string; icon: LucideIcon; features: string[] }[] = [
   {
     title: "Téléphonie IP d'entreprise",
-    slug: "telephonie",
+    slug: "telephonie-ip",
     description:
-      "Terminaux fixes, sans fil et répondants aux exigences de mobilité ou télétravail.",
+      "Terminaux fixes, sans fil et répondant aux exigences de mobilité ou télétravail.",
     image: "/images/telephonie-ip-entreprise.webp",
     alt: "Illustration d'un standard téléphonique : opératrice avec casque, téléphone et messagerie",
     cta: "Découvrir la téléphonie IP",
@@ -20,25 +21,14 @@ const solutions: { title: string; slug: string; description: string; image: stri
   },
   {
     title: "Réseaux et Wi-Fi professionnels",
-    slug: "reseaux",
+    slug: "reseaux-wifi",
     description:
       "Tous les équipements pour une connectivité optimale.",
     image: "/images/reseau-wifi-professionnel.webp",
     alt: "Illustration d'un réseau Wi-Fi professionnel reliant smartphones, tablettes et ordinateurs",
     cta: "Découvrir nos solutions réseau",
     icon: Network,
-    features: ["Wi-Fi professionnel", "VPN sécurisé", "Monitoring 24/7"],
-  },
-  {
-    title: "Matériel informatique professionnel",
-    slug: "informatique",
-    description:
-      "Ordinateurs, périphériques, accessoires adaptés à vos besoins.",
-    image: "/images/materiel-informatique-professionnel.webp",
-    alt: "Illustration : techniciens informatiques travaillant devant des baies de serveurs",
-    cta: "Découvrir notre offre informatique",
-    icon: Laptop,
-    features: ["Matériel certifié", "Maintenance préventive", "Support technique"],
+    features: ["Wi-Fi professionnel", "VPN sécurisé", "Monitoring réseau"],
   },
   {
     title: "Cybersécurité et protection des données",
@@ -50,6 +40,17 @@ const solutions: { title: string; slug: string; description: string; image: stri
     cta: "Découvrir nos solutions de cybersécurité",
     icon: ShieldCheck,
     features: ["Pare-feu Fortinet", "Audit de sécurité", "Sauvegarde sécurisée"],
+  },
+  {
+    title: "Alarme et vidéosurveillance",
+    slug: "alarme-videosurveillance",
+    description:
+      "Alarme anti-intrusion et incendie, télésurveillance, contrôle d'accès et caméras pour protéger vos locaux.",
+    image: "/images/securite-informatique.webp",
+    alt: "La mascotte Léa Numérique sécurise un poste de travail : bouclier d'alerte, clé et cadenas",
+    cta: "Découvrir nos solutions d'alarme et de vidéosurveillance",
+    icon: Cctv,
+    features: ["Alarme anti-intrusion et incendie", "Télésurveillance", "Vidéosurveillance Hikvision et TP-Link"],
   },
 ];
 
@@ -64,13 +65,33 @@ export default function ServiceCards() {
             Nos domaines d&apos;expertise
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold text-white mt-3 mb-4">
-            Téléphonie, réseau, informatique et cybersécurité pour les professionnels
+            Télécom, réseau et sécurité, alarme et vidéosurveillance pour les professionnels
           </h2>
           <p className="text-white/70 max-w-2xl mx-auto">
-            De la téléphonie à la cybersécurité, nous couvrons tous vos besoins
-            en infrastructure numérique.
+            De vos lignes téléphoniques à la protection de vos données : chaque
+            domaine a sa page détaillée.
           </p>
         </div>
+
+        {/* Offre opérateur : abonnements télécoms (lignes, mobiles, fibre) */}
+        <Link
+          href={solutionPath("operateur-telecom")}
+          className="group mb-8 flex flex-col sm:flex-row sm:items-center gap-5 rounded-3xl border border-[#7C6EFA]/25 bg-[#7C6EFA]/[0.07] p-6 sm:p-8 hover:border-[#7C6EFA]/50 hover:bg-[#7C6EFA]/15 transition-colors"
+        >
+          <span className="w-12 h-12 rounded-xl bg-[#7C6EFA] flex items-center justify-center flex-shrink-0">
+            <RadioTower className="text-white w-5 h-5" aria-hidden="true" />
+          </span>
+          <span className="flex-1">
+            <span className="block text-xl font-bold text-white mb-1">Opérateur télécom pour les entreprises</span>
+            <span className="block text-white/70 text-sm leading-relaxed">
+              Lignes fixes et trunks SIP, portabilité de vos numéros, forfaits mobiles et accès internet fibre pro,
+              avec le même interlocuteur que pour votre standard.
+            </span>
+          </span>
+          <span className="inline-flex items-center gap-2 text-[#7C6EFA] text-sm font-semibold group-hover:gap-3 transition-all flex-shrink-0">
+            Découvrir notre offre opérateur <ArrowRight className="w-3 h-3" aria-hidden="true" />
+          </span>
+        </Link>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {solutions.map((solution) => (
@@ -108,7 +129,7 @@ export default function ServiceCards() {
                   ))}
                 </ul>
                 <Link
-                  href={`/solutions#${solution.slug}`}
+                  href={solutionPath(solution.slug)}
                   className="inline-flex items-center gap-2 text-[#7C6EFA] text-sm font-semibold hover:gap-3 transition-all"
                 >
                   {solution.cta} <ArrowRight className="w-3 h-3" aria-hidden="true" />
@@ -117,6 +138,17 @@ export default function ServiceCards() {
             </div>
           ))}
         </div>
+
+        {/* Informatique : en retrait, simple lien vers la page dédiée */}
+        <p className="mt-8 text-center text-white/70 text-sm">
+          Besoin de postes, de serveurs ou d&apos;imprimantes ?{" "}
+          <Link
+            href={solutionPath("materiel-informatique")}
+            className="inline-flex items-center gap-2 text-[#7C6EFA] font-semibold hover:gap-3 transition-all"
+          >
+            Découvrir notre offre de matériel informatique professionnel <ArrowRight className="w-3 h-3" aria-hidden="true" />
+          </Link>
+        </p>
       </div>
     </section>
   );

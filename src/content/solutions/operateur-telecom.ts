@@ -118,7 +118,7 @@ export const operateurTelecom: SolutionContent = {
       {
         question: "Que deviennent les lignes d'alarme, d'ascenseur ou de terminal de paiement ?",
         answer:
-          "Reliées au réseau cuivre, elles s'arrêteront avec lui. Selon le modèle, l'équipement pourra passer par l'accès internet ou demandera un transmetteur adapté, à voir avec son mainteneur.",
+          "Reliées au réseau cuivre, elles s'arrêteront avec lui. Selon le modèle, l'équipement pourra passer par l'accès internet ou demandera un transmetteur adapté : nous l'étudions pour les [alarmes que nous installons](/solutions/alarme-videosurveillance), et avec leur mainteneur pour les ascenseurs ou les terminaux de paiement.",
       },
     ],
   },

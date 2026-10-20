@@ -18,6 +18,7 @@ PAGES = {
     "reseaux-wifi": "/solutions/reseaux-wifi",
     "materiel-informatique": "/solutions/materiel-informatique",
     "cybersecurite": "/solutions/cybersecurite",
+    "alarme-videosurveillance": "/solutions/alarme-videosurveillance",
     "services": "/services",
 }
 

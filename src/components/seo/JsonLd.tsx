@@ -55,6 +55,11 @@ export const siteJsonLd = {
         "Maintenance informatique",
         "Cybersécurité",
         "Pare-feu",
+        "Alarme anti-intrusion",
+        "Alarme incendie",
+        "Télésurveillance",
+        "Contrôle d'accès",
+        "Interphonie",
         "Vidéosurveillance",
       ],
       contactPoint: {

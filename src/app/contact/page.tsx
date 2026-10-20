@@ -7,7 +7,7 @@ import { site } from "@/lib/site";
 export const metadata = pageMetadata({
   title: "Contact & devis IT gratuit à Angers",
   description:
-    "Lignes, mobiles, téléphonie, réseau ou informatique à Angers ? Appelez le 02 19 23 06 91 ou écrivez-nous : réponse sous 24h ouvrées, devis gratuit.",
+    "Lignes, téléphonie, réseau, alarme ou vidéosurveillance à Angers ? Appelez le 02 19 23 06 91 ou écrivez-nous : réponse sous 24h ouvrées, devis gratuit.",
   path: "/contact",
 });
 

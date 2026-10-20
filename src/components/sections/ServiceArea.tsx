@@ -50,6 +50,10 @@ export const homeFaq: { question: string; answer: string }[] = [
       "Oui. Nous accompagnons des mairies et collectivités, des collèges et lycées, des EHPAD et établissements de santé, ainsi que des PME/PMI, des industries, des notaires et des professions libérales. Chaque solution est adaptée aux contraintes du secteur.",
   },
   {
+    question: "Installez-vous des alarmes et de la vidéosurveillance ?",
+    answer: `Oui : alarmes anti-intrusion et incendie, télésurveillance, contrôle d'accès, interphonie et vidéosurveillance, avec des caméras Hikvision ou TP-Link. Le détail est sur notre page [alarme et vidéosurveillance](${solutionPath("alarme-videosurveillance")}).`,
+  },
+  {
     question: "Le devis est-il gratuit ? Sous quel délai répondez-vous ?",
     answer:
       "Oui, le devis est gratuit et sans engagement. Nous vous répondons sous 24h ouvrées et organisons si nécessaire une visite ou un appel de diagnostic. Vous pouvez [demander votre devis en ligne](/contact).",
@@ -77,7 +81,7 @@ export default function ServiceArea() {
             <p className="text-gray-600 leading-relaxed mb-5">
               Léa Numérique accompagne les entreprises, collectivités et établissements de
               santé de l&apos;Anjou pour leurs abonnements télécoms et leurs projets de téléphonie IP, de réseau,
-              d&apos;informatique et de cybersécurité. Nous intervenons sur site pour les audits, les installations et la maintenance ;
+              de cybersécurité, d&apos;alarme, de vidéosurveillance et d&apos;informatique. Nous intervenons sur site pour les audits, les installations et la maintenance ;
               notre télémaintenance sécurisée prend le relais pour le support au quotidien.
             </p>
             <p className="text-gray-600 leading-relaxed mb-8">

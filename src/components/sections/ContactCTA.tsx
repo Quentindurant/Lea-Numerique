@@ -28,7 +28,7 @@ export default function ContactCTA() {
               </h2>
               <p className="text-white/70 leading-relaxed mb-8">
                 {frenchSpacing(
-                  "Lignes et mobiles, téléphonie, réseau, matériel ou sécurité : décrivez-nous votre besoin. Nous vous répondons sous 24h ouvrées et le devis est gratuit, sans engagement.",
+                  "Lignes et mobiles, téléphonie, réseau, sécurité, alarme ou vidéosurveillance : décrivez-nous votre besoin. Nous vous répondons sous 24h ouvrées et le devis est gratuit, sans engagement.",
                 )}
               </p>
               <div className="flex flex-col sm:flex-row gap-6">

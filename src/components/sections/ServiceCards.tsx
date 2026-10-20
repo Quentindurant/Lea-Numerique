@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { PhoneCall, Network, Laptop, ShieldCheck, RadioTower, ArrowRight } from "lucide-react";
+import { PhoneCall, Network, ShieldCheck, RadioTower, Cctv, ArrowRight } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { solutionPath, type SolutionSlug } from "@/lib/solutions";
@@ -31,17 +31,6 @@ const solutions: { title: string; slug: SolutionSlug; description: string; image
     features: ["Wi-Fi professionnel", "VPN sécurisé", "Monitoring réseau"],
   },
   {
-    title: "Matériel informatique professionnel",
-    slug: "materiel-informatique",
-    description:
-      "Ordinateurs, périphériques, accessoires adaptés à vos besoins.",
-    image: "/images/materiel-informatique-professionnel.webp",
-    alt: "Illustration : techniciens informatiques travaillant devant des baies de serveurs",
-    cta: "Découvrir notre offre informatique",
-    icon: Laptop,
-    features: ["Postes HP, Lenovo et Dell", "Maintenance préventive", "Support technique"],
-  },
-  {
     title: "Cybersécurité et protection des données",
     slug: "cybersecurite",
     description:
@@ -51,6 +40,17 @@ const solutions: { title: string; slug: SolutionSlug; description: string; image
     cta: "Découvrir nos solutions de cybersécurité",
     icon: ShieldCheck,
     features: ["Pare-feu Fortinet", "Audit de sécurité", "Sauvegarde sécurisée"],
+  },
+  {
+    title: "Alarme et vidéosurveillance",
+    slug: "alarme-videosurveillance",
+    description:
+      "Alarme anti-intrusion et incendie, télésurveillance, contrôle d'accès et caméras pour protéger vos locaux.",
+    image: "/images/securite-informatique.webp",
+    alt: "La mascotte Léa Numérique sécurise un poste de travail : bouclier d'alerte, clé et cadenas",
+    cta: "Découvrir nos solutions d'alarme et de vidéosurveillance",
+    icon: Cctv,
+    features: ["Alarme anti-intrusion et incendie", "Télésurveillance", "Vidéosurveillance Hikvision et TP-Link"],
   },
 ];
 
@@ -65,7 +65,7 @@ export default function ServiceCards() {
             Nos domaines d&apos;expertise
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold text-white mt-3 mb-4">
-            Télécoms, réseau, informatique et cybersécurité pour les professionnels
+            Télécom, réseau et sécurité, alarme et vidéosurveillance pour les professionnels
           </h2>
           <p className="text-white/70 max-w-2xl mx-auto">
             De vos lignes téléphoniques à la protection de vos données : chaque
@@ -138,6 +138,17 @@ export default function ServiceCards() {
             </div>
           ))}
         </div>
+
+        {/* Informatique : en retrait, simple lien vers la page dédiée */}
+        <p className="mt-8 text-center text-white/70 text-sm">
+          Besoin de postes, de serveurs ou d&apos;imprimantes ?{" "}
+          <Link
+            href={solutionPath("materiel-informatique")}
+            className="inline-flex items-center gap-2 text-[#7C6EFA] font-semibold hover:gap-3 transition-all"
+          >
+            Découvrir notre offre de matériel informatique professionnel <ArrowRight className="w-3 h-3" aria-hidden="true" />
+          </Link>
+        </p>
       </div>
     </section>
   );

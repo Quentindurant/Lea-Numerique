@@ -19,9 +19,9 @@ export default function Footer() {
               className="h-10 w-auto mb-4 brightness-0 invert"
             />
             <p className="text-white/70 text-sm leading-relaxed">
-              Opérateur télécom et intégrateur IT : lignes, mobiles et fibre pro,
-              téléphonie IP, réseaux, informatique et cybersécurité pour les
-              entreprises et collectivités du Maine-et-Loire.
+              Opérateur télécom et intégrateur : lignes, mobiles et fibre pro,
+              téléphonie IP, réseau et cybersécurité, alarme et vidéosurveillance,
+              informatique, pour les entreprises et collectivités du Maine-et-Loire.
             </p>
           </div>
 

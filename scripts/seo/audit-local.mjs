@@ -45,6 +45,7 @@ const DEFAULT_EXTRA = [
   "/solutions/reseaux-wifi",
   "/solutions/materiel-informatique",
   "/solutions/cybersecurite",
+  "/solutions/alarme-videosurveillance",
   "/solutions/inexistant",
 ];
 

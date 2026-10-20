@@ -36,7 +36,7 @@ export const site = {
   name: "Léa Numérique",
   alternateNames: ["Lea Numerique", "LeaNumerique"],
   description:
-    "Opérateur télécom et intégrateur IT à Angers : lignes, mobiles et fibre pro, téléphonie IP, réseaux, informatique et cybersécurité en Maine-et-Loire.",
+    "Opérateur télécom à Angers : lignes, mobiles et fibre, téléphonie IP, réseau, cybersécurité, alarme et vidéosurveillance en Maine-et-Loire. Devis gratuit.",
   phone: "+33219230691",
   phoneDisplay: "02 19 23 06 91",
   email: "hello@lea-numerique.fr",

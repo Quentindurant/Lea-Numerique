@@ -20,7 +20,7 @@ export default function About() {
               Un opérateur télécom et intégrateur IT angevin
             </h2>
             <p className="text-gray-600 leading-relaxed mb-5">
-              Léa Numérique est un intégrateur de solutions technologiques qui fournit aussi les abonnements télécoms de ses clients : lignes fixes, forfaits mobiles et accès internet fibre. Nous répondons aux besoins des organisations en téléphonie IP, réseau, informatique et cybersécurité : audit de l&apos;existant, choix du matériel, installation, formation des utilisateurs, puis maintenance.
+              Léa Numérique est un intégrateur de solutions technologiques qui fournit aussi les abonnements télécoms de ses clients : lignes fixes, forfaits mobiles et accès internet fibre. Nous répondons aux besoins des organisations en téléphonie IP, réseau, cybersécurité, alarme et vidéosurveillance, ainsi qu&apos;en matériel informatique : audit de l&apos;existant, choix du matériel, installation, formation des utilisateurs, puis maintenance.
             </p>
             <p className="text-gray-600 leading-relaxed mb-8">
               Avec nos marques partenaires de référence, dont 3CX, Yeastar, Ubiquiti, HP et Lenovo, nous sélectionnons pour chaque projet les équipements adaptés à votre structure et à votre budget, avec un interlocuteur local qui connaît votre installation.

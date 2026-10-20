@@ -182,7 +182,8 @@ Ce que nous mettons en place :
 • Téléphonie IP : IPBX Yeastar et 3CX, téléphones Yealink fixes et sans fil, solution Wazo, standard virtuel, renvoi sur mobile, visioconférence intégrée.
 • Réseaux : câblage RJ45 et fibre optique, Wi-Fi professionnel, VLAN et QoS pour la voix, VPN entre sites et pour les nomades, monitoring (Ubiquiti, TP-Link, Zyxel, Fortinet).
 • Matériel : postes, portables, serveurs, NAS et imprimantes HP, Lenovo et Dell, migration Windows, virtualisation, gestion de parc.
-• Cybersécurité : pare-feu Fortinet, antivirus et EDR, filtrage web et DNS, sauvegarde externalisée chiffrée, audit de sécurité, plan de reprise d'activité, vidéosurveillance Hikvision.
+• Cybersécurité : pare-feu Fortinet, antivirus et EDR, filtrage web et DNS, sauvegarde externalisée chiffrée, audit de sécurité, plan de reprise d'activité.
+• Sûreté des locaux : alarmes anti-intrusion et incendie, télésurveillance, contrôle d'accès, interphonie, vidéosurveillance Hikvision et TP-Link.
 • Maintenance : helpdesk téléphonique dédié, télémaintenance sécurisée, intervention sur site sous 4 h dans le cadre d'un contrat, rapports mensuels.
 
 Nos clients : mairies et collectivités, collèges et lycées, EHPAD et établissements de santé, PME, PMI et industries, notaires et professions libérales. Plus de 800 clients, plus de 10 ans d'expérience.

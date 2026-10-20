@@ -8,7 +8,7 @@ Libellés et règles vérifiés dans l'aide Google le 19 octobre 2026 (sources e
 
 | Quand | Action | Effort |
 |---|---|---|
-| J0, jour du déploiement | Contrôles en production, sitemap, une demande d'indexation pour chacune des 8 URL modifiées, annotation, premier relevé | 1 h |
+| J0, jour du déploiement | Contrôles en production, sitemap, une demande d'indexation pour chacune des 9 URL modifiées, annotation, premier relevé | 1 h |
 | J0 ou J+1, une seule fois | « Valider la correction » sur le motif « Introuvable (404) », si les 4 redirections sont correctes | 5 min |
 | J+7 | Relevé | 30 min |
 | J+14 | Relevé, état de la validation des 404 | 30 min |
@@ -20,7 +20,7 @@ J0 est le jour où la branche de la refonte arrive sur `main` : le workflow GitH
 
 - **Droits** : il faut être propriétaire ou utilisateur avec accès complet de la propriété pour demander une indexation. L'aide Google demande les droits de propriétaire pour envoyer un sitemap.
 - **Type de propriété** : regardez le sélecteur en haut à gauche de Search Console. Propriété de domaine (`sc-domain:lea-numerique.fr`) ou préfixe d'URL (`https://lea-numerique.fr/`). Le script de la section 7 en a besoin.
-- **URL modifiées par la refonte** (une demande d'indexation chacune) : `/`, `/services`, `/solutions`, `/solutions/telephonie-ip`, `/solutions/operateur-telecom`, `/solutions/reseaux-wifi`, `/solutions/materiel-informatique`, `/solutions/cybersecurite`.
+- **URL modifiées par la refonte** (une demande d'indexation chacune) : `/`, `/services`, `/solutions`, `/solutions/telephonie-ip`, `/solutions/operateur-telecom`, `/solutions/reseaux-wifi`, `/solutions/materiel-informatique`, `/solutions/cybersecurite`, `/solutions/alarme-videosurveillance`.
 
 ## 2. Procédure après le déploiement, dans l'ordre
 
@@ -57,7 +57,7 @@ done
 **Pages actuelles** : code `200`, canonique auto-référente, pas de `noindex` ni dans le HTML ni dans les en-têtes.
 
 ```bash
-for p in / /solutions /solutions/telephonie-ip /solutions/operateur-telecom /solutions/reseaux-wifi /solutions/materiel-informatique /solutions/cybersecurite /services /contact /a-propos; do
+for p in / /solutions /solutions/telephonie-ip /solutions/operateur-telecom /solutions/reseaux-wifi /solutions/materiel-informatique /solutions/cybersecurite /solutions/alarme-videosurveillance /services /contact /a-propos; do
   code=$(curl -s -o /tmp/lea-page.html -w "%{http_code}" "https://lea-numerique.fr$p")
   canon=$(grep -oiE '<link[^>]+rel="canonical"[^>]*>' /tmp/lea-page.html | head -1)
   robots=$(grep -oiE '<meta[^>]+name="robots"[^>]*>' /tmp/lea-page.html | head -1)
@@ -78,7 +78,7 @@ Attendu pour chaque page : `200`, `<link rel="canonical" href="https://lea-numer
    curl -s https://lea-numerique.fr/sitemap.xml | grep -oE '<loc>[^<]*</loc>|<lastmod>[^<]*</lastmod>'
    ```
 
-   Attendu : les 5 pages solutions sont présentes, aucune ancienne URL, aucune URL qui redirige, des dates `lastmod` réelles (pas la même date partout).
+   Attendu : les 6 pages solutions sont présentes, aucune ancienne URL, aucune URL qui redirige, des dates `lastmod` réelles (pas la même date partout).
 2. Dans Search Console : Sitemaps > champ « Ajouter un sitemap » > `sitemap.xml` > « Envoyer ».
 3. Vérifier, quelques heures ou jours plus tard, la colonne « État » : « Opération effectuée ». En cas d'« Impossible de récupérer le sitemap », Google réessaie quelques jours ; corrigez puis renvoyez.
 
@@ -86,7 +86,7 @@ Renvoyer le sitemap a du sens après une modification importante, ce qui est le 
 
 ### 2.3 Inspection d'URL et une seule demande d'indexation par URL modifiée
 
-Pour chacune des 8 URL, dans cet ordre : `/`, `/services`, `/solutions`, `/solutions/operateur-telecom`, `/solutions/telephonie-ip`, `/solutions/reseaux-wifi`, `/solutions/materiel-informatique`, `/solutions/cybersecurite`.
+Pour chacune des 9 URL, dans cet ordre : `/`, `/services`, `/solutions`, `/solutions/operateur-telecom`, `/solutions/telephonie-ip`, `/solutions/reseaux-wifi`, `/solutions/materiel-informatique`, `/solutions/cybersecurite`, `/solutions/alarme-videosurveillance`.
 
 1. Coller l'URL complète (par exemple `https://lea-numerique.fr/solutions/telephonie-ip`) dans la barre d'inspection en haut de Search Console.
 2. Lire l'état indexé : « Cette URL n'a pas été indexée par Google » est normal pour une page neuve ; « Cette URL est sur Google » signifie qu'elle peut apparaître dans les résultats.
@@ -116,7 +116,7 @@ Cette validation n'a aucun effet sur le classement : elle accélère seulement l
 Performances > clic droit sur le graphique > ajouter une annotation (libellé anglais : « Add annotation »), datée du jour J0, 120 caractères au maximum, par exemple :
 
 ```text
-Refonte SEO : 5 pages solutions dont opérateur télécom, /services réécrite, redirections 301 des anciennes URL (commit abc1234)
+Refonte SEO : 6 pages solutions dont opérateur télécom et alarme, /services réécrite, redirections 301 des anciennes URL (commit abc1234)
 ```
 
 Les annotations sont visibles par tous les utilisateurs de la propriété ; propriétaires et utilisateurs avec accès complet peuvent en créer. Ajoutez-en une autre à la validation de la fiche Google et à chaque lien externe important.
@@ -179,6 +179,7 @@ Mode de remplissage :
 | `/solutions/reseaux-wifi` | | | | | | | Indexation demandée le |
 | `/solutions/materiel-informatique` | | | | | | | Indexation demandée le |
 | `/solutions/cybersecurite` | | | | | | | Indexation demandée le |
+| `/solutions/alarme-videosurveillance` | | | | | | | Indexation demandée le |
 | `/services` | | | | | | | Indexation demandée le |
 | `/contact` | | | | | | | |
 | `/a-propos` | | | | | | | |
@@ -194,6 +195,7 @@ Mode de remplissage :
 | `/solutions/reseaux-wifi` | | | | | | | |
 | `/solutions/materiel-informatique` | | | | | | | |
 | `/solutions/cybersecurite` | | | | | | | |
+| `/solutions/alarme-videosurveillance` | | | | | | | |
 | `/services` | | | | | | | |
 | `/contact` | | | | | | | |
 | `/a-propos` | | | | | | | |
@@ -209,6 +211,7 @@ Mode de remplissage :
 | `/solutions/reseaux-wifi` | | | | | | | |
 | `/solutions/materiel-informatique` | | | | | | | |
 | `/solutions/cybersecurite` | | | | | | | |
+| `/solutions/alarme-videosurveillance` | | | | | | | |
 | `/services` | | | | | | | |
 | `/contact` | | | | | | | |
 | `/a-propos` | | | | | | | |
@@ -224,6 +227,7 @@ Mode de remplissage :
 | `/solutions/reseaux-wifi` | | | | | | | |
 | `/solutions/materiel-informatique` | | | | | | | |
 | `/solutions/cybersecurite` | | | | | | | |
+| `/solutions/alarme-videosurveillance` | | | | | | | |
 | `/services` | | | | | | | |
 | `/contact` | | | | | | | |
 | `/a-propos` | | | | | | | |

@@ -46,7 +46,7 @@ Ne modifiez ni le nom, ni l'adresse, ni la catégorie pendant la validation : un
    - Fiche déjà gérée par quelqu'un d'autre : faites une demande de propriété depuis la fiche (article Google « Demander la propriété d'une fiche », lien en bas de page). Ne créez pas de doublon.
 2. **Se connecter avec le compte Google de l'entreprise**, ouvrir [business.google.com/add](https://business.google.com/add) et choisir « Ajouter votre établissement sur Google ».
 3. **Nom** : `Léa Numérique`, exactement (section 5).
-4. **Catégorie principale** : `Assistance et services informatiques` (section 6). Ajoutez les catégories secondaires une fois la validation terminée : Google demande de ne pas modifier la catégorie pendant la validation.
+4. **Catégorie principale** : la catégorie télécoms, « Fournisseur de services de télécommunications » ou l'intitulé équivalent proposé par l'interface (section 6). Ajoutez les catégories secondaires une fois la validation terminée : Google demande de ne pas modifier la catégorie pendant la validation.
 5. **Lieu que les clients peuvent visiter** : répondre selon la section 4. Si la réponse est non, l'adresse est saisie pour la validation mais n'est pas affichée.
 6. **Zone desservie** : Angers, Maine-et-Loire, Pays de la Loire (section 10).
 7. **Coordonnées** : téléphone `02 19 23 06 91`, site `https://lea-numerique.fr/?utm_source=google&utm_medium=organic&utm_campaign=gbp-fiche` (section 12).
@@ -95,11 +95,11 @@ Google autorise une catégorie principale et jusqu'à neuf catégories secondair
 
 | Intitulé exact | Identifiant Google | Verdict | Justification |
 |---|---|---|---|
-| Assistance et services informatiques | `computer_support_and_services` | **Catégorie principale** | Décrit l'activité d'ensemble : installation, maintenance sous contrat, helpdesk, gestion de parc. C'est la catégorie des prestataires informatiques pour entreprises. |
+| Assistance et services informatiques | `computer_support_and_services` | Secondaire (principale seulement si la catégorie télécoms est introuvable) | Installation, maintenance sous contrat, helpdesk, gestion de parc. L'informatique est désormais une activité en retrait. |
 | Service réseaux informatiques | `computer_networking_center` | Secondaire | Câblage RJ45 et fibre, Wi-Fi professionnel, VLAN, VPN, équipements actifs. |
 | Service de sécurité informatique | `computer_security_service` | Secondaire | Pare-feu Fortinet, EDR, filtrage, sauvegarde, audit de sécurité, PRA. |
 | Consultant informatique | `computer_consultant` | Secondaire | Audit de l'existant, préconisations, plan de transformation IT. |
-| Télévision en circuit fermé (CCTV) | `closed_circuit_television` | Secondaire, si l'activité est régulière | Vidéosurveillance Hikvision. À n'ajouter que si le dirigeant confirme des installations régulières. |
+| Télévision en circuit fermé (CCTV) | `closed_circuit_television` | Secondaire | Vidéosurveillance (Hikvision, TP-Link) : activité confirmée par le propriétaire. |
 | Service de réparation d'ordinateurs | `computer_repair_service` | À éviter | Attire les demandes de dépannage de particuliers, hors de la cible. |
 | Magasin d'informatique | `computer_store` | À éviter | Pas de magasin ouvert au public. |
 | Services aux entreprises | `business_to_business_service` | Inutile | Trop générique, n'apporte aucune pertinence. |
@@ -113,20 +113,20 @@ Il n'existe pas de catégorie intitulée « Prestataire de services informatique
 | `telecommunications_service_provider` | Fournisseur de services de télécommunications | **À retenir** : le propriétaire confirme que Léa Numérique vend des lignes fixes et trunks SIP, la portabilité des numéros, des forfaits mobiles et des accès internet fibre pro. |
 | `telecommunications_contractor` | Entrepreneur en télécommunications | Si l'activité téléphonie est surtout l'installation (IPBX, postes, câblage). |
 | `telephone_company` | Compagnie de téléphone | À éviter : catégorie des opérateurs de téléphonie grand public, la catégorie précédente correspond mieux à une offre pour les entreprises. |
-| `security_system_installer` | Installateur du système de sécurité | Alternative à la catégorie CCTV pour la vidéosurveillance. |
+| `security_system_installer` | Installateur du système de sécurité | **À retenir** en secondaire : alarmes anti-intrusion et incendie, télésurveillance, contrôle d'accès et interphonie (activités confirmées). |
 
 Pour les trouver, tapez « télécom » ou « sécurité » dans le champ catégorie et retenez l'intitulé proposé dont le sens correspond.
 
-**Proposition à valider avec le dirigeant (5 à 6 catégories)** : principale « Assistance et services informatiques » ; secondaires « Fournisseur de services de télécommunications » (intitulé à confirmer dans l'interface, voir le tableau ci-dessus), « Service réseaux informatiques », « Service de sécurité informatique », « Consultant informatique », et « Télévision en circuit fermé (CCTV) » si la vidéosurveillance est une activité régulière.
+**Proposition (6 catégories)** : principale « Fournisseur de services de télécommunications » (intitulé à confirmer dans l'interface, voir le tableau ci-dessus) ; secondaires « Installateur du système de sécurité », « Télévision en circuit fermé (CCTV) », « Service réseaux informatiques », « Service de sécurité informatique » et « Assistance et services informatiques ». La catégorie principale est le signal le plus fort pour la carte des résultats locaux : c'est elle qui fera ressortir la fiche sur « opérateur téléphone 49 ». Si l'intitulé télécoms n'apparaît pas dans l'interface, mettre « Assistance et services informatiques » en principale et la catégorie télécoms la plus proche en secondaire.
 
-Contrôle utile : sur Google Maps, la catégorie principale de chaque établissement s'affiche sous son nom. Regardez celle des intégrateurs angevins qui sortent sur « informatique entreprise Angers » et « téléphonie entreprise Angers ».
+Contrôle utile : sur Google Maps, la catégorie principale de chaque établissement s'affiche sous son nom. Regardez celle des entreprises angevines qui sortent sur « opérateur téléphone 49 », « téléphonie entreprise Angers » et « alarme entreprise Angers ».
 
 ## 7. Description de l'établissement (prête à coller)
 
-Limite : 750 caractères. Pas d'URL ni de HTML, et Google demande de décrire l'établissement plutôt que des promotions ou des prix. Texte ci-dessous : 703 caractères.
+Limite : 750 caractères. Pas d'URL ni de HTML, et Google demande de décrire l'établissement plutôt que des promotions ou des prix. Texte ci-dessous : 742 caractères.
 
 ```text
-Léa Numérique est un opérateur télécom et intégrateur informatique installé à Angers. Nous fournissons aux entreprises, collectivités et établissements du Maine-et-Loire leurs lignes fixes et trunks SIP, forfaits mobiles et accès fibre, avec portabilité des numéros, ainsi que la téléphonie IP (Yeastar, 3CX, Yealink), les réseaux et le Wi-Fi, les postes et serveurs HP, Lenovo et Dell, la cybersécurité (pare-feu Fortinet, EDR, sauvegarde chiffrée) et la vidéosurveillance. Le même interlocuteur suit votre projet de l'audit de l'existant à la maintenance, forme vos utilisateurs et intervient sur site sous 4 h dans le cadre d'un contrat de maintenance. Chaque demande reçoit une réponse sous 24 h ouvrées.
+Léa Numérique est un opérateur télécom et intégrateur informatique installé à Angers. Nous fournissons aux entreprises, collectivités et établissements du Maine-et-Loire leurs lignes fixes et trunks SIP, forfaits mobiles et accès fibre, avec portabilité des numéros, ainsi que la téléphonie IP (Yeastar, 3CX, Yealink), les réseaux et le Wi-Fi, les postes et serveurs HP, Lenovo et Dell, la cybersécurité (pare-feu Fortinet, EDR, sauvegarde chiffrée), les alarmes, le contrôle d'accès et la vidéosurveillance. Le même interlocuteur suit votre projet de l'audit de l'existant à la maintenance, forme vos utilisateurs et intervient sur site sous 4 h dans le cadre d'un contrat de maintenance. Chaque demande reçoit une réponse sous 24 h ouvrées.
 ```
 
 Version courte (200 caractères) pour les plateformes et annuaires qui demandent une description brève :
@@ -151,7 +151,10 @@ Opérateur télécom et intégrateur informatique à Angers : lignes, mobiles et
 | Maintenance informatique sous contrat | Contrat personnalisé : helpdesk téléphonique dédié, télémaintenance sécurisée, intervention sur site sous 4 h, maintenance préventive, gestion du parc matériel, suivi et rapports mensuels. | 188 |
 | Cybersécurité et pare-feu | Pare-feu nouvelle génération Fortinet, antivirus et EDR entreprise, filtrage web et DNS. L'audit de sécurité complet commence par repérer les points faibles de votre système d'information. | 188 |
 | Sauvegarde et plan de reprise d'activité | Sauvegarde externalisée et chiffrée de vos données, et plan de reprise d'activité (PRA) : ce qu'il faut restaurer en premier, dans quel ordre et dans quel délai après un incident. | 179 |
-| Vidéosurveillance | Vidéosurveillance Hikvision pour vos locaux, avec le même déroulé que vos autres équipements : étude des besoins, installation, formation des utilisateurs et maintenance. | 170 |
+| Vidéosurveillance | Caméras Hikvision ou TP-Link et enregistreur pour vos locaux, sur un réseau séparé, avec le même déroulé que vos autres équipements : étude des besoins, installation, formation des utilisateurs et maintenance. | 209 |
+| Alarme anti-intrusion et télésurveillance | Centrale, détecteurs et sirène adaptés à vos locaux, avec liaison possible à un centre de télésurveillance. Étude, installation, mise en service et maintenance par le même interlocuteur que votre réseau. | 203 |
+| Alarme incendie | Détection et alarme incendie selon le type d'établissement et ses obligations : étude des locaux, installation, essais et maintenance. | 134 |
+| Contrôle d'accès et interphonie | Badges, digicodes et interphones pour gérer qui entre, où et à quelle heure, reliés à votre réseau et maintenus avec le reste de vos équipements. | 145 |
 | Audit et conseil informatique | Audit de l'infrastructure existante, préconisations personnalisées et plan de transformation IT. Nous accompagnons vos équipes dans le changement et gérons la relation avec les constructeurs. | 191 |
 
 Les services refusés par Google le sont automatiquement : si l'un disparaît, raccourcissez son nom et retirez tout terme promotionnel.

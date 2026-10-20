@@ -19,6 +19,7 @@ const reseaux = solutionPath("reseaux-wifi");
 const materiel = solutionPath("materiel-informatique");
 const cyber = solutionPath("cybersecurite");
 const operateur = solutionPath("operateur-telecom");
+const alarme = solutionPath("alarme-videosurveillance");
 const telephone = `[${site.phoneDisplay}](tel:${site.phone})`;
 const email = `[${site.email}](mailto:${site.email})`;
 
@@ -122,7 +123,7 @@ export const servicesPage: ServicesPageContent = {
     badge: "Services et solutions",
     title: "Quatre prestations, un seul interlocuteur",
     paragraphs: [
-      `Nos pages solutions présentent ce que nous installons : la [téléphonie IP et le standard d'entreprise](${telephonie}), les [réseaux, le Wi-Fi et le câblage](${reseaux}), le [matériel informatique professionnel](${materiel}) et la [cybersécurité, du pare-feu à la sauvegarde](${cyber}). Notre [offre d'opérateur télécom](${operateur}) couvre vos lignes, vos forfaits mobiles et votre accès fibre. Cette page décrit la façon dont nous travaillons sur ces sujets, en quatre prestations qui peuvent s'enchaîner sur un même projet : le conseil, l'installation, la maintenance et la sécurité.`,
+      `Nos pages solutions présentent ce que nous installons : la [téléphonie IP et le standard d'entreprise](${telephonie}), les [réseaux, le Wi-Fi et le câblage](${reseaux}), le [matériel informatique professionnel](${materiel}) et la [cybersécurité, du pare-feu à la sauvegarde](${cyber}). Notre [offre d'opérateur télécom](${operateur}) couvre vos lignes, vos forfaits mobiles et votre accès fibre, et notre page [alarme et vidéosurveillance](${alarme}) la protection de vos locaux. Cette page décrit la façon dont nous travaillons sur ces sujets, en quatre prestations qui peuvent s'enchaîner sur un même projet : le conseil, l'installation, la maintenance et la sécurité.`,
       "[Installés place du Président Kennedy à Angers](/a-propos), nous intervenons dans l'agglomération, dans tout le Maine-et-Loire et en Pays de la Loire. Le reste de la France est couvert sur site ou à distance, en particulier pour les organisations multi-sites.",
     ],
     navLabel: "Accès direct aux quatre prestations",
@@ -226,7 +227,7 @@ export const servicesPage: ServicesPageContent = {
       paragraphs: [
         "Un rançongiciel qui chiffre les dossiers partagés, une messagerie piratée après un e-mail d'hameçonnage, un serveur qui tombe sans sauvegarde récente : ces incidents peuvent bloquer l'activité d'une PME comme d'une collectivité. La prestation sécurité poursuit deux objectifs : réduire le risque d'incident, et en limiter les conséquences s'il se produit.",
         `Elle commence par un audit de sécurité complet, qui repère les points faibles et permet de prioriser les actions. Nous déployons ensuite les protections adaptées : pare-feu nouvelle génération Fortinet, antivirus et EDR sur les postes, filtrage web et DNS, sauvegarde externalisée chiffrée. L'EDR, par exemple, surveille le comportement des programmes et peut stopper un chiffrement massif de fichiers. Le rôle de chaque protection est détaillé sur notre page [cybersécurité, pare-feu et sauvegarde](${cyber}).`,
-        "Pour les structures qui ne peuvent pas se permettre un arrêt prolongé, nous formalisons un plan de reprise d'activité (PRA) : il indique quels systèmes restaurer en premier et à partir de quelles sauvegardes, pour reprendre le travail au plus vite après un sinistre. La vidéosurveillance Hikvision peut compléter le dispositif pour protéger les locaux.",
+        `Pour les structures qui ne peuvent pas se permettre un arrêt prolongé, nous formalisons un plan de reprise d'activité (PRA) : il indique quels systèmes restaurer en premier et à partir de quelles sauvegardes, pour reprendre le travail au plus vite après un sinistre. Pour les locaux, [l'alarme, le contrôle d'accès et la vidéosurveillance](${alarme}) complètent le dispositif.`,
       ],
       items: [
         "Pare-feu nouvelle génération (Fortinet)",
@@ -264,7 +265,7 @@ export const servicesPage: ServicesPageContent = {
         title: "Un EHPAD où le personnel doit rester joignable",
         situation:
           "Dans un EHPAD, le personnel se déplace toute la journée entre les étages et doit pouvoir être appelé partout, y compris dans les chambres. Les dossiers des résidents contiennent des données de santé, dont la confidentialité est encadrée par la loi.",
-        intervention: `Nous dimensionnons le [Wi-Fi professionnel](${reseaux}) selon la configuration du bâtiment et équipons les équipes de [téléphones IP sans fil Yealink](${telephonie}). Les postes et les données sont protégés par un [pare-feu Fortinet et un EDR](${cyber}), avec une sauvegarde externalisée chiffrée, confiée à un hébergeur certifié HDS puisqu'il s'agit de données de santé. La vidéosurveillance Hikvision peut sécuriser les accès.`,
+        intervention: `Nous dimensionnons le [Wi-Fi professionnel](${reseaux}) selon la configuration du bâtiment et équipons les équipes de [téléphones IP sans fil Yealink](${telephonie}). Les postes et les données sont protégés par un [pare-feu Fortinet et un EDR](${cyber}), avec une sauvegarde externalisée chiffrée, confiée à un hébergeur certifié HDS puisqu'il s'agit de données de santé. Le [contrôle d'accès et la vidéosurveillance](${alarme}) sécurisent les entrées.`,
         services: ["conseil", "installation", "securite", "maintenance"],
       },
       {

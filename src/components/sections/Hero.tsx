@@ -60,12 +60,12 @@ export default function Hero() {
                 Léa Numérique, votre opérateur télécom à&nbsp;Angers
               </span>{" "}
               <span className="block text-white/80 text-2xl sm:text-4xl lg:text-5xl font-medium mt-2">
-                Téléphonie IP, réseau, informatique et cybersécurité
+                Télécom, réseau et sécurité, alarme et vidéosurveillance
               </span>
             </h1>
 
             <p className="text-white/70 text-base sm:text-lg leading-relaxed mb-8">
-              Basée à Angers, Léa Numérique fournit les lignes téléphoniques, les forfaits mobiles et l&apos;accès internet fibre des entreprises, collectivités et établissements de santé du <span className="whitespace-nowrap">Maine-et-Loire</span>. Elle installe et maintient aussi leur téléphonie IP, leurs réseaux, leur parc informatique et leur cybersécurité. Un interlocuteur unique, de l&apos;audit à la maintenance.
+              Basée à Angers, Léa Numérique fournit les lignes téléphoniques, les forfaits mobiles et l&apos;accès internet fibre des entreprises, collectivités et établissements de santé du <span className="whitespace-nowrap">Maine-et-Loire</span>. Elle installe et maintient aussi leur téléphonie IP, leurs réseaux, leur cybersécurité, leurs alarmes, leur vidéosurveillance et leur parc informatique. Un interlocuteur unique, de l&apos;audit à la maintenance.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">

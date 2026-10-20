@@ -11,7 +11,7 @@ import { solutionPath } from "@/lib/solutions";
 export const metadata = pageMetadata({
   title: "Intégrateur IT de proximité à Angers",
   description:
-    "Léa Numérique, opérateur télécom et intégrateur IT basé à Angers : lignes, téléphonie, réseau, informatique et cybersécurité pour les professionnels.",
+    "Léa Numérique, opérateur télécom et intégrateur à Angers : lignes, téléphonie, réseau, cybersécurité, alarme et vidéosurveillance pour les professionnels.",
   path: "/a-propos",
 });
 
@@ -89,8 +89,9 @@ export default function APropos() {
                 et prenons en charge votre{" "}
                 <Link href={solutionPath("telephonie-ip")} className={RICH_TEXT_LINK_CLASS}>téléphonie IP</Link>, votre{" "}
                 <Link href={solutionPath("reseaux-wifi")} className={RICH_TEXT_LINK_CLASS}>réseau</Link>, votre{" "}
-                <Link href={solutionPath("materiel-informatique")} className={RICH_TEXT_LINK_CLASS}>parc informatique</Link> et votre{" "}
-                <Link href={solutionPath("cybersecurite")} className={RICH_TEXT_LINK_CLASS}>cybersécurité</Link>,
+                <Link href={solutionPath("materiel-informatique")} className={RICH_TEXT_LINK_CLASS}>parc informatique</Link>, votre{" "}
+                <Link href={solutionPath("cybersecurite")} className={RICH_TEXT_LINK_CLASS}>cybersécurité</Link> ainsi que vos{" "}
+                <Link href={solutionPath("alarme-videosurveillance")} className={RICH_TEXT_LINK_CLASS}>alarmes et votre vidéosurveillance</Link>,
                 de l&apos;audit à la{" "}
                 <Link href="/services#maintenance" className={RICH_TEXT_LINK_CLASS}>maintenance</Link>.
               </p>

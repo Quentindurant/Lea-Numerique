@@ -13,9 +13,9 @@ import { site } from "@/lib/site";
 import { SOLUTIONS, type SolutionSlug } from "@/lib/solutions";
 
 export const metadata = pageMetadata({
-  title: "Nos solutions télécom et IT à Angers",
+  title: "Nos solutions télécom et sécurité à Angers",
   description:
-    "Opérateur télécom, téléphonie IP, réseaux, matériel informatique et cybersécurité : nos solutions pour les professionnels du Maine-et-Loire. Devis gratuit.",
+    "Opérateur télécom, téléphonie IP, réseau, cybersécurité, alarme, vidéosurveillance et informatique : nos solutions pour le Maine-et-Loire. Devis gratuit.",
   path: "/solutions",
 });
 
@@ -81,7 +81,7 @@ export default function Solutions() {
             </div>
             <p className="text-white/70 text-lg sm:text-xl leading-relaxed pb-2">
               {fr(
-                "Abonnements télécoms, téléphonie, réseau, matériel et sécurité : Léa Numérique prend en charge ces cinq domaines pour les entreprises, les collectivités et les établissements de santé du Maine-et-Loire. Chacun a sa page détaillée, avec notre méthode et un exemple de déroulé.",
+                "Abonnements télécoms, téléphonie, réseau, cybersécurité, alarme et vidéosurveillance, matériel : Léa Numérique prend en charge ces six domaines pour les entreprises, les collectivités et les établissements de santé du Maine-et-Loire. Chacun a sa page détaillée, avec notre méthode et un exemple de déroulé.",
               )}
             </p>
           </div>
@@ -175,7 +175,7 @@ export default function Solutions() {
         <div className="max-w-6xl mx-auto px-6 lg:px-8 py-20 lg:py-28">
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] gap-6 lg:gap-16">
             <h2 id="domaines-lies" className="text-3xl sm:text-4xl font-bold text-white leading-tight">
-              Cinq domaines qui fonctionnent ensemble
+              Six domaines qui fonctionnent ensemble
             </h2>
             <div className="space-y-5">
               <p className="text-white/70 leading-relaxed">

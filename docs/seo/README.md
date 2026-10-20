@@ -34,7 +34,7 @@ L'historique publié ne contient que des commits relus, sans nom d'opérateur pa
 
 ## À fournir avant la mise en production
 
-1. **Mentions légales (obligation LCEN)** : renseignées d'après le registre (dénomination LE@ Numérique, SAS au capital de 95 300 €, SIREN 837 873 694, RCS Angers, TVA FR51837873694 ; directeur de la publication : le représentant légal, Groupe GC Développement). Reste l'hébergeur du serveur (nom, adresse, téléphone), à saisir dans `host` de l'objet `legal` de `src/lib/site.ts`. Si vous préférez nommer la personne physique qui représente Groupe GC Développement, la mettre dans `publicationDirector`.
+1. **Mentions légales (obligation LCEN)** : complètes, d'après le registre et l'hébergeur confirmé (dénomination LE@ Numérique, SAS au capital de 95 300 €, SIREN 837 873 694, RCS Angers, TVA FR51837873694, directeur de la publication : le représentant légal, Groupe GC Développement ; hébergeur : OVH SAS, 2 rue Kellermann, 59100 Roubaix). Pour nommer la personne physique qui représente Groupe GC Développement, modifier `publicationDirector` dans `src/lib/site.ts`.
 2. **Numéro officiel** : confirmer le 02 19 23 06 91, et dire s'il passe par un serveur vocal (cela bloque la validation de la fiche Google par téléphone).
 3. **Adresse** : des clients sont-ils reçus au 19 place du Président Kennedy, avec une enseigne ? Cela décide si l'adresse est visible ou masquée sur la fiche Google.
 

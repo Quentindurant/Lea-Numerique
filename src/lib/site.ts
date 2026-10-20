@@ -36,7 +36,13 @@ const legal: LegalInfo = {
   vatNumber: "FR51837873694",
   // Représentant légal (présidente de la SAS) : directeur de la publication d'office
   publicationDirector: "Groupe GC Développement, président de la société",
-  host: null, // à fournir par le propriétaire (nom, adresse, téléphone ou site de l'hébergeur)
+  // Hébergeur confirmé par le propriétaire (siège publié par OVHcloud sur ses conditions générales)
+  host: {
+    name: "OVH SAS (OVHcloud)",
+    address: "2 rue Kellermann, 59100 Roubaix, France",
+    phone: "+33 9 72 10 10 07",
+    website: "https://www.ovhcloud.com",
+  },
 };
 
 export const site = {

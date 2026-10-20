@@ -3,7 +3,7 @@ import type { SolutionContent } from "./types";
 // Aucun nom d'autre opérateur sur cette page, et pas de section marques (champ brands absent).
 export const operateurTelecom: SolutionContent = {
   slug: "operateur-telecom",
-  lastModified: "2026-10-19",
+  lastModified: "2026-10-20",
 
   seo: {
     title: "Opérateur télécom entreprise à Angers (49)",

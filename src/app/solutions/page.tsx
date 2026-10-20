@@ -72,7 +72,7 @@ export default function Solutions() {
               </div>
               {/* Tailles choisies pour que chaque ligne tienne sans mot isolé, du mobile (390 px) au bureau */}
               <h1 className="text-[2.5rem] sm:text-6xl lg:text-[3.5rem] xl:text-[4rem] font-bold text-white leading-none">
-                Nos solutions télécom et IT{" "}
+                Nos solutions télécom et sécurité{" "}
                 <br />
                 <span className="block mt-3 text-[#7C6EFA] text-3xl sm:text-5xl lg:text-[2.5rem] xl:text-5xl leading-tight">
                   à Angers et en Anjou

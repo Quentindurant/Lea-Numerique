@@ -117,7 +117,7 @@ Il n'existe pas de catégorie intitulée « Prestataire de services informatique
 
 Pour les trouver, tapez « télécom » ou « sécurité » dans le champ catégorie et retenez l'intitulé proposé dont le sens correspond.
 
-**Proposition (6 catégories)** : principale « Fournisseur de services de télécommunications » (intitulé à confirmer dans l'interface, voir le tableau ci-dessus) ; secondaires « Installateur du système de sécurité », « Télévision en circuit fermé (CCTV) », « Service réseaux informatiques », « Service de sécurité informatique » et « Assistance et services informatiques ». La catégorie principale est le signal le plus fort pour la carte des résultats locaux : c'est elle qui fera ressortir la fiche sur « opérateur téléphone 49 ». Si l'intitulé télécoms n'apparaît pas dans l'interface, mettre « Assistance et services informatiques » en principale et la catégorie télécoms la plus proche en secondaire.
+**Proposition (6 catégories)** : principale « Fournisseur de services de télécommunications » (intitulé à confirmer dans l'interface, voir le tableau ci-dessus) ; secondaires « Installateur du système de sécurité », « Télévision en circuit fermé (CCTV) », « Service réseaux informatiques », « Service de sécurité informatique » et « Assistance et services informatiques ». La catégorie principale est le signal le plus fort pour la carte des résultats locaux : c'est elle qui aidera le plus la fiche à ressortir sur « opérateur téléphone 49 ». Si l'intitulé télécoms n'apparaît pas dans l'interface, mettre « Assistance et services informatiques » en principale et la catégorie télécoms la plus proche en secondaire.
 
 Contrôle utile : sur Google Maps, la catégorie principale de chaque établissement s'affiche sous son nom. Regardez celle des entreprises angevines qui sortent sur « opérateur téléphone 49 », « téléphonie entreprise Angers » et « alarme entreprise Angers ».
 
@@ -153,7 +153,7 @@ Opérateur télécom et intégrateur informatique à Angers : lignes, mobiles et
 | Sauvegarde et plan de reprise d'activité | Sauvegarde externalisée et chiffrée de vos données, et plan de reprise d'activité (PRA) : ce qu'il faut restaurer en premier, dans quel ordre et dans quel délai après un incident. | 179 |
 | Vidéosurveillance | Caméras Hikvision ou TP-Link et enregistreur pour vos locaux, sur un réseau séparé, avec le même déroulé que vos autres équipements : étude des besoins, installation, formation des utilisateurs et maintenance. | 209 |
 | Alarme anti-intrusion et télésurveillance | Centrale, détecteurs et sirène adaptés à vos locaux, avec liaison possible à un centre de télésurveillance. Étude, installation, mise en service et maintenance par le même interlocuteur que votre réseau. | 203 |
-| Alarme incendie | Détection et alarme incendie selon le type d'établissement et ses obligations : étude des locaux, installation, essais et maintenance. | 134 |
+| Alarme incendie | Alarme incendie adaptée au type d'établissement et à ses obligations : étude des locaux, installation et suivi. | 113 |
 | Contrôle d'accès et interphonie | Badges, digicodes et interphones pour gérer qui entre, où et à quelle heure, reliés à votre réseau et maintenus avec le reste de vos équipements. | 145 |
 | Audit et conseil informatique | Audit de l'infrastructure existante, préconisations personnalisées et plan de transformation IT. Nous accompagnons vos équipes dans le changement et gérons la relation avec les constructeurs. | 191 |
 

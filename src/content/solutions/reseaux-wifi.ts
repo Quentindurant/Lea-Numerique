@@ -2,7 +2,7 @@ import type { SolutionContent } from "./types";
 
 export const reseauxWifi: SolutionContent = {
   slug: "reseaux-wifi",
-  lastModified: "2026-10-19",
+  lastModified: "2026-10-20",
 
   seo: {
     title: "Réseau informatique et Wi-Fi pro à Angers",

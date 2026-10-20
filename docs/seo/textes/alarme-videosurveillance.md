@@ -3,7 +3,7 @@
 - URL : https://lea-numerique.fr/solutions/alarme-videosurveillance
 - Balise title (57 caractères) : Alarme et vidéosurveillance à Angers (49) | Léa Numérique
 - Meta description (148 caractères) : Alarme intrusion et incendie, télésurveillance, contrôle d'accès et vidéosurveillance pour entreprises du Maine-et-Loire. Demandez un devis gratuit.
-- Nombre de mots du contenu principal : 1079
+- Nombre de mots du contenu principal : 1109
 
 Fichier généré automatiquement depuis la page construite, pour relecture. Les corrections se font dans le code source (src/content/solutions/*.ts, src/app/solutions/page.tsx ou src/content/services.ts), puis ce fichier est régénéré.
 
@@ -17,7 +17,7 @@ Sûreté des locaux
 
 # Installateur d'alarme et de vidéosurveillance à Angers
 
-Alarme anti-intrusion ou incendie, télésurveillance, contrôle d'accès, interphone vidéo et caméras : Léa Numérique installe et maintient la protection de vos locaux. La plupart de ces équipements passent désormais par le réseau informatique : le même interlocuteur s'occupe donc du câblage et de leur sécurité.
+Alarme anti-intrusion ou incendie, télésurveillance, contrôle d'accès, interphone vidéo et caméras : Léa Numérique installe et maintient la protection des locaux de votre entreprise. Caméras, contrôle d'accès, interphones et transmetteurs d'alarme se raccordent désormais au réseau informatique : le même interlocuteur s'occupe donc du câblage et de leur sécurité.
 
 [Demander un devis](/contact)[Appeler le 02 19 23 06 91](tel:+33219230691)
 
@@ -25,7 +25,7 @@ Alarme et vidéosurveillance
 
 01 /
 
-## Les besoins de protection d'une PME, d'une mairie ou d'un EHPAD
+## Les besoins de protection d'une entreprise, d'une mairie ou d'un EHPAD
 
 Chaque organisation a ses points sensibles :
 
@@ -38,7 +38,7 @@ Chaque organisation a ses points sensibles :
 
 ## Alarme, accès et caméras : les équipements que nous installons
 
-Centrales, lecteurs de badges et caméras passent aujourd'hui par le réseau : nous les raccordons à des [switchs PoE, sur un VLAN séparé](/solutions/reseaux-wifi), et leur appliquons les règles de [sécurité des équipements connectés](/solutions/cybersecurite) (mots de passe d'usine remplacés, mises à jour suivies).
+Caméras, lecteurs de badges et contrôleurs de portes, interphones et transmetteurs IP se raccordent au réseau (en PoE pour les caméras et les lecteurs) : nous les plaçons [sur un VLAN séparé, derrière des switchs PoE](/solutions/reseaux-wifi), et leur appliquons les règles de [sécurité des équipements connectés](/solutions/cybersecurite) (mots de passe d'usine remplacés, mises à jour suivies).
 
 ### Alarme anti-intrusion
 
@@ -46,11 +46,11 @@ Contacts d'ouverture et détecteurs de mouvement préviennent la centrale, qui d
 
 ### Alarme incendie
 
-Le Code du travail impose un système d'alarme sonore, audible de tout point du bâtiment, là où plus de cinquante personnes peuvent se trouver habituellement et partout où l'on manipule des matières inflammables. Dans un établissement recevant du public, l'équipement exigé dépend en outre du type d'activité et de la catégorie.
+Le Code du travail impose un système d'alarme sonore, audible de tout point du bâtiment, là où plus de cinquante personnes peuvent se trouver habituellement et partout où l'on manipule des matières inflammables. Dans un établissement recevant du public, l'équipement exigé dépend en outre du type d'activité et de la catégorie. Ce système reste autonome, indépendant du réseau informatique.
 
 ### Télésurveillance et levée de doute
 
-La centrale transmet chaque alarme à un centre de télésurveillance, qui doit lever le doute avant d'alerter les forces de l'ordre : vérifier que l'alerte est réelle, à distance grâce à une caméra ou à une écoute du site.
+La centrale transmet chaque alarme à un centre de télésurveillance, qui doit lever le doute avant d'alerter les forces de l'ordre : vérifier que l'alerte est réelle, par exemple à distance grâce à une caméra ou à une écoute du site.
 
 ### Contrôle d'accès et interphonie
 
@@ -78,7 +78,7 @@ Chaque projet suit les mêmes étapes, à Angers comme ailleurs en Maine-et-Loir
   * Proposition : emplacement des détecteurs, lecteurs et caméras, dans un devis clair.
   * [Installation et câblage](/services#installation) : prises, switchs PoE, VLAN, pose des équipements.
   * Paramétrage des zones, des badges et de la conservation des images, tests, prise en main par vos référents.
-  * [Contrat de maintenance des équipements](/services#maintenance) : helpdesk, télémaintenance, intervention sur site sous 4h.
+  * [Contrat de maintenance des équipements](/services#maintenance) : helpdesk, télémaintenance, intervention sur site selon votre contrat.
 
 Marques partenaires
 
@@ -90,7 +90,7 @@ Ses caméras AcuSense distinguent une personne ou un véhicule d'un animal ou d'
 
   * ### TP-Link VIGI
 
-Caméras et enregistreurs VIGI se gèrent dans Omada Central, la plateforme cloud des switchs et bornes Wi-Fi TP-Link ; les vidéos restent enregistrées dans vos locaux.
+Caméras et enregistreurs VIGI se gèrent dans Omada Central, la plateforme cloud des switchs et bornes Wi-Fi TP-Link ; par défaut, les vidéos restent enregistrées dans vos locaux.
 
 Exemple type
 

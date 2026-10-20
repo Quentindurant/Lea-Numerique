@@ -14,7 +14,7 @@ Fichier généré automatiquement depuis la page construite, pour relecture. Les
 
 Nos domaines d'expertise
 
-# Nos solutions télécom et IT   
+# Nos solutions télécom et sécurité   
 à Angers et en Anjou
 
 Abonnements télécoms, téléphonie, réseau, cybersécurité, alarme et vidéosurveillance, matériel : Léa Numérique prend en charge ces six domaines pour les entreprises, les collectivités et les établissements de santé du Maine-et-Loire. Chacun a sa page détaillée, avec notre méthode et un exemple de déroulé.

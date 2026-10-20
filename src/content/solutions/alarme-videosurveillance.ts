@@ -16,7 +16,7 @@ export const alarmeVideosurveillance: SolutionContent = {
     eyebrow: "Sûreté des locaux",
     title: "Installateur d'alarme et de vidéosurveillance à Angers",
     intro:
-      "Alarme anti-intrusion ou incendie, télésurveillance, contrôle d'accès, interphone vidéo et caméras : Léa Numérique installe et maintient la protection de vos locaux. La plupart de ces équipements passent désormais par le réseau informatique : le même interlocuteur s'occupe donc du câblage et de leur sécurité.",
+      "Alarme anti-intrusion ou incendie, télésurveillance, contrôle d'accès, interphone vidéo et caméras : Léa Numérique installe et maintient la protection des locaux de votre entreprise. Caméras, contrôle d'accès, interphones et transmetteurs d'alarme se raccordent désormais au réseau informatique : le même interlocuteur s'occupe donc du câblage et de leur sécurité.",
     image: {
       src: "/images/securite-informatique.webp",
       alt: "La mascotte Léa Numérique sécurise un poste de travail : bouclier d'alerte, clé et cadenas",
@@ -25,7 +25,7 @@ export const alarmeVideosurveillance: SolutionContent = {
 
   sections: [
     {
-      title: "Les besoins de protection d'une PME, d'une mairie ou d'un EHPAD",
+      title: "Les besoins de protection d'une entreprise, d'une mairie ou d'un EHPAD",
       paragraphs: ["Chaque organisation a ses points sensibles :"],
       bullets: [
         "PME : un entrepôt rempli de stock, vide la nuit et le week-end.",
@@ -37,7 +37,7 @@ export const alarmeVideosurveillance: SolutionContent = {
     {
       title: "Alarme, accès et caméras : les équipements que nous installons",
       paragraphs: [
-        "Centrales, lecteurs de badges et caméras passent aujourd'hui par le réseau : nous les raccordons à des [switchs PoE, sur un VLAN séparé](/solutions/reseaux-wifi), et leur appliquons les règles de [sécurité des équipements connectés](/solutions/cybersecurite) (mots de passe d'usine remplacés, mises à jour suivies).",
+        "Caméras, lecteurs de badges et contrôleurs de portes, interphones et transmetteurs IP se raccordent au réseau (en PoE pour les caméras et les lecteurs) : nous les plaçons [sur un VLAN séparé, derrière des switchs PoE](/solutions/reseaux-wifi), et leur appliquons les règles de [sécurité des équipements connectés](/solutions/cybersecurite) (mots de passe d'usine remplacés, mises à jour suivies).",
       ],
       subsections: [
         {
@@ -49,13 +49,13 @@ export const alarmeVideosurveillance: SolutionContent = {
         {
           title: "Alarme incendie",
           paragraphs: [
-            "Le Code du travail impose un système d'alarme sonore, audible de tout point du bâtiment, là où plus de cinquante personnes peuvent se trouver habituellement et partout où l'on manipule des matières inflammables. Dans un établissement recevant du public, l'équipement exigé dépend en outre du type d'activité et de la catégorie.",
+            "Le Code du travail impose un système d'alarme sonore, audible de tout point du bâtiment, là où plus de cinquante personnes peuvent se trouver habituellement et partout où l'on manipule des matières inflammables. Dans un établissement recevant du public, l'équipement exigé dépend en outre du type d'activité et de la catégorie. Ce système reste autonome, indépendant du réseau informatique.",
           ],
         },
         {
           title: "Télésurveillance et levée de doute",
           paragraphs: [
-            "La centrale transmet chaque alarme à un centre de télésurveillance, qui doit lever le doute avant d'alerter les forces de l'ordre : vérifier que l'alerte est réelle, à distance grâce à une caméra ou à une écoute du site.",
+            "La centrale transmet chaque alarme à un centre de télésurveillance, qui doit lever le doute avant d'alerter les forces de l'ordre : vérifier que l'alerte est réelle, par exemple à distance grâce à une caméra ou à une écoute du site.",
           ],
         },
         {
@@ -87,7 +87,7 @@ export const alarmeVideosurveillance: SolutionContent = {
         "Proposition : emplacement des détecteurs, lecteurs et caméras, dans un devis clair.",
         "[Installation et câblage](/services#installation) : prises, switchs PoE, VLAN, pose des équipements.",
         "Paramétrage des zones, des badges et de la conservation des images, tests, prise en main par vos référents.",
-        "[Contrat de maintenance des équipements](/services#maintenance) : helpdesk, télémaintenance, intervention sur site sous 4h.",
+        "[Contrat de maintenance des équipements](/services#maintenance) : helpdesk, télémaintenance, intervention sur site selon votre contrat.",
       ],
     },
   ],
@@ -103,7 +103,7 @@ export const alarmeVideosurveillance: SolutionContent = {
       {
         name: "TP-Link VIGI",
         description:
-          "Caméras et enregistreurs VIGI se gèrent dans Omada Central, la plateforme cloud des switchs et bornes Wi-Fi TP-Link ; les vidéos restent enregistrées dans vos locaux.",
+          "Caméras et enregistreurs VIGI se gèrent dans Omada Central, la plateforme cloud des switchs et bornes Wi-Fi TP-Link ; par défaut, les vidéos restent enregistrées dans vos locaux.",
       },
     ],
   },

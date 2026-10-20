@@ -295,7 +295,7 @@ export default function SolutionPage({ entry, content }: { entry: SolutionEntry;
           <h2 id={IDS.others} className={sectionTitle}>
             Nos autres solutions
           </h2>
-          <ul className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+          <ul className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {others.map((other) => {
               const OtherIcon = SOLUTION_ICONS[other.slug];
               return (

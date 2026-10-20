@@ -1,9 +1,9 @@
 # Texte de la page /solutions
 
 - URL : https://lea-numerique.fr/solutions
-- Balise title (52 caractères) : Nos solutions télécom et IT à Angers | Léa Numérique
-- Meta description (155 caractères) : Opérateur télécom, téléphonie IP, réseaux, matériel informatique et cybersécurité : nos solutions pour les professionnels du Maine-et-Loire. Devis gratuit.
-- Nombre de mots du contenu principal : 501
+- Balise title (58 caractères) : Nos solutions télécom et sécurité à Angers | Léa Numérique
+- Meta description (153 caractères) : Opérateur télécom, téléphonie IP, réseau, cybersécurité, alarme, vidéosurveillance et informatique : nos solutions pour le Maine-et-Loire. Devis gratuit.
+- Nombre de mots du contenu principal : 554
 
 Fichier généré automatiquement depuis la page construite, pour relecture. Les corrections se font dans le code source (src/content/solutions/*.ts, src/app/solutions/page.tsx ou src/content/services.ts), puis ce fichier est régénéré.
 
@@ -17,7 +17,7 @@ Nos domaines d'expertise
 # Nos solutions télécom et IT   
 à Angers et en Anjou
 
-Abonnements télécoms, téléphonie, réseau, matériel et sécurité : Léa Numérique prend en charge ces cinq domaines pour les entreprises, les collectivités et les établissements de santé du Maine-et-Loire. Chacun a sa page détaillée, avec notre méthode et un exemple de déroulé.
+Abonnements télécoms, téléphonie, réseau, cybersécurité, alarme et vidéosurveillance, matériel : Léa Numérique prend en charge ces six domaines pour les entreprises, les collectivités et les établissements de santé du Maine-et-Loire. Chacun a sa page détaillée, avec notre méthode et un exemple de déroulé.
 
 01 /
 
@@ -74,6 +74,42 @@ Marques
 
 04 /
 
+## Cybersécurité
+
+Aucun outil ne protège seul contre toutes les menaces : la sécurité se construit par couches. Après un audit, nous combinons les protections adaptées à vos risques, du pare-feu Fortinet à la sauvegarde externalisée chiffrée.
+
+  * Antivirus et EDR entreprise
+  * Filtrage web et DNS
+  * Plan de reprise d'activité (PRA)
+  * Audit de sécurité
+
+Marques
+
+  * Fortinet
+  * Zyxel
+
+[Cybersécurité, pare-feu et sauvegarde](/solutions/cybersecurite)
+
+05 /
+
+## Alarme et vidéosurveillance
+
+Alarme anti-intrusion et incendie, télésurveillance, contrôle d'accès, interphonie et caméras : nous protégeons aussi vos locaux. Les équipements s'appuient sur votre réseau, que nous installons et maintenons déjà.
+
+  * Alarme anti-intrusion et incendie
+  * Télésurveillance
+  * Contrôle d'accès et interphonie
+  * Vidéosurveillance
+
+Marques
+
+  * Hikvision
+  * TP-Link VIGI
+
+[Alarme, vidéosurveillance et contrôle d'accès](/solutions/alarme-videosurveillance)
+
+06 /
+
 ## Matériel informatique
 
 Un portable de collaborateur nomade n'a pas les mêmes contraintes qu'un serveur de fichiers. Nous choisissons avec vous le matériel HP, Lenovo ou Dell adapté à chaque usage et assurons son déploiement, migration Windows comprise.
@@ -91,26 +127,7 @@ Marques
 
 [Matériel informatique professionnel](/solutions/materiel-informatique)
 
-05 /
-
-## Cybersécurité
-
-Aucun outil ne protège seul contre toutes les menaces : la sécurité se construit par couches. Après un audit, nous combinons les protections adaptées à vos risques, du pare-feu Fortinet à la sauvegarde externalisée chiffrée.
-
-  * Antivirus et EDR entreprise
-  * Filtrage web et DNS
-  * Plan de reprise d'activité (PRA)
-  * Vidéosurveillance des locaux
-
-Marques
-
-  * Fortinet
-  * Hikvision
-  * Zyxel
-
-[Cybersécurité, pare-feu et sauvegarde](/solutions/cybersecurite)
-
-## Cinq domaines qui fonctionnent ensemble
+## Six domaines qui fonctionnent ensemble
 
 Un trunk SIP passe par votre accès internet et un téléphone IP a besoin d'un réseau qui priorise la voix ; un poste de travail, lui, n'est protégé que si le pare-feu et la sauvegarde suivent. Avec un seul interlocuteur pour l'ensemble, un incident ne passe pas d'un prestataire à l'autre avant d'être traité.
 

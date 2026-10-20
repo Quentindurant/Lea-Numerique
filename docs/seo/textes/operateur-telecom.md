@@ -3,7 +3,7 @@
 - URL : https://lea-numerique.fr/solutions/operateur-telecom
 - Balise title (58 caractères) : Opérateur télécom entreprise à Angers (49) | Léa Numérique
 - Meta description (151 caractères) : Votre opérateur téléphonique pro en Maine-et-Loire : lignes fixes, trunks SIP, forfaits mobiles et fibre, numéros conservés. Demandez un devis gratuit.
-- Nombre de mots du contenu principal : 1016
+- Nombre de mots du contenu principal : 1038
 
 Fichier généré automatiquement depuis la page construite, pour relecture. Les corrections se font dans le code source (src/content/solutions/*.ts, src/app/solutions/page.tsx ou src/content/services.ts), puis ce fichier est régénéré.
 
@@ -120,14 +120,15 @@ Oui, s'il s'agit d'un IPBX compatible SIP, ce que l'audit vérifie. Un autocommu
 
 ### Que deviennent les lignes d'alarme, d'ascenseur ou de terminal de paiement ?
 
-Reliées au réseau cuivre, elles s'arrêteront avec lui. Selon le modèle, l'équipement pourra passer par l'accès internet ou demandera un transmetteur adapté, à voir avec son mainteneur.
+Reliées au réseau cuivre, elles s'arrêteront avec lui. Selon le modèle, l'équipement pourra passer par l'accès internet ou demandera un transmetteur adapté : nous l'étudions pour les [alarmes que nous installons](/solutions/alarme-videosurveillance), et avec leur mainteneur pour les ascenseurs ou les terminaux de paiement.
 
 ## Nos autres solutions
 
   * [Téléphonie IP et standard d'entreprise](/solutions/telephonie-ip)
   * [Réseaux, Wi-Fi et câblage professionnels](/solutions/reseaux-wifi)
-  * [Matériel informatique professionnel](/solutions/materiel-informatique)
   * [Cybersécurité, pare-feu et sauvegarde](/solutions/cybersecurite)
+  * [Alarme, vidéosurveillance et contrôle d'accès](/solutions/alarme-videosurveillance)
+  * [Matériel informatique professionnel](/solutions/materiel-informatique)
   * [Nos services : conseil, installation, maintenance et sécurité](/services)
 
 ## Faites le point sur vos abonnements télécoms

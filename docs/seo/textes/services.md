@@ -3,7 +3,7 @@
 - URL : https://lea-numerique.fr/services
 - Balise title (60 caractères) : Maintenance informatique entreprise à Angers | Léa Numérique
 - Meta description (148 caractères) : Maintenance informatique à Angers : audit, installation, contrat avec helpdesk dédié et intervention sur site sous 4h. Demandez votre devis gratuit.
-- Nombre de mots du contenu principal : 1930
+- Nombre de mots du contenu principal : 1945
 
 Fichier généré automatiquement depuis la page construite, pour relecture. Les corrections se font dans le code source (src/content/solutions/*.ts, src/app/solutions/page.tsx ou src/content/services.ts), puis ce fichier est régénéré.
 
@@ -19,7 +19,7 @@ Services et solutions
 
 ## Quatre prestations, un seul interlocuteur
 
-Nos pages solutions présentent ce que nous installons : la [téléphonie IP et le standard d'entreprise](/solutions/telephonie-ip), les [réseaux, le Wi-Fi et le câblage](/solutions/reseaux-wifi), le [matériel informatique professionnel](/solutions/materiel-informatique) et la [cybersécurité, du pare-feu à la sauvegarde](/solutions/cybersecurite). Notre [offre d'opérateur télécom](/solutions/operateur-telecom) couvre vos lignes, vos forfaits mobiles et votre accès fibre. Cette page décrit la façon dont nous travaillons sur ces sujets, en quatre prestations qui peuvent s'enchaîner sur un même projet : le conseil, l'installation, la maintenance et la sécurité.
+Nos pages solutions présentent ce que nous installons : la [téléphonie IP et le standard d'entreprise](/solutions/telephonie-ip), les [réseaux, le Wi-Fi et le câblage](/solutions/reseaux-wifi), le [matériel informatique professionnel](/solutions/materiel-informatique) et la [cybersécurité, du pare-feu à la sauvegarde](/solutions/cybersecurite). Notre [offre d'opérateur télécom](/solutions/operateur-telecom) couvre vos lignes, vos forfaits mobiles et votre accès fibre, et notre page [alarme et vidéosurveillance](/solutions/alarme-videosurveillance) la protection de vos locaux. Cette page décrit la façon dont nous travaillons sur ces sujets, en quatre prestations qui peuvent s'enchaîner sur un même projet : le conseil, l'installation, la maintenance et la sécurité.
 
 [Installés place du Président Kennedy à Angers](/a-propos), nous intervenons dans l'agglomération, dans tout le Maine-et-Loire et en Pays de la Loire. Le reste de la France est couvert sur site ou à distance, en particulier pour les organisations multi-sites.
 
@@ -112,7 +112,7 @@ Un rançongiciel qui chiffre les dossiers partagés, une messagerie piratée apr
 
 Elle commence par un audit de sécurité complet, qui repère les points faibles et permet de prioriser les actions. Nous déployons ensuite les protections adaptées : pare-feu nouvelle génération Fortinet, antivirus et EDR sur les postes, filtrage web et DNS, sauvegarde externalisée chiffrée. L'EDR, par exemple, surveille le comportement des programmes et peut stopper un chiffrement massif de fichiers. Le rôle de chaque protection est détaillé sur notre page [cybersécurité, pare-feu et sauvegarde](/solutions/cybersecurite).
 
-Pour les structures qui ne peuvent pas se permettre un arrêt prolongé, nous formalisons un plan de reprise d'activité (PRA) : il indique quels systèmes restaurer en premier et à partir de quelles sauvegardes, pour reprendre le travail au plus vite après un sinistre. La vidéosurveillance Hikvision peut compléter le dispositif pour protéger les locaux.
+Pour les structures qui ne peuvent pas se permettre un arrêt prolongé, nous formalisons un plan de reprise d'activité (PRA) : il indique quels systèmes restaurer en premier et à partir de quelles sauvegardes, pour reprendre le travail au plus vite après un sinistre. Pour les locaux, [l'alarme, le contrôle d'accès et la vidéosurveillance](/solutions/alarme-videosurveillance) complètent le dispositif.
 
 La prestation en bref
 
@@ -155,7 +155,7 @@ Dans un EHPAD, le personnel se déplace toute la journée entre les étages et d
 
 Intervention type
 
-Nous dimensionnons le [Wi-Fi professionnel](/solutions/reseaux-wifi) selon la configuration du bâtiment et équipons les équipes de [téléphones IP sans fil Yealink](/solutions/telephonie-ip). Les postes et les données sont protégés par un [pare-feu Fortinet et un EDR](/solutions/cybersecurite), avec une sauvegarde externalisée chiffrée, confiée à un hébergeur certifié HDS puisqu'il s'agit de données de santé. La vidéosurveillance Hikvision peut sécuriser les accès.
+Nous dimensionnons le [Wi-Fi professionnel](/solutions/reseaux-wifi) selon la configuration du bâtiment et équipons les équipes de [téléphones IP sans fil Yealink](/solutions/telephonie-ip). Les postes et les données sont protégés par un [pare-feu Fortinet et un EDR](/solutions/cybersecurite), avec une sauvegarde externalisée chiffrée, confiée à un hébergeur certifié HDS puisqu'il s'agit de données de santé. Le [contrôle d'accès et la vidéosurveillance](/solutions/alarme-videosurveillance) sécurisent les entrées.
 
 Prestations mobiliséesConseilInstallationSécuritéMaintenance
 

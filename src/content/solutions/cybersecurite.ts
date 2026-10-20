@@ -2,7 +2,7 @@ import type { SolutionContent } from "./types";
 
 export const cybersecurite: SolutionContent = {
   slug: "cybersecurite",
-  lastModified: "2026-10-19",
+  lastModified: "2026-10-20",
 
   seo: {
     title: "Cybersécurité PME et collectivités à Angers",
@@ -38,6 +38,7 @@ export const cybersecurite: SolutionContent = {
       title: "Pare-feu, EDR et filtrage : protéger le réseau et les postes",
       paragraphs: [
         "Un portable en télétravail ou une clé USB contaminée échappent au pare-feu : chaque poste doit donc être protégé aussi.",
+        "Caméras et centrales d'alarme reliées au réseau n'acceptent pas d'EDR : elles se protègent par un réseau séparé et des mises à jour suivies, comme l'explique [la page alarme et vidéosurveillance](/solutions/alarme-videosurveillance).",
       ],
       subsections: [
         {
@@ -68,12 +69,6 @@ export const cybersecurite: SolutionContent = {
       ],
     },
     {
-      title: "Vidéosurveillance professionnelle Hikvision pour vos locaux",
-      paragraphs: [
-        "Nous installons des caméras IP Hikvision reliées à un enregistreur réseau, alimentées par le câble Ethernet (PoE) et placées sur un réseau séparé. Les images de personnes identifiables sont des données personnelles : les zones filmées et l'accès aux enregistrements se décident dès le projet.",
-      ],
-    },
-    {
       title: "Audit de sécurité, mise en œuvre et suivi : notre méthode",
       paragraphs: [
         "L'[audit de sécurité](/services#securite) passe en revue le pare-feu et les accès distants, les comptes et leurs droits, les sauvegardes, le cloisonnement des réseaux et les mises à jour, dont les [postes encore sous Windows 10](/solutions/materiel-informatique). Vous recevez des actions classées par priorité et un devis clair.",
@@ -83,17 +78,12 @@ export const cybersecurite: SolutionContent = {
   ],
 
   brands: {
-    title: "Fortinet, Hikvision et Zyxel : nos marques de sécurité",
+    title: "Fortinet et Zyxel : nos marques de sécurité réseau",
     items: [
       {
         name: "Fortinet",
         description:
           "Partenaire certifié : les FortiGate réunissent filtrage, VPN et détection d'intrusion, gérés depuis une seule interface.",
-      },
-      {
-        name: "Hikvision",
-        description:
-          "Caméras IP et enregistreurs réseau, choisis selon les zones à couvrir, l'éclairage nocturne et la durée d'enregistrement.",
       },
       {
         name: "Zyxel",
@@ -132,9 +122,9 @@ export const cybersecurite: SolutionContent = {
           "La fréquence découle de la perte de données acceptable : avec une sauvegarde chaque nuit, vous perdez au plus une journée de travail. La conservation doit couvrir un problème découvert tard, comme un fichier supprimé il y a trois semaines.",
       },
       {
-        question: "Comment accéder aux caméras à distance de façon sécurisée ?",
+        question: "Que faire si un poste est touché par un rançongiciel ?",
         answer:
-          "Par un VPN, plutôt qu'en ouvrant un port de la box vers l'enregistreur. Nous changeons aussi les identifiants par défaut et installons le dernier firmware.",
+          "Débranchez-le du réseau sans l'éteindre, déconnectez les sauvegardes encore branchées et prévenez votre prestataire informatique. Ne payez pas la rançon, portez plainte et, si des données personnelles sont touchées, notifiez la violation à la CNIL dans les 72 heures. Le PRA guide ensuite la restauration.",
       },
     ],
   },

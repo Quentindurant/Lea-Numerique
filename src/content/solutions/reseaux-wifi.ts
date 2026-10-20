@@ -59,7 +59,7 @@ export const reseauxWifi: SolutionContent = {
         {
           title: "VLAN, QoS et VPN",
           paragraphs: [
-            "Un VLAN découpe le réseau en réseaux logiques séparés : postes, téléphonie, invités, caméras, machines de production. Entre eux, le [pare-feu nouvelle génération](/solutions/cybersecurite) applique vos règles. La QoS fait passer la voix en premier ; le VPN relie vos sites distants et vos équipes mobiles par un tunnel chiffré, à travers l'[accès internet fibre de chaque site](/solutions/operateur-telecom).",
+            "Un VLAN découpe le réseau en réseaux logiques séparés : postes, téléphonie, invités, [caméras de vidéosurveillance](/solutions/alarme-videosurveillance), machines de production. Entre eux, le [pare-feu nouvelle génération](/solutions/cybersecurite) applique vos règles. La QoS fait passer la voix en premier ; le VPN relie vos sites distants et vos équipes mobiles par un tunnel chiffré, à travers l'[accès internet fibre de chaque site](/solutions/operateur-telecom).",
           ],
         },
       ],

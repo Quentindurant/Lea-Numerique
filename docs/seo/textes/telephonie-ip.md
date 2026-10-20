@@ -3,7 +3,7 @@
 - URL : https://lea-numerique.fr/solutions/telephonie-ip
 - Balise title (55 caractères) : Téléphonie IP pour entreprises à Angers | Léa Numérique
 - Meta description (147 caractères) : Standard téléphonique IP 3CX ou Yeastar, postes Yealink et télétravail : installation et formation en Maine-et-Loire. Demandez votre devis gratuit.
-- Nombre de mots du contenu principal : 964
+- Nombre de mots du contenu principal : 969
 
 Fichier généré automatiquement depuis la page construite, pour relecture. Les corrections se font dans le code source (src/content/solutions/*.ts, src/app/solutions/page.tsx ou src/content/services.ts), puis ce fichier est régénéré.
 
@@ -141,8 +141,9 @@ Par l'application du standard (Linkus chez Yeastar, application 3CX) sur ordinat
 
   * [Opérateur télécom : lignes, mobiles et fibre pro](/solutions/operateur-telecom)
   * [Réseaux, Wi-Fi et câblage professionnels](/solutions/reseaux-wifi)
-  * [Matériel informatique professionnel](/solutions/materiel-informatique)
   * [Cybersécurité, pare-feu et sauvegarde](/solutions/cybersecurite)
+  * [Alarme, vidéosurveillance et contrôle d'accès](/solutions/alarme-videosurveillance)
+  * [Matériel informatique professionnel](/solutions/materiel-informatique)
   * [Nos services : conseil, installation, maintenance et sécurité](/services)
 
 ## Faites le point sur votre téléphonie

@@ -3,7 +3,7 @@
 - URL : https://lea-numerique.fr/solutions/materiel-informatique
 - Balise title (60 caractères) : Matériel informatique professionnel à Angers | Léa Numérique
 - Meta description (152 caractères) : Postes et portables HP, Lenovo ou Dell, serveurs, NAS et imprimantes : choix, migration Windows 11 et suivi du parc à Angers. Demandez un devis gratuit.
-- Nombre de mots du contenu principal : 976
+- Nombre de mots du contenu principal : 981
 
 Fichier généré automatiquement depuis la page construite, pour relecture. Les corrections se font dans le code source (src/content/solutions/*.ts, src/app/solutions/page.tsx ou src/content/services.ts), puis ce fichier est régénéré.
 
@@ -140,6 +140,7 @@ Oui. Chaque rôle (fichiers, logiciel métier, annuaire) a sa machine virtuelle 
   * [Opérateur télécom : lignes, mobiles et fibre pro](/solutions/operateur-telecom)
   * [Réseaux, Wi-Fi et câblage professionnels](/solutions/reseaux-wifi)
   * [Cybersécurité, pare-feu et sauvegarde](/solutions/cybersecurite)
+  * [Alarme, vidéosurveillance et contrôle d'accès](/solutions/alarme-videosurveillance)
   * [Nos services : conseil, installation, maintenance et sécurité](/services)
 
 ## Des postes à renouveler ou à migrer vers Windows 11 ?

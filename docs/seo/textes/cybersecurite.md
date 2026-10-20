@@ -3,7 +3,7 @@
 - URL : https://lea-numerique.fr/solutions/cybersecurite
 - Balise title (59 caractères) : Cybersécurité PME et collectivités à Angers | Léa Numérique
 - Meta description (152 caractères) : Pare-feu Fortinet, EDR, filtrage DNS, sauvegarde externalisée chiffrée et PRA pour PME et collectivités du Maine-et-Loire. Demandez votre devis gratuit.
-- Nombre de mots du contenu principal : 1016
+- Nombre de mots du contenu principal : 1003
 
 Fichier généré automatiquement depuis la page construite, pour relecture. Les corrections se font dans le code source (src/content/solutions/*.ts, src/app/solutions/page.tsx ou src/content/services.ts), puis ce fichier est régénéré.
 
@@ -40,6 +40,8 @@ Un incident part parfois d'une simple pièce jointe piégée, et le RGPD impose 
 
 Un portable en télétravail ou une clé USB contaminée échappent au pare-feu : chaque poste doit donc être protégé aussi.
 
+Caméras et centrales d'alarme reliées au réseau n'acceptent pas d'EDR : elles se protègent par un réseau séparé et des mises à jour suivies, comme l'explique [la page alarme et vidéosurveillance](/solutions/alarme-videosurveillance).
+
 ### Pare-feu nouvelle génération Fortinet
 
 Placé entre votre [accès internet fibre](/solutions/operateur-telecom) et le réseau local, un FortiGate ne se contente pas de filtrer des ports : il identifie les applications, bloque les intrusions connues et gère les VPN de vos sites et de vos collaborateurs nomades. Ces protections reposent sur des abonnements FortiGuard à renouveler, qui tiennent les signatures à jour.
@@ -62,12 +64,6 @@ Le plan de reprise d'activité (PRA) fixe, pour chaque application, la perte de 
 
 04 /
 
-## Vidéosurveillance professionnelle Hikvision pour vos locaux
-
-Nous installons des caméras IP Hikvision reliées à un enregistreur réseau, alimentées par le câble Ethernet (PoE) et placées sur un réseau séparé. Les images de personnes identifiables sont des données personnelles : les zones filmées et l'accès aux enregistrements se décident dès le projet.
-
-05 /
-
 ## Audit de sécurité, mise en œuvre et suivi : notre méthode
 
 L'[audit de sécurité](/services#securite) passe en revue le pare-feu et les accès distants, les comptes et leurs droits, les sauvegardes, le cloisonnement des réseaux et les mises à jour, dont les [postes encore sous Windows 10](/solutions/materiel-informatique). Vous recevez des actions classées par priorité et un devis clair.
@@ -76,15 +72,11 @@ Après la mise en œuvre et la recette, nous formons vos utilisateurs ; un [cont
 
 Marques partenaires
 
-## Fortinet, Hikvision et Zyxel : nos marques de sécurité
+## Fortinet et Zyxel : nos marques de sécurité réseau
 
   * ### Fortinet
 
 Partenaire certifié : les FortiGate réunissent filtrage, VPN et détection d'intrusion, gérés depuis une seule interface.
-
-  * ### Hikvision
-
-Caméras IP et enregistreurs réseau, choisis selon les zones à couvrir, l'éclairage nocturne et la durée d'enregistrement.
 
   * ### Zyxel
 
@@ -136,15 +128,16 @@ Pas s'il est bien dimensionné : nous choisissons le FortiGate d'après son déb
 
 La fréquence découle de la perte de données acceptable : avec une sauvegarde chaque nuit, vous perdez au plus une journée de travail. La conservation doit couvrir un problème découvert tard, comme un fichier supprimé il y a trois semaines.
 
-### Comment accéder aux caméras à distance de façon sécurisée ?
+### Que faire si un poste est touché par un rançongiciel ?
 
-Par un VPN, plutôt qu'en ouvrant un port de la box vers l'enregistreur. Nous changeons aussi les identifiants par défaut et installons le dernier firmware.
+Débranchez-le du réseau sans l'éteindre, déconnectez les sauvegardes encore branchées et prévenez votre prestataire informatique. Ne payez pas la rançon, portez plainte et, si des données personnelles sont touchées, notifiez la violation à la CNIL dans les 72 heures. Le PRA guide ensuite la restauration.
 
 ## Nos autres solutions
 
   * [Téléphonie IP et standard d'entreprise](/solutions/telephonie-ip)
   * [Opérateur télécom : lignes, mobiles et fibre pro](/solutions/operateur-telecom)
   * [Réseaux, Wi-Fi et câblage professionnels](/solutions/reseaux-wifi)
+  * [Alarme, vidéosurveillance et contrôle d'accès](/solutions/alarme-videosurveillance)
   * [Matériel informatique professionnel](/solutions/materiel-informatique)
   * [Nos services : conseil, installation, maintenance et sécurité](/services)
 

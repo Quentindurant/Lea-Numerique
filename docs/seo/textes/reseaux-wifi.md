@@ -3,7 +3,7 @@
 - URL : https://lea-numerique.fr/solutions/reseaux-wifi
 - Balise title (57 caractères) : Réseau informatique et Wi-Fi pro à Angers | Léa Numérique
 - Meta description (146 caractères) : Câblage RJ45 et fibre, Wi-Fi professionnel, VLAN, QoS et VPN entre sites : votre réseau installé et supervisé en Anjou. Demandez un devis gratuit.
-- Nombre de mots du contenu principal : 988
+- Nombre de mots du contenu principal : 996
 
 Fichier généré automatiquement depuis la page construite, pour relecture. Les corrections se font dans le code source (src/content/solutions/*.ts, src/app/solutions/page.tsx ou src/content/services.ts), puis ce fichier est régénéré.
 
@@ -54,7 +54,7 @@ Des bornes pilotées depuis une console unique remplacent box et répéteurs : l
 
 ### VLAN, QoS et VPN
 
-Un VLAN découpe le réseau en réseaux logiques séparés : postes, téléphonie, invités, caméras, machines de production. Entre eux, le [pare-feu nouvelle génération](/solutions/cybersecurite) applique vos règles. La QoS fait passer la voix en premier ; le VPN relie vos sites distants et vos équipes mobiles par un tunnel chiffré, à travers l'[accès internet fibre de chaque site](/solutions/operateur-telecom).
+Un VLAN découpe le réseau en réseaux logiques séparés : postes, téléphonie, invités, [caméras de vidéosurveillance](/solutions/alarme-videosurveillance), machines de production. Entre eux, le [pare-feu nouvelle génération](/solutions/cybersecurite) applique vos règles. La QoS fait passer la voix en premier ; le VPN relie vos sites distants et vos équipes mobiles par un tunnel chiffré, à travers l'[accès internet fibre de chaque site](/solutions/operateur-telecom).
 
 03 /
 
@@ -147,8 +147,9 @@ Le premier relie en permanence deux réseaux par un tunnel chiffré entre pare-f
 
   * [Téléphonie IP et standard d'entreprise](/solutions/telephonie-ip)
   * [Opérateur télécom : lignes, mobiles et fibre pro](/solutions/operateur-telecom)
-  * [Matériel informatique professionnel](/solutions/materiel-informatique)
   * [Cybersécurité, pare-feu et sauvegarde](/solutions/cybersecurite)
+  * [Alarme, vidéosurveillance et contrôle d'accès](/solutions/alarme-videosurveillance)
+  * [Matériel informatique professionnel](/solutions/materiel-informatique)
   * [Nos services : conseil, installation, maintenance et sécurité](/services)
 
 ## Parlons de votre réseau

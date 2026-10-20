@@ -50,7 +50,7 @@ const summaries: Record<SolutionSlug, { summary: string; points: string[] }> = {
   cybersecurite: {
     summary:
       "Aucun outil ne protège seul contre toutes les menaces : la sécurité se construit par couches. Après un audit, nous combinons les protections adaptées à vos risques, du pare-feu Fortinet à la sauvegarde externalisée chiffrée.",
-    points: ["Antivirus et EDR entreprise", "Filtrage web et DNS", "Plan de reprise d'activité (PRA)", "Vidéosurveillance des locaux"],
+    points: ["Antivirus et EDR entreprise", "Filtrage web et DNS", "Plan de reprise d'activité (PRA)", "Audit de sécurité"],
   },
 };
 

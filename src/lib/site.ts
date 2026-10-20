@@ -4,6 +4,10 @@
 /** Informations légales (mentions légales, LCEN). Un champ à null n'est pas affiché. */
 export type LegalInfo = {
   companyName: string;
+  /** Dénomination exacte au registre (reprise dans le JSON-LD legalName) */
+  legalName: string;
+  /** Date de création au registre (AAAA-MM-JJ, reprise dans le JSON-LD foundingDate) */
+  foundingDate: string | null;
   legalForm: string;
   /** Capital social, tel qu'il doit être affiché (ex. « 1 000 € ») */
   shareCapital: string | null;
@@ -19,15 +23,19 @@ export type LegalInfo = {
   host: { name: string; address: string; phone: string | null; website: string | null } | null;
 };
 
+// Données du registre (RCS, RNE, INSEE) relevées le 20/10/2026 et fournies par le propriétaire
 const legal: LegalInfo = {
-  companyName: "Léa Numérique",
-  legalForm: "SAS",
+  companyName: "LE@ Numérique, exerçant sous le nom Léa Numérique",
+  legalName: "LE@ Numérique",
+  foundingDate: "2018-03-01",
+  legalForm: "SAS (société par actions simplifiée)",
   // Siège social : site.address (19 place du Président Kennedy, 49100 Angers)
-  shareCapital: null, // à fournir par le propriétaire
-  siren: null, // à fournir par le propriétaire
-  rcs: null, // à fournir par le propriétaire (ville du greffe et numéro)
-  vatNumber: null, // à fournir par le propriétaire
-  publicationDirector: null, // à fournir par le propriétaire
+  shareCapital: "95 300 €",
+  siren: "837 873 694",
+  rcs: { city: "Angers", number: "837 873 694" },
+  vatNumber: "FR51837873694",
+  // Représentant légal (présidente de la SAS) : directeur de la publication d'office
+  publicationDirector: "Groupe GC Développement, président de la société",
   host: null, // à fournir par le propriétaire (nom, adresse, téléphone ou site de l'hébergeur)
 };
 

@@ -34,7 +34,7 @@ L'historique publié ne contient que des commits relus, sans nom d'opérateur pa
 
 ## À fournir avant la mise en production
 
-1. **Mentions légales (obligation LCEN)** : capital social, SIREN, RCS (ville et numéro), TVA intracommunautaire, directeur de la publication, hébergeur (nom, adresse, téléphone). À saisir dans l'objet `legal` de `src/lib/site.ts`.
+1. **Mentions légales (obligation LCEN)** : renseignées d'après le registre (dénomination LE@ Numérique, SAS au capital de 95 300 €, SIREN 837 873 694, RCS Angers, TVA FR51837873694 ; directeur de la publication : le représentant légal, Groupe GC Développement). Reste l'hébergeur du serveur (nom, adresse, téléphone), à saisir dans `host` de l'objet `legal` de `src/lib/site.ts`. Si vous préférez nommer la personne physique qui représente Groupe GC Développement, la mettre dans `publicationDirector`.
 2. **Numéro officiel** : confirmer le 02 19 23 06 91, et dire s'il passe par un serveur vocal (cela bloque la validation de la fiche Google par téléphone).
 3. **Adresse** : des clients sont-ils reçus au 19 place du Président Kennedy, avec une enseigne ? Cela décide si l'adresse est visible ou masquée sur la fiche Google.
 
@@ -61,6 +61,7 @@ L'historique publié ne contient que des commits relus, sans nom d'opérateur pa
 - Pages légales : l'en-tête garde un fond sombre (le logo blanc était illisible sur fond clair).
 
 **Points relevés, non modifiés** :
+- Page à propos : « depuis plus de 10 ans » et le chiffre « 10+ ans d'expérience » alors que la société a été créée le 01/03/2018 (registre). À reformuler si l'ancienneté désigne l'expérience de l'équipe, par exemple « une équipe forte de plus de 10 ans d'expérience ».
 - Contraste : le bouton principal (blanc sur `#7C6EFA`) est à 3,8:1, sous le seuil AA de 4,5:1 ; `#5A4ED8` donnerait 6:1. C'est un choix de charte.
 - L'image `/images/telephonie-ip-entreprise.webp` porte la mention « designed by freepik » : vérifier la licence ou changer de visuel.
 - Politique de confidentialité (à faire valider, idéalement par un juriste) : le sujet du formulaire n'est pas cité ; « vous informer de nos offres si vous y avez consenti » sans case de consentement ; finalité « améliorer nos services » trop vague ; pas de base légale ; responsable du traitement non identifié ; droits incomplets (opposition, limitation, réclamation auprès de la CNIL) ; EmailJS cité sans localisation ni garanties en cas de transfert hors UE ; accusé de réception automatique non mentionné ; pas de mention d'information sous le formulaire ; titre « Contact DPO » à revoir si aucun DPO n'est désigné ; rien sur les cookies (aucun cookie aujourd'hui, à revoir si un outil de mesure d'audience est ajouté) ; politique non datée.

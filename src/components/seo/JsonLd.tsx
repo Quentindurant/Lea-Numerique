@@ -20,8 +20,14 @@ export const siteJsonLd = {
       "@type": "ProfessionalService",
       "@id": ORGANIZATION_ID,
       name: site.name,
+      legalName: site.legal.legalName,
       alternateName: site.alternateNames,
       description: site.description,
+      ...(site.legal.foundingDate ? { foundingDate: site.legal.foundingDate } : {}),
+      ...(site.legal.vatNumber ? { vatID: site.legal.vatNumber } : {}),
+      ...(site.legal.siren
+        ? { identifier: { "@type": "PropertyValue", propertyID: "SIREN", value: site.legal.siren.replace(/\s/g, "") } }
+        : {}),
       url: site.url,
       // Mascotte (418 x 489, lisible sur fond blanc). Pas /images/logo.png : 600 x 71, sous le minimum
       // de 112 px demandé par Google, et jaune pâle sur fond transparent, donc illisible sur blanc.

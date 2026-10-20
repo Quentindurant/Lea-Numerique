@@ -1,4 +1,4 @@
-import { PhoneCall, Network, Laptop, ShieldCheck, RadioTower } from "lucide-react";
+import { PhoneCall, Network, Laptop, ShieldCheck, RadioTower, Cctv } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import type { SolutionEntry, SolutionSlug } from "@/lib/solutions";
 import type { BreadcrumbItem } from "@/components/ui/Breadcrumbs";
@@ -9,6 +9,7 @@ export const SOLUTION_ICONS: Record<SolutionSlug, LucideIcon> = {
   "reseaux-wifi": Network,
   "materiel-informatique": Laptop,
   cybersecurite: ShieldCheck,
+  "alarme-videosurveillance": Cctv,
 };
 
 // Fil d'Ariane : une seule source pour l'affichage et pour le JSON-LD BreadcrumbList

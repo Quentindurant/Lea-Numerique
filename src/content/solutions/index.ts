@@ -5,6 +5,7 @@ import { operateurTelecom } from "./operateur-telecom";
 import { reseauxWifi } from "./reseaux-wifi";
 import { materielInformatique } from "./materiel-informatique";
 import { cybersecurite } from "./cybersecurite";
+import { alarmeVideosurveillance } from "./alarme-videosurveillance";
 
 export const solutionContents: Record<SolutionSlug, SolutionContent> = {
   "telephonie-ip": telephonieIp,
@@ -12,6 +13,7 @@ export const solutionContents: Record<SolutionSlug, SolutionContent> = {
   "reseaux-wifi": reseauxWifi,
   "materiel-informatique": materielInformatique,
   cybersecurite,
+  "alarme-videosurveillance": alarmeVideosurveillance,
 };
 
 export function getSolutionContent(slug: SolutionSlug): SolutionContent {

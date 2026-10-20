@@ -42,6 +42,11 @@ const summaries: Record<SolutionSlug, { summary: string; points: string[] }> = {
       "Un portable de collaborateur nomade n'a pas les mêmes contraintes qu'un serveur de fichiers. Nous choisissons avec vous le matériel HP, Lenovo ou Dell adapté à chaque usage et assurons son déploiement, migration Windows comprise.",
     points: ["Postes de travail et portables", "Serveurs et NAS", "Imprimantes professionnelles", "Maintenance préventive"],
   },
+  "alarme-videosurveillance": {
+    summary:
+      "Alarme anti-intrusion et incendie, télésurveillance, contrôle d'accès, interphonie et caméras : nous protégeons aussi vos locaux. Les équipements s'appuient sur votre réseau, que nous installons et maintenons déjà.",
+    points: ["Alarme anti-intrusion et incendie", "Télésurveillance", "Contrôle d'accès et interphonie", "Vidéosurveillance"],
+  },
   cybersecurite: {
     summary:
       "Aucun outil ne protège seul contre toutes les menaces : la sécurité se construit par couches. Après un audit, nous combinons les protections adaptées à vos risques, du pare-feu Fortinet à la sauvegarde externalisée chiffrée.",

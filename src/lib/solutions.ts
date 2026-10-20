@@ -28,18 +28,26 @@ export const SOLUTIONS = [
     legacyAnchor: "reseaux",
   },
   {
-    slug: "materiel-informatique",
-    path: "/solutions/materiel-informatique",
-    label: "Matériel informatique",
-    anchor: "Matériel informatique professionnel",
-    legacyAnchor: "informatique",
-  },
-  {
     slug: "cybersecurite",
     path: "/solutions/cybersecurite",
     label: "Cybersécurité",
     anchor: "Cybersécurité, pare-feu et sauvegarde",
     legacyAnchor: "cybersecurite",
+  },
+  {
+    slug: "alarme-videosurveillance",
+    path: "/solutions/alarme-videosurveillance",
+    label: "Alarme et vidéosurveillance",
+    anchor: "Alarme, vidéosurveillance et contrôle d'accès",
+    // Nouvelle page : id de sa carte sur le hub (pas d'ancienne ancre à conserver)
+    legacyAnchor: "alarme",
+  },
+  {
+    slug: "materiel-informatique",
+    path: "/solutions/materiel-informatique",
+    label: "Matériel informatique",
+    anchor: "Matériel informatique professionnel",
+    legacyAnchor: "informatique",
   },
 ] as const;
 
